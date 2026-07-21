@@ -20,7 +20,7 @@ export function PlaceholderPage({ title, subtitle }: { title: string; subtitle: 
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Header />
-      <main className="flex-1 mx-auto max-w-[1400px] w-full px-4 lg:px-8 py-20">
+      <main className="flex-1 mx-auto max-w-none w-full px-4 lg:px-8 py-20">
         <h1 className="text-4xl lg:text-5xl font-bold text-brand-dark">{title}</h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-2xl">{subtitle}</p>
         <p className="mt-8 text-sm text-muted-foreground">This page is coming soon.</p>

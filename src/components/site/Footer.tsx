@@ -45,7 +45,7 @@ const columns = [
 export function Footer() {
   return (
     <footer className="bg-brand-dark text-white">
-      <div className="mx-auto max-w-[1400px] px-4 py-14 lg:px-8">
+      <div className="mx-auto max-w-none px-4 py-14 lg:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-6">
           <div className="lg:col-span-2">
             <ZekanoLogo variant="light" />
