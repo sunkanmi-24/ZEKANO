@@ -16,18 +16,18 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white border-b border-border">
-      <div className="mx-auto flex max-w-none items-center justify-between px-4 py-4 lg:px-8">
-        <Link to="/" className="flex items-center shrink-0">
+    <header className="zekano-header sticky top-0 z-50 w-full bg-white border-b border-border">
+      <div className="zekano-header-inner mx-auto flex max-w-none items-center justify-between px-4 py-4 lg:px-8">
+        <Link to="/" className="zekano-logo-wrap flex items-center shrink-0">
           <ZekanoLogo />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="zekano-nav hidden lg:flex items-center gap-8">
           {nav.map((item) => (
             <Link
               key={item.label}
               to={item.to}
-              className="flex items-center gap-1 text-sm font-medium text-brand-dark hover:text-brand-green transition-colors"
+              className="zekano-nav-link flex items-center gap-1 text-sm font-medium text-brand-dark hover:text-brand-green transition-colors"
               activeProps={{ className: "text-brand-green border-b-2 border-brand-green pb-1" }}
               activeOptions={{ exact: item.to === "/" }}
             >
@@ -40,14 +40,14 @@ export function Header() {
         <div className="hidden lg:block">
           <Link
             to="/contact"
-            className="inline-flex items-center rounded-full bg-brand-green px-6 py-2.5 text-sm font-semibold text-white hover:bg-brand-green-dark transition-colors"
+            className="zekano-contact-btn inline-flex items-center rounded-full bg-brand-green px-6 py-2.5 text-sm font-semibold text-white hover:bg-brand-green-dark transition-colors"
           >
             Contact Us
           </Link>
         </div>
 
         <button
-          className="lg:hidden p-2 -mr-2"
+          className="zekano-mobile-menu-btn lg:hidden p-2 -mr-2"
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
@@ -56,14 +56,14 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-border bg-white">
+        <div className="zekano-mobile-menu lg:hidden border-t border-border bg-white">
           <nav className="flex flex-col px-4 py-4 gap-1">
             {nav.map((item) => (
               <Link
                 key={item.label}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="py-3 px-2 text-base font-medium text-brand-dark hover:text-brand-green"
+                className="zekano-mobile-nav-link py-3 px-2 text-base font-medium text-brand-dark hover:text-brand-green"
               >
                 {item.label}
               </Link>
@@ -71,7 +71,7 @@ export function Header() {
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-full bg-brand-green px-6 py-3 text-sm font-semibold text-white"
+              className="zekano-mobile-contact-btn mt-2 inline-flex items-center justify-center rounded-full bg-brand-green px-6 py-3 text-sm font-semibold text-white"
             >
               Contact Us
             </Link>
