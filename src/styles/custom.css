@@ -1,0 +1,56 @@
+/* ==========================================================================
+   ZEKANO Custom Overrides
+   Add your own styles below to override default component / Tailwind styles.
+   Each major element has a unique class name so you can target it safely.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+.zekano-header {}
+.zekano-header-inner {}
+.zekano-logo {}
+.zekano-nav {}
+.zekano-nav-link {}
+.zekano-contact-btn {}
+.zekano-mobile-menu-btn {}
+.zekano-mobile-menu {}
+.zekano-mobile-nav-link {}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.zekano-footer {}
+.zekano-footer-inner {}
+.zekano-footer-logo {}
+.zekano-footer-tagline {}
+.zekano-footer-social {}
+.zekano-footer-col {}
+.zekano-footer-col-title {}
+.zekano-footer-link {}
+.zekano-footer-contact {}
+.zekano-footer-copy {}
+
+/* --------------------------------------------------------------------------
+   Home Page Sections
+   -------------------------------------------------------------------------- */
+.zekano-hero {}
+.zekano-hero-bg {}
+.zekano-hero-content {}
+.zekano-hero-title {}
+.zekano-hero-subtitle {}
+.zekano-hero-buttons {}
+.zekano-hero-pillars {}
+.zekano-who-we-serve {}
+.zekano-who-we-serve-title {}
+.zekano-serve-card {}
+.zekano-who-we-are {}
+.zekano-stats-grid {}
+.zekano-stat-item {}
+.zekano-purpose-card {}
+.zekano-what-we-do {}
+.zekano-system-card {}
+.zekano-ecosystem {}
+.zekano-ecosystem-step {}
+.zekano-founder {}
+.zekano-cta {}
