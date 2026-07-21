@@ -17,8 +17,10 @@ import { Footer } from "@/components/site/Footer";
 import heroCars from "@/assets/hero-cars.jpg.asset.json";
 import citySkyline from "@/assets/city-skyline.jpg";
 import founder from "@/assets/founder.jpg";
-import driver from "@/assets/driver.jpg";
-import phoneApp from "@/assets/phone-app.jpg";
+import driverAsset from "@/assets/driver.png.asset.json";
+import phoneAppAsset from "@/assets/holdingphone.png.asset.json";
+const driver = driverAsset.url;
+const phoneApp = phoneAppAsset.url;
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -245,17 +247,17 @@ function HomePage() {
 
             <div className="zekano-system-card grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-4 items-center">
               <div className="zekano-system-text">
-                <h3 className="zekano-system-title text-lg font-bold text-brand-green">ZEKMANAGE</h3>
-                <p className="zekano-system-subtitle text-sm font-semibold text-brand-dark">
+                <h3 className="zekano-system-title text-2xl font-bold text-brand-green">ZEKMANAGE</h3>
+                <p className="zekano-system-subtitle text-base font-semibold text-brand-dark">
                   Structured Mobility Management System
                 </p>
-                <p className="zekano-system-desc mt-2 text-sm text-muted-foreground">
+                <p className="zekano-system-desc mt-2 text-base text-muted-foreground">
                   Enables vehicle owners to earn predictable income through the professional management of their
                   mobility assets.
                 </p>
                 <Link
                   to="/our-systems"
-                  className="zekano-system-link mt-3 inline-flex items-center gap-2 text-sm font-semibold text-brand-green"
+                  className="zekano-system-link mt-3 inline-flex items-center gap-2 text-base font-semibold text-brand-green"
                 >
                   Learn More <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -263,7 +265,7 @@ function HomePage() {
               <img
                 src={phoneApp}
                 alt="ZEKMANAGE app"
-                className="zekano-system-img h-40 w-auto object-contain justify-self-end"
+                className="zekano-system-img h-64 w-auto object-contain justify-self-end"
                 width={600}
                 height={700}
                 loading="lazy"
@@ -272,17 +274,17 @@ function HomePage() {
 
             <div className="zekano-system-card border-t border-border pt-5 grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-4 items-center">
               <div className="zekano-system-text">
-                <h3 className="zekano-system-title text-lg font-bold text-brand-blue">ZEKLEASE</h3>
-                <p className="zekano-system-subtitle text-sm font-semibold text-brand-dark">
+                <h3 className="zekano-system-title text-2xl font-bold text-brand-blue">ZEKLEASE</h3>
+                <p className="zekano-system-subtitle text-base font-semibold text-brand-dark">
                   Structured Mobility Access System
                 </p>
-                <p className="zekano-system-desc mt-2 text-sm text-muted-foreground">
+                <p className="zekano-system-desc mt-2 text-base text-muted-foreground">
                   Enables responsible, vetted drivers to earn sustainable income through access to professionally
                   managed vehicles.
                 </p>
                 <Link
                   to="/our-systems"
-                  className="zekano-system-link mt-3 inline-flex items-center gap-2 text-sm font-semibold text-brand-blue"
+                  className="zekano-system-link mt-3 inline-flex items-center gap-2 text-base font-semibold text-brand-blue"
                 >
                   Learn More <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -290,9 +292,9 @@ function HomePage() {
               <img
                 src={driver}
                 alt="ZEKLEASE driver"
-                className="zekano-system-img h-32 w-40 object-cover rounded-lg justify-self-end"
+                className="zekano-system-img h-56 w-56 object-cover rounded-lg justify-self-end"
                 width={700}
-                height={512}
+                height={700}
                 loading="lazy"
               />
             </div>
