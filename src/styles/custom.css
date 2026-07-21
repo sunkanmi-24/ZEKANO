@@ -72,9 +72,6 @@
 }
 .zekano-who-we-serve-title {
 }
-.zekano-serve-card {
-  margin: 5px !important;
-}
 .zekano-who-we-are {
 }
 .zekano-stats-grid {
@@ -94,4 +91,7 @@
 .zekano-founder {
 }
 .zekano-cta {
+}
+.zekano-serve-grid {
+  margin: 10px !important;
 }
