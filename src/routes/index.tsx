@@ -17,8 +17,10 @@ import { Footer } from "@/components/site/Footer";
 import heroCars from "@/assets/hero-cars.jpg.asset.json";
 import citySkyline from "@/assets/city-skyline.jpg";
 import founder from "@/assets/founder.jpg";
-import driver from "@/assets/driver.jpg";
-import phoneApp from "@/assets/phone-app.jpg";
+import driverAsset from "@/assets/driver.png.asset.json";
+import phoneAppAsset from "@/assets/holdingphone.png.asset.json";
+const driver = driverAsset.url;
+const phoneApp = phoneAppAsset.url;
 
 export const Route = createFileRoute("/")({
   component: HomePage,
