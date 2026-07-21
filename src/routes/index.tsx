@@ -55,10 +55,10 @@ function HomePage() {
           <img src={heroCars} alt="Vehicles on highway" className="h-full w-full object-cover opacity-70" width={1600} height={900} />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/80 to-transparent" />
         </div>
-        <div className="relative mx-auto max-w-none px-4 py-16 lg:px-8 lg:py-24">
+        <div className="relative mx-auto max-w-none px-4 py-[15px] lg:px-8">
           <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-start">
             <div className="max-w-2xl">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              <h1 className="text-[40px] font-bold text-white leading-tight">
                 Structured Mobility.<br />
                 <span className="text-brand-green">Professionally Managed.</span>
               </h1>
