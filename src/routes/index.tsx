@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Car, CircleUser, Users, TrendingUp, Layers, User, BarChart3, Shield, Building2, Quote } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import heroCars from "@/assets/hero-cars.jpg";
+import heroCars from "@/assets/hero-cars.png.asset.json";
 import citySkyline from "@/assets/city-skyline.jpg";
 import founder from "@/assets/founder.jpg";
 import driver from "@/assets/driver.jpg";
