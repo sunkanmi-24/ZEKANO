@@ -95,3 +95,6 @@
 .zekano-serve-grid {
   margin: 10px !important;
 }
+.zekano-hero-bg .object-cover {
+  object-fit: contain !important;
+}
