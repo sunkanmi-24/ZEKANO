@@ -304,22 +304,22 @@ function HomePage() {
               HOW OUR SYSTEMS WORK TOGETHER
             </p>
 
-            <div className="zekano-ecosystem-grid mt-6 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4 lg:gap-2">
+            <div className="zekano-ecosystem-grid mt-6 grid grid-cols-2 sm:grid-cols-3 gap-6 lg:gap-10">
               {ecosystem.map((step, i) => (
-                <div key={step.title} className="zekano-ecosystem-step flex flex-col items-center text-center relative">
-                  <div className={`zekano-ecosystem-icon grid h-12 w-12 place-items-center rounded-full ${step.color}`}>
-                    <step.icon className="h-6 w-6 text-white" />
+                <div key={step.title} className="zekano-ecosystem-step flex flex-col items-center text-center relative px-2">
+                  <div className={`zekano-ecosystem-icon grid h-14 w-14 lg:h-16 lg:w-16 place-items-center rounded-full ${step.color}`}>
+                    <step.icon className="h-7 w-7 lg:h-8 lg:w-8 text-white" />
                   </div>
                   <h4
-                    className={`zekano-ecosystem-step-title mt-3 text-xs font-bold ${step.color === "bg-brand-blue" ? "text-brand-blue" : step.color === "bg-brand-dark" ? "text-brand-dark" : "text-brand-green"}`}
+                    className={`zekano-ecosystem-step-title mt-4 text-sm sm:text-base lg:text-lg font-bold ${step.color === "bg-brand-blue" ? "text-brand-blue" : step.color === "bg-brand-dark" ? "text-brand-dark" : "text-brand-green"}`}
                   >
                     {step.title}
                   </h4>
-                  <p className="zekano-ecosystem-step-desc mt-1 text-[11px] leading-tight text-muted-foreground">
+                  <p className="zekano-ecosystem-step-desc mt-2 text-sm leading-snug text-muted-foreground">
                     {step.desc}
                   </p>
-                  {i < ecosystem.length - 1 && (
-                    <ArrowRight className="zekano-ecosystem-arrow hidden lg:block absolute -right-3 top-4 h-4 w-4 text-muted-foreground" />
+                  {i < ecosystem.length - 1 && (i + 1) % 3 !== 0 && (
+                    <ArrowRight className="zekano-ecosystem-arrow hidden sm:block absolute -right-5 lg:-right-7 top-5 lg:top-6 h-5 w-5 text-muted-foreground" />
                   )}
                 </div>
               ))}
