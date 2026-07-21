@@ -55,7 +55,7 @@ function HomePage() {
           <img src={heroCars} alt="Vehicles on highway" className="h-full w-full object-cover opacity-70" width={1600} height={900} />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/80 to-transparent" />
         </div>
-        <div className="relative mx-auto max-w-[1400px] px-4 py-16 lg:px-8 lg:py-24">
+        <div className="relative mx-auto max-w-none px-4 py-16 lg:px-8 lg:py-24">
           <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-start">
             <div className="max-w-2xl">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
@@ -95,7 +95,7 @@ function HomePage() {
 
       {/* WHO WE SERVE */}
       <section className="py-14 lg:py-16 bg-white">
-        <div className="mx-auto max-w-[1400px] px-4 lg:px-8">
+        <div className="mx-auto max-w-none px-4 lg:px-8">
           <h2 className="text-center text-2xl lg:text-3xl font-bold text-brand-dark">
             Who We Serve
             <span className="block mx-auto mt-2 h-0.5 w-12 bg-brand-green" />
@@ -119,7 +119,7 @@ function HomePage() {
 
       {/* WHO WE ARE + STATS + PURPOSE */}
       <section className="py-8 lg:py-10 bg-white">
-        <div className="mx-auto max-w-[1400px] px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6">
+        <div className="mx-auto max-w-none px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6">
           <div className="rounded-2xl border border-border p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-8">
             <div>
               <p className="text-xs font-bold tracking-wider text-brand-green">WHO WE ARE</p>
@@ -169,7 +169,7 @@ function HomePage() {
 
       {/* WHAT WE DO + HOW SYSTEMS WORK */}
       <section className="py-8 lg:py-10 bg-white">
-        <div className="mx-auto max-w-[1400px] px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="mx-auto max-w-none px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Systems cards */}
           <div className="rounded-2xl border border-border p-5 lg:p-6 space-y-5">
             <p className="text-xs font-bold tracking-wider text-brand-green">WHAT WE DO</p>
@@ -234,7 +234,7 @@ function HomePage() {
 
       {/* FOUNDER + CTA */}
       <section className="py-8 lg:py-10 bg-white">
-        <div className="mx-auto max-w-[1400px] px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="mx-auto max-w-none px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-border overflow-hidden grid grid-cols-1 sm:grid-cols-[auto_1fr]">
             <img src={founder} alt="Founder" className="h-full w-full sm:w-48 object-cover" width={600} height={600} loading="lazy" />
             <div className="p-6">

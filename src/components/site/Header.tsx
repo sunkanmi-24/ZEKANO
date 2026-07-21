@@ -17,7 +17,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-border">
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 lg:px-8">
+      <div className="mx-auto flex max-w-none items-center justify-between px-4 py-4 lg:px-8">
         <Link to="/" className="flex items-center shrink-0">
           <ZekanoLogo />
         </Link>
