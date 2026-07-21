@@ -98,3 +98,15 @@
 .zekano-hero-bg .object-cover {
   object-fit: contain !important;
 }
+.zekano-system-card img {
+  min-height: 200px;
+  min-width: 300px;
+}
+@media screen and (max-width: 768px) {
+  /* CSS rules placed here only apply to screens 768px wide or smaller */
+
+  .zekano-system-card img {
+    min-height: 200px;
+    min-width: 100%;
+  }
+}
