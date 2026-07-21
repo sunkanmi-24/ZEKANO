@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Car, CircleUser, Users, TrendingUp, Layers, User, BarChart3, Shield, Building2, Quote } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import heroCars from "@/assets/hero-cars.jpg";
+import heroCars from "@/assets/hero-cars.png.asset.json";
 import citySkyline from "@/assets/city-skyline.jpg";
 import founder from "@/assets/founder.jpg";
 import driver from "@/assets/driver.jpg";
@@ -52,7 +52,7 @@ function HomePage() {
       {/* HERO */}
       <section className="zekano-hero relative bg-brand-dark overflow-hidden">
         <div className="zekano-hero-bg absolute inset-0">
-          <img src={heroCars} alt="Vehicles on highway" className="h-full w-full object-cover opacity-70" width={1600} height={900} />
+          <img src={heroCars.url} alt="Vehicles on highway" className="h-full w-full object-cover opacity-70" width={1600} height={900} />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/80 to-transparent" />
         </div>
         <div className="zekano-hero-content relative mx-auto max-w-none px-4 py-[15px] lg:px-8">
