@@ -46,7 +46,7 @@ export function Footer() {
   return (
     <footer className="zekano-footer bg-brand-dark text-white">
       <div className="zekano-footer-inner mx-auto max-w-none px-4 py-14 lg:px-8">
-        <div className="zekano-footer-grid grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-6">
+        <div className="zekano-footer-grid grid grid-cols-2 gap-10 md:grid-cols-4 lg:grid-cols-6">
           <div className="zekano-footer-brand lg:col-span-2">
             <ZekanoLogo variant="light" />
             <p className="zekano-footer-tagline mt-4 text-sm text-white/70 max-w-xs">
