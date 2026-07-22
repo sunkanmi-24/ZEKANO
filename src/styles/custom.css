@@ -96,7 +96,7 @@
   margin: 10px !important;
 }
 .zekano-hero-bg .object-cover {
-  object-fit: contain !important;
+  object-fit: cover !important;
 }
 .zekano-system-card img {
   min-height: 200px;
@@ -108,9 +108,6 @@
     min-height: 200px;
     min-width: 100%;
   }
-  .zekano-hero-bg .object-cover {
-    object-fit: cover !important;
-  }
 }
 
 .text-brand-blue,
@@ -120,4 +117,7 @@
 .bg-brand-dark,
 .bg-brand-blue {
   background-color: oklch(0.31 0.11 259.92);
+}
+.zekano-hero-pillars {
+  background-color: color-mix(in oklab, oklch(0.14 0.05 252.78) 85%, #00000000) !important;
 }
