@@ -112,3 +112,13 @@
     object-fit: cover !important;
   }
 }
+
+.text-brand-blue {
+  color: oklch(0.31 0.11 259.92);
+}
+.bg-brand-blue {
+  background-color: oklch(0.31 0.11 259.92);
+}
+.text-brand-dark {
+  color: oklch(0.31 0.11 259.52);
+}
