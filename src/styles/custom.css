@@ -121,3 +121,6 @@
 .zekano-hero-pillars {
   background-color: color-mix(in oklab, oklch(0.14 0.05 252.78) 85%, #00000000) !important;
 }
+.zekano-hero-bg img {
+  opacity: 1 !important;
+}
