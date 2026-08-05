@@ -16,6 +16,7 @@ import { Route as WhatWeDoRouteImport } from './routes/what-we-do'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as OurSystemsRouteImport } from './routes/our-systems'
+import { Route as OurStoryRouteImport } from './routes/our-story'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CompanyRouteImport } from './routes/company'
 import { Route as IndexRouteImport } from './routes/index'
@@ -55,6 +56,11 @@ const OurSystemsRoute = OurSystemsRouteImport.update({
   path: '/our-systems',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OurStoryRoute = OurStoryRouteImport.update({
+  id: '/our-story',
+  path: '/our-story',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -75,6 +81,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/our-story': typeof OurStoryRoute
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -87,6 +94,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/our-story': typeof OurStoryRoute
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -100,6 +108,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/our-story': typeof OurStoryRoute
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -114,6 +123,7 @@ export interface FileRouteTypes {
     | '/'
     | '/company'
     | '/contact'
+    | '/our-story'
     | '/our-systems'
     | '/resources'
     | '/sitemap.xml'
@@ -126,6 +136,7 @@ export interface FileRouteTypes {
     | '/'
     | '/company'
     | '/contact'
+    | '/our-story'
     | '/our-systems'
     | '/resources'
     | '/sitemap.xml'
@@ -138,6 +149,7 @@ export interface FileRouteTypes {
     | '/'
     | '/company'
     | '/contact'
+    | '/our-story'
     | '/our-systems'
     | '/resources'
     | '/sitemap.xml'
@@ -151,6 +163,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
+  OurStoryRoute: typeof OurStoryRoute
   OurSystemsRoute: typeof OurSystemsRoute
   ResourcesRoute: typeof ResourcesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -211,6 +224,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OurSystemsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/our-story': {
+      id: '/our-story'
+      path: '/our-story'
+      fullPath: '/our-story'
+      preLoaderRoute: typeof OurStoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -239,6 +259,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
+  OurStoryRoute: OurStoryRoute,
   OurSystemsRoute: OurSystemsRoute,
   ResourcesRoute: ResourcesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
@@ -250,3 +271,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
