@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ZekmanageRouteImport } from './routes/zekmanage'
+import { Route as ZekleaseRouteImport } from './routes/zeklease'
 import { Route as WhyZekanoRouteImport } from './routes/why-zekano'
 import { Route as WhatWeDoRouteImport } from './routes/what-we-do'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -22,6 +23,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const ZekmanageRoute = ZekmanageRouteImport.update({
   id: '/zekmanage',
   path: '/zekmanage',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ZekleaseRoute = ZekleaseRouteImport.update({
+  id: '/zeklease',
+  path: '/zeklease',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WhyZekanoRoute = WhyZekanoRouteImport.update({
@@ -74,6 +80,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/what-we-do': typeof WhatWeDoRoute
   '/why-zekano': typeof WhyZekanoRoute
+  '/zeklease': typeof ZekleaseRoute
   '/zekmanage': typeof ZekmanageRoute
 }
 export interface FileRoutesByTo {
@@ -85,6 +92,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/what-we-do': typeof WhatWeDoRoute
   '/why-zekano': typeof WhyZekanoRoute
+  '/zeklease': typeof ZekleaseRoute
   '/zekmanage': typeof ZekmanageRoute
 }
 export interface FileRoutesById {
@@ -97,6 +105,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/what-we-do': typeof WhatWeDoRoute
   '/why-zekano': typeof WhyZekanoRoute
+  '/zeklease': typeof ZekleaseRoute
   '/zekmanage': typeof ZekmanageRoute
 }
 export interface FileRouteTypes {
@@ -110,6 +119,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/what-we-do'
     | '/why-zekano'
+    | '/zeklease'
     | '/zekmanage'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -121,6 +131,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/what-we-do'
     | '/why-zekano'
+    | '/zeklease'
     | '/zekmanage'
   id:
     | '__root__'
@@ -132,6 +143,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/what-we-do'
     | '/why-zekano'
+    | '/zeklease'
     | '/zekmanage'
   fileRoutesById: FileRoutesById
 }
@@ -144,6 +156,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   WhatWeDoRoute: typeof WhatWeDoRoute
   WhyZekanoRoute: typeof WhyZekanoRoute
+  ZekleaseRoute: typeof ZekleaseRoute
   ZekmanageRoute: typeof ZekmanageRoute
 }
 
@@ -154,6 +167,13 @@ declare module '@tanstack/react-router' {
       path: '/zekmanage'
       fullPath: '/zekmanage'
       preLoaderRoute: typeof ZekmanageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/zeklease': {
+      id: '/zeklease'
+      path: '/zeklease'
+      fullPath: '/zeklease'
+      preLoaderRoute: typeof ZekleaseRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/why-zekano': {
@@ -224,6 +244,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   WhatWeDoRoute: WhatWeDoRoute,
   WhyZekanoRoute: WhyZekanoRoute,
+  ZekleaseRoute: ZekleaseRoute,
   ZekmanageRoute: ZekmanageRoute,
 }
 export const routeTree = rootRouteImport
