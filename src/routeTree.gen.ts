@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ZekmanageRouteImport } from './routes/zekmanage'
 import { Route as WhyZekanoRouteImport } from './routes/why-zekano'
 import { Route as WhatWeDoRouteImport } from './routes/what-we-do'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -18,6 +19,11 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CompanyRouteImport } from './routes/company'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ZekmanageRoute = ZekmanageRouteImport.update({
+  id: '/zekmanage',
+  path: '/zekmanage',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WhyZekanoRoute = WhyZekanoRouteImport.update({
   id: '/why-zekano',
   path: '/why-zekano',
@@ -68,6 +74,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/what-we-do': typeof WhatWeDoRoute
   '/why-zekano': typeof WhyZekanoRoute
+  '/zekmanage': typeof ZekmanageRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -78,6 +85,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/what-we-do': typeof WhatWeDoRoute
   '/why-zekano': typeof WhyZekanoRoute
+  '/zekmanage': typeof ZekmanageRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -89,6 +97,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/what-we-do': typeof WhatWeDoRoute
   '/why-zekano': typeof WhyZekanoRoute
+  '/zekmanage': typeof ZekmanageRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/what-we-do'
     | '/why-zekano'
+    | '/zekmanage'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/what-we-do'
     | '/why-zekano'
+    | '/zekmanage'
   id:
     | '__root__'
     | '/'
@@ -121,6 +132,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/what-we-do'
     | '/why-zekano'
+    | '/zekmanage'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -132,10 +144,18 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   WhatWeDoRoute: typeof WhatWeDoRoute
   WhyZekanoRoute: typeof WhyZekanoRoute
+  ZekmanageRoute: typeof ZekmanageRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/zekmanage': {
+      id: '/zekmanage'
+      path: '/zekmanage'
+      fullPath: '/zekmanage'
+      preLoaderRoute: typeof ZekmanageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/why-zekano': {
       id: '/why-zekano'
       path: '/why-zekano'
@@ -204,17 +224,8 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   WhatWeDoRoute: WhatWeDoRoute,
   WhyZekanoRoute: WhyZekanoRoute,
+  ZekmanageRoute: ZekmanageRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
