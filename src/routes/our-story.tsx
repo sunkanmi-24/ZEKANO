@@ -134,7 +134,7 @@ function OurStoryPage() {
             </ol>
 
             <aside className="zekano-story-card self-start rounded-2xl border border-border bg-background p-6 sm:p-8">
-              <ZekanoLogo className="w-[110px]" />
+              <div className="w-[110px]"><ZekanoLogo /></div>
               <h2 className="mt-6 text-xl font-bold text-brand-dark sm:text-2xl">More Than a Company</h2>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
                 ZEKANO is not just about mobility. We are building systems that create trust, opportunity, and lasting
@@ -152,7 +152,7 @@ function OurStoryPage() {
       <section className="zekano-story-promise px-5 pb-16 sm:px-8 lg:px-12">
         <div className="flex flex-col items-start gap-6 rounded-2xl bg-brand-dark p-6 sm:p-8 lg:flex-row lg:items-center lg:gap-10 lg:p-10">
           <div className="hidden h-16 w-16 shrink-0 items-center justify-center rounded-full bg-background sm:flex">
-            <ZekanoLogo variant="light" className="w-10" />
+            <div className="w-10"><ZekanoLogo /></div>
           </div>
           <div className="min-w-0 flex-1">
             <h2 className="text-lg font-bold text-primary-foreground sm:text-xl">Our Promise</h2>
