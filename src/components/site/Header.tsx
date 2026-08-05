@@ -16,7 +16,7 @@ const nav: NavItem[] = [
     to: "/company",
     children: [
       { label: "ZEKLEASE", to: "/our-systems#zeklease" },
-      { label: "ZEKMANAGE", to: "/our-systems#zekmanage" },
+      { label: "ZEKMANAGE", to: "/zekmanage" },
     ],
   },
   { label: "What We Do", to: "/what-we-do" },
