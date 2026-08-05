@@ -93,7 +93,7 @@ function ZekleasePage() {
               <h1 className="zeklease-title mt-4 text-3xl sm:text-4xl lg:text-[42px] font-bold text-brand-dark leading-[1.15]">
                 Thank You for Your Interest
                 <br />
-                in <span className="text-brand-green">ZEKLEASE</span>
+                in <span className="text-brand-dark">ZEKLEASE</span>
               </h1>
               <div className="mt-6 h-0.5 w-24 bg-brand-green" />
               <p className="zeklease-hero-desc mt-6 text-base text-muted-foreground leading-relaxed max-w-xl">
