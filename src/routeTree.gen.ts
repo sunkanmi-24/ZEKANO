@@ -17,6 +17,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as OurSystemsRouteImport } from './routes/our-systems'
 import { Route as OurStoryRouteImport } from './routes/our-story'
+import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CompanyRouteImport } from './routes/company'
 import { Route as IndexRouteImport } from './routes/index'
@@ -61,6 +62,11 @@ const OurStoryRoute = OurStoryRouteImport.update({
   path: '/our-story',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LeadershipRoute = LeadershipRouteImport.update({
+  id: '/leadership',
+  path: '/leadership',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -81,6 +87,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/leadership': typeof LeadershipRoute
   '/our-story': typeof OurStoryRoute
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
@@ -94,6 +101,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/leadership': typeof LeadershipRoute
   '/our-story': typeof OurStoryRoute
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
@@ -108,6 +116,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/leadership': typeof LeadershipRoute
   '/our-story': typeof OurStoryRoute
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
@@ -123,6 +132,7 @@ export interface FileRouteTypes {
     | '/'
     | '/company'
     | '/contact'
+    | '/leadership'
     | '/our-story'
     | '/our-systems'
     | '/resources'
@@ -136,6 +146,7 @@ export interface FileRouteTypes {
     | '/'
     | '/company'
     | '/contact'
+    | '/leadership'
     | '/our-story'
     | '/our-systems'
     | '/resources'
@@ -149,6 +160,7 @@ export interface FileRouteTypes {
     | '/'
     | '/company'
     | '/contact'
+    | '/leadership'
     | '/our-story'
     | '/our-systems'
     | '/resources'
@@ -163,6 +175,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
+  LeadershipRoute: typeof LeadershipRoute
   OurStoryRoute: typeof OurStoryRoute
   OurSystemsRoute: typeof OurSystemsRoute
   ResourcesRoute: typeof ResourcesRoute
@@ -231,6 +244,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OurStoryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/leadership': {
+      id: '/leadership'
+      path: '/leadership'
+      fullPath: '/leadership'
+      preLoaderRoute: typeof LeadershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -259,6 +279,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
+  LeadershipRoute: LeadershipRoute,
   OurStoryRoute: OurStoryRoute,
   OurSystemsRoute: OurSystemsRoute,
   ResourcesRoute: ResourcesRoute,
