@@ -13,6 +13,8 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/what-we-do", priority: "0.8" },
           { path: "/our-systems", priority: "0.8" },
           { path: "/why-zekano", priority: "0.8" },
+          { path: "/zeklease", priority: "0.8" },
+          { path: "/zekmanage", priority: "0.8" },
           { path: "/resources", priority: "0.7" },
           { path: "/contact", priority: "0.7" },
         ];
