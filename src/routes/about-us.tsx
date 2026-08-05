@@ -151,7 +151,7 @@ function AboutUsPage() {
               </div>
 
               <div className="mt-8">
-                <p className="font-signature text-3xl italic text-brand-dark">A.A. Adekunle</p>
+                <p className="text-3xl italic font-serif text-brand-dark">A.A. Adekunle</p>
                 <span aria-hidden className="mt-1 block h-px w-40 bg-border" />
                 <p className="mt-3 text-sm font-bold text-brand-green">A.A. Adekunle</p>
                 <p className="text-sm text-brand-dark">Founder &amp; CEO</p>
