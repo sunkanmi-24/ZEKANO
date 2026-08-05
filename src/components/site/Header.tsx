@@ -15,16 +15,23 @@ const nav: NavItem[] = [
     label: "Company",
     to: "/company",
     children: [
+      { label: "About Us", to: "/about-us" },
       { label: "Our Story", to: "/our-story" },
       { label: "Leadership", to: "/leadership" },
+    ],
+  },
+  { label: "What We Do", to: "/what-we-do" },
+  {
+    label: "Our Systems",
+    to: "/our-systems",
+    children: [
       { label: "ZEKLEASE", to: "/zeklease" },
       { label: "ZEKMANAGE", to: "/zekmanage" },
     ],
   },
-  { label: "What We Do", to: "/what-we-do" },
-  { label: "Our Systems", to: "/our-systems" },
   { label: "Why ZEKANO", to: "/why-zekano" },
   { label: "Resources", to: "/resources" },
+
 ];
 
 export function Header() {
