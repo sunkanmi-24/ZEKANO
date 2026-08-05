@@ -126,7 +126,7 @@ function ZekleasePage() {
                   <Mail className="h-6 w-6 text-white" />
                 </div>
                 <div className="min-w-0">
-                  <h2 className="text-xl lg:text-2xl font-bold text-brand-green">Ready to get started?</h2>
+                  <h2 className="text-xl lg:text-2xl font-bold text-brand-dark">Ready to get started?</h2>
                   <p className="mt-3 text-base text-muted-foreground leading-relaxed">
                     Send us an email expressing your interest and one of our{" "}
                     <span className="font-bold text-brand-dark">Driver Success Officers</span> will contact you within
@@ -190,7 +190,7 @@ function ZekleasePage() {
         {/* WHAT YOU'LL EXPERIENCE */}
         <section className="zeklease-experience mx-auto max-w-none w-full px-4 lg:px-8 pb-14">
           <div className="rounded-2xl bg-secondary px-6 py-10 lg:px-10">
-            <h2 className="text-xl lg:text-2xl font-bold text-brand-green text-center">What You&apos;ll Experience</h2>
+            <h2 className="text-xl lg:text-2xl font-bold text-brand-dark text-center">What You&apos;ll Experience</h2>
             <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x divide-border">
               {experience.map((e) => (
                 <div key={e.title} className="flex items-start gap-4 lg:px-6 first:lg:pl-0 last:lg:pr-0">
