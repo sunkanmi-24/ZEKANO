@@ -15,6 +15,7 @@ const nav: NavItem[] = [
     label: "Company",
     to: "/company",
     children: [
+      { label: "Our Story", to: "/our-story" },
       { label: "ZEKLEASE", to: "/zeklease" },
       { label: "ZEKMANAGE", to: "/zekmanage" },
     ],
@@ -55,16 +56,19 @@ export function Header() {
                   <ChevronDown className="h-3.5 w-3.5" />
                 </Link>
                 {activeMenu === item.label && (
-                  <div className="zekano-nav-dropdown-menu absolute left-0 top-full mt-2 w-48 rounded-lg border border-border bg-white py-2 shadow-lg">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.label}
-                        to={child.to}
-                        className="zekano-nav-dropdown-link block px-4 py-2 text-sm font-medium text-brand-dark hover:bg-brand-green/10 hover:text-brand-green"
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
+                  <div className="zekano-nav-dropdown-menu absolute left-0 top-full z-50 w-48 pt-3">
+                    <div className="rounded-lg border border-border bg-white py-2 shadow-lg">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.label}
+                          to={child.to}
+                          onClick={() => setActiveMenu(null)}
+                          className="zekano-nav-dropdown-link block px-4 py-2 text-sm font-medium text-brand-dark hover:bg-brand-green/10 hover:text-brand-green"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
