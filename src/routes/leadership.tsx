@@ -185,8 +185,10 @@ function LeadershipPage() {
         <section className="leadership-cta mx-auto max-w-none w-full px-4 lg:px-8 py-10 lg:py-14">
           <div className="rounded-2xl border border-border bg-secondary/40 px-5 py-7 lg:px-10 lg:py-9">
             <div className="grid gap-6 lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-8">
-              <div className="grid h-20 w-20 shrink-0 place-items-center rounded-full bg-white">
-                <ZekanoLogo />
+              <div className="grid h-20 w-20 shrink-0 place-items-center overflow-hidden rounded-full bg-white">
+                <div className="scale-[0.6]">
+                  <ZekanoLogo />
+                </div>
               </div>
               <div className="min-w-0">
                 <h2 className="text-xl lg:text-2xl font-bold text-brand-dark">One Team. One Mission.</h2>
