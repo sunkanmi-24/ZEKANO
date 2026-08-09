@@ -19,6 +19,7 @@ import { Route as OurSystemsRouteImport } from './routes/our-systems'
 import { Route as OurStoryRouteImport } from './routes/our-story'
 import { Route as OurPrinciplesRouteImport } from './routes/our-principles'
 import { Route as OurPhilosophyRouteImport } from './routes/our-philosophy'
+import { Route as OurCultureRouteImport } from './routes/our-culture'
 import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CompanyRouteImport } from './routes/company'
@@ -75,6 +76,11 @@ const OurPhilosophyRoute = OurPhilosophyRouteImport.update({
   path: '/our-philosophy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OurCultureRoute = OurCultureRouteImport.update({
+  id: '/our-culture',
+  path: '/our-culture',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LeadershipRoute = LeadershipRouteImport.update({
   id: '/leadership',
   path: '/leadership',
@@ -107,6 +113,7 @@ export interface FileRoutesByFullPath {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/leadership': typeof LeadershipRoute
+  '/our-culture': typeof OurCultureRoute
   '/our-philosophy': typeof OurPhilosophyRoute
   '/our-principles': typeof OurPrinciplesRoute
   '/our-story': typeof OurStoryRoute
@@ -124,6 +131,7 @@ export interface FileRoutesByTo {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/leadership': typeof LeadershipRoute
+  '/our-culture': typeof OurCultureRoute
   '/our-philosophy': typeof OurPhilosophyRoute
   '/our-principles': typeof OurPrinciplesRoute
   '/our-story': typeof OurStoryRoute
@@ -142,6 +150,7 @@ export interface FileRoutesById {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/leadership': typeof LeadershipRoute
+  '/our-culture': typeof OurCultureRoute
   '/our-philosophy': typeof OurPhilosophyRoute
   '/our-principles': typeof OurPrinciplesRoute
   '/our-story': typeof OurStoryRoute
@@ -161,6 +170,7 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/leadership'
+    | '/our-culture'
     | '/our-philosophy'
     | '/our-principles'
     | '/our-story'
@@ -178,6 +188,7 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/leadership'
+    | '/our-culture'
     | '/our-philosophy'
     | '/our-principles'
     | '/our-story'
@@ -195,6 +206,7 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/leadership'
+    | '/our-culture'
     | '/our-philosophy'
     | '/our-principles'
     | '/our-story'
@@ -213,6 +225,7 @@ export interface RootRouteChildren {
   CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
   LeadershipRoute: typeof LeadershipRoute
+  OurCultureRoute: typeof OurCultureRoute
   OurPhilosophyRoute: typeof OurPhilosophyRoute
   OurPrinciplesRoute: typeof OurPrinciplesRoute
   OurStoryRoute: typeof OurStoryRoute
@@ -297,6 +310,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OurPhilosophyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/our-culture': {
+      id: '/our-culture'
+      path: '/our-culture'
+      fullPath: '/our-culture'
+      preLoaderRoute: typeof OurCultureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/leadership': {
       id: '/leadership'
       path: '/leadership'
@@ -341,6 +361,7 @@ const rootRouteChildren: RootRouteChildren = {
   CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
   LeadershipRoute: LeadershipRoute,
+  OurCultureRoute: OurCultureRoute,
   OurPhilosophyRoute: OurPhilosophyRoute,
   OurPrinciplesRoute: OurPrinciplesRoute,
   OurStoryRoute: OurStoryRoute,
