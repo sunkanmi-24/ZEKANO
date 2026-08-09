@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-import { ArrowRight, MailOpen } from "lucide-react";
+import { useMemo, useState } from "react";
+import { ArrowRight, MailOpen, Search, ChevronDown } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import resourcesHero from "@/assets/resources-hero.jpg";
@@ -17,12 +17,12 @@ export const Route = createFileRoute("/resources")({
       {
         name: "description",
         content:
-          "Guides, insights, news, downloads and videos from ZEKANO to keep you informed about mobility, our systems, and industry trends.",
+          "Search, filter and sort guides, insights, news, downloads and videos from ZEKANO to keep you informed about mobility, our systems, and industry trends.",
       },
       { property: "og:title", content: "Resources — Knowledge. Insights. Better Decisions." },
       {
         property: "og:description",
-        content: "Helpful guides, insights and updates on structured mobility from ZEKANO.",
+        content: "Search, filter and sort helpful guides, insights and updates on structured mobility from ZEKANO.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/resources" },
@@ -34,6 +34,7 @@ export const Route = createFileRoute("/resources")({
 });
 
 const tabs = ["All Resources", "Guides", "Insights", "News", "Downloads", "Videos"] as const;
+const sortOptions = ["Newest", "A–Z", "Z–A"] as const;
 
 type Item = {
   tag: string;
@@ -42,6 +43,7 @@ type Item = {
   body: string;
   cta: string;
   image: string;
+  order: number;
 };
 
 const items: Item[] = [
@@ -52,6 +54,7 @@ const items: Item[] = [
     body: "Everything you need to know about partnering with ZEKANO and maximizing your vehicle's income.",
     cta: "Read More",
     image: heroCars.url,
+    order: 1,
   },
   {
     tag: "GUIDE",
@@ -60,6 +63,7 @@ const items: Item[] = [
     body: "Learn how our systems support drivers to build sustainable income and grow.",
     cta: "Read More",
     image: driver.url,
+    order: 2,
   },
   {
     tag: "INSIGHT",
@@ -68,6 +72,7 @@ const items: Item[] = [
     body: "Key trends shaping the mobility industry and how structured solutions drive the future.",
     cta: "Read More",
     image: cityRoad,
+    order: 3,
   },
   {
     tag: "DOWNLOAD",
@@ -76,6 +81,7 @@ const items: Item[] = [
     body: "Download our operational standards summary.",
     cta: "Download PDF",
     image: philosophyHero,
+    order: 4,
   },
   {
     tag: "NEWS",
@@ -84,12 +90,32 @@ const items: Item[] = [
     body: "Stay up to date with our latest news and milestones.",
     cta: "Read More",
     image: holdingPhone.url,
+    order: 5,
   },
 ];
 
 function ResourcesPage() {
   const [active, setActive] = useState<(typeof tabs)[number]>("All Resources");
-  const visible = active === "All Resources" ? items : items.filter((i) => i.category === active);
+  const [query, setQuery] = useState("");
+  const [sort, setSort] = useState<(typeof sortOptions)[number]>("Newest");
+
+  const visible = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    let list = items.filter((i) => {
+      const inCategory = active === "All Resources" || i.category === active;
+      const inQuery =
+        q === "" ||
+        i.title.toLowerCase().includes(q) ||
+        i.body.toLowerCase().includes(q) ||
+        i.tag.toLowerCase().includes(q) ||
+        i.category.toLowerCase().includes(q);
+      return inCategory && inQuery;
+    });
+    if (sort === "A–Z") list = [...list].sort((a, b) => a.title.localeCompare(b.title));
+    else if (sort === "Z–A") list = [...list].sort((a, b) => b.title.localeCompare(a.title));
+    else list = [...list].sort((a, b) => a.order - b.order);
+    return list;
+  }, [active, query, sort]);
 
   return (
     <div className="zekano-resources min-h-screen bg-white flex flex-col">
@@ -151,8 +177,40 @@ function ResourcesPage() {
           </div>
         </section>
 
+        {/* Search & Sort */}
+        <section className="zekano-resources-controls px-5 sm:px-8 lg:px-12">
+          <div className="flex flex-col gap-4 py-5 sm:flex-row sm:items-center sm:justify-between">
+            <div className="zekano-resources-search relative w-full sm:max-w-sm">
+              <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+              <input
+                type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search resources by keyword…"
+                aria-label="Search resources"
+                className="w-full rounded-md border border-border bg-white py-2.5 pl-10 pr-4 text-base text-brand-dark placeholder:text-muted-foreground focus:border-brand-green focus:outline-none focus:ring-2 focus:ring-brand-green/30"
+              />
+            </div>
+            <div className="zekano-resources-sort relative w-full sm:w-auto">
+              <label htmlFor="sort-select" className="sr-only">Sort resources</label>
+              <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+              <select
+                id="sort-select"
+                value={sort}
+                onChange={(e) => setSort(e.target.value as (typeof sortOptions)[number])}
+                aria-label="Sort resources"
+                className="w-full appearance-none rounded-md border border-border bg-white py-2.5 pl-4 pr-10 text-base font-semibold text-brand-dark focus:border-brand-green focus:outline-none focus:ring-2 focus:ring-brand-green/30 sm:w-44"
+              >
+                {sortOptions.map((o) => (
+                  <option key={o} value={o}>{o}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </section>
+
         {/* Cards */}
-        <section className="zekano-resources-list px-5 py-8 sm:px-8 lg:px-12 lg:py-12">
+        <section className="zekano-resources-list px-5 py-2 sm:px-8 lg:px-12 lg:py-6">
           <div className="grid gap-5 lg:grid-cols-2">
             {visible.map((item) => (
               <article
@@ -183,7 +241,7 @@ function ResourcesPage() {
           </div>
           {visible.length === 0 && (
             <p className="py-10 text-center text-muted-foreground">
-              New {active.toLowerCase()} are coming soon.
+              No resources found{query.trim() ? ` for "${query.trim()}"` : ` in ${active.toLowerCase()}`}. Try a different keyword or filter.
             </p>
           )}
         </section>
