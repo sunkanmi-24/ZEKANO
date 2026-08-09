@@ -13,10 +13,15 @@ import { Route as ZekmanageRouteImport } from './routes/zekmanage'
 import { Route as ZekleaseRouteImport } from './routes/zeklease'
 import { Route as WhyZekanoRouteImport } from './routes/why-zekano'
 import { Route as WhatWeDoRouteImport } from './routes/what-we-do'
+import { Route as StewardshipRouteImport } from './routes/stewardship'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as OurSystemsRouteImport } from './routes/our-systems'
 import { Route as OurStoryRouteImport } from './routes/our-story'
+import { Route as OurPrinciplesRouteImport } from './routes/our-principles'
+import { Route as OurPhilosophyRouteImport } from './routes/our-philosophy'
+import { Route as OurCultureRouteImport } from './routes/our-culture'
+import { Route as OurCommitmentRouteImport } from './routes/our-commitment'
 import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CompanyRouteImport } from './routes/company'
@@ -43,6 +48,11 @@ const WhatWeDoRoute = WhatWeDoRouteImport.update({
   path: '/what-we-do',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StewardshipRoute = StewardshipRouteImport.update({
+  id: '/stewardship',
+  path: '/stewardship',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -61,6 +71,26 @@ const OurSystemsRoute = OurSystemsRouteImport.update({
 const OurStoryRoute = OurStoryRouteImport.update({
   id: '/our-story',
   path: '/our-story',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurPrinciplesRoute = OurPrinciplesRouteImport.update({
+  id: '/our-principles',
+  path: '/our-principles',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurPhilosophyRoute = OurPhilosophyRouteImport.update({
+  id: '/our-philosophy',
+  path: '/our-philosophy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurCultureRoute = OurCultureRouteImport.update({
+  id: '/our-culture',
+  path: '/our-culture',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurCommitmentRoute = OurCommitmentRouteImport.update({
+  id: '/our-commitment',
+  path: '/our-commitment',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LeadershipRoute = LeadershipRouteImport.update({
@@ -95,10 +125,15 @@ export interface FileRoutesByFullPath {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/leadership': typeof LeadershipRoute
+  '/our-commitment': typeof OurCommitmentRoute
+  '/our-culture': typeof OurCultureRoute
+  '/our-philosophy': typeof OurPhilosophyRoute
+  '/our-principles': typeof OurPrinciplesRoute
   '/our-story': typeof OurStoryRoute
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/stewardship': typeof StewardshipRoute
   '/what-we-do': typeof WhatWeDoRoute
   '/why-zekano': typeof WhyZekanoRoute
   '/zeklease': typeof ZekleaseRoute
@@ -110,10 +145,15 @@ export interface FileRoutesByTo {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/leadership': typeof LeadershipRoute
+  '/our-commitment': typeof OurCommitmentRoute
+  '/our-culture': typeof OurCultureRoute
+  '/our-philosophy': typeof OurPhilosophyRoute
+  '/our-principles': typeof OurPrinciplesRoute
   '/our-story': typeof OurStoryRoute
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/stewardship': typeof StewardshipRoute
   '/what-we-do': typeof WhatWeDoRoute
   '/why-zekano': typeof WhyZekanoRoute
   '/zeklease': typeof ZekleaseRoute
@@ -126,10 +166,15 @@ export interface FileRoutesById {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/leadership': typeof LeadershipRoute
+  '/our-commitment': typeof OurCommitmentRoute
+  '/our-culture': typeof OurCultureRoute
+  '/our-philosophy': typeof OurPhilosophyRoute
+  '/our-principles': typeof OurPrinciplesRoute
   '/our-story': typeof OurStoryRoute
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/stewardship': typeof StewardshipRoute
   '/what-we-do': typeof WhatWeDoRoute
   '/why-zekano': typeof WhyZekanoRoute
   '/zeklease': typeof ZekleaseRoute
@@ -143,10 +188,15 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/leadership'
+    | '/our-commitment'
+    | '/our-culture'
+    | '/our-philosophy'
+    | '/our-principles'
     | '/our-story'
     | '/our-systems'
     | '/resources'
     | '/sitemap.xml'
+    | '/stewardship'
     | '/what-we-do'
     | '/why-zekano'
     | '/zeklease'
@@ -158,10 +208,15 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/leadership'
+    | '/our-commitment'
+    | '/our-culture'
+    | '/our-philosophy'
+    | '/our-principles'
     | '/our-story'
     | '/our-systems'
     | '/resources'
     | '/sitemap.xml'
+    | '/stewardship'
     | '/what-we-do'
     | '/why-zekano'
     | '/zeklease'
@@ -173,10 +228,15 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/leadership'
+    | '/our-commitment'
+    | '/our-culture'
+    | '/our-philosophy'
+    | '/our-principles'
     | '/our-story'
     | '/our-systems'
     | '/resources'
     | '/sitemap.xml'
+    | '/stewardship'
     | '/what-we-do'
     | '/why-zekano'
     | '/zeklease'
@@ -189,10 +249,15 @@ export interface RootRouteChildren {
   CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
   LeadershipRoute: typeof LeadershipRoute
+  OurCommitmentRoute: typeof OurCommitmentRoute
+  OurCultureRoute: typeof OurCultureRoute
+  OurPhilosophyRoute: typeof OurPhilosophyRoute
+  OurPrinciplesRoute: typeof OurPrinciplesRoute
   OurStoryRoute: typeof OurStoryRoute
   OurSystemsRoute: typeof OurSystemsRoute
   ResourcesRoute: typeof ResourcesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  StewardshipRoute: typeof StewardshipRoute
   WhatWeDoRoute: typeof WhatWeDoRoute
   WhyZekanoRoute: typeof WhyZekanoRoute
   ZekleaseRoute: typeof ZekleaseRoute
@@ -229,6 +294,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WhatWeDoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/stewardship': {
+      id: '/stewardship'
+      path: '/stewardship'
+      fullPath: '/stewardship'
+      preLoaderRoute: typeof StewardshipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -255,6 +327,34 @@ declare module '@tanstack/react-router' {
       path: '/our-story'
       fullPath: '/our-story'
       preLoaderRoute: typeof OurStoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-principles': {
+      id: '/our-principles'
+      path: '/our-principles'
+      fullPath: '/our-principles'
+      preLoaderRoute: typeof OurPrinciplesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-philosophy': {
+      id: '/our-philosophy'
+      path: '/our-philosophy'
+      fullPath: '/our-philosophy'
+      preLoaderRoute: typeof OurPhilosophyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-culture': {
+      id: '/our-culture'
+      path: '/our-culture'
+      fullPath: '/our-culture'
+      preLoaderRoute: typeof OurCultureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-commitment': {
+      id: '/our-commitment'
+      path: '/our-commitment'
+      fullPath: '/our-commitment'
+      preLoaderRoute: typeof OurCommitmentRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/leadership': {
@@ -301,10 +401,15 @@ const rootRouteChildren: RootRouteChildren = {
   CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
   LeadershipRoute: LeadershipRoute,
+  OurCommitmentRoute: OurCommitmentRoute,
+  OurCultureRoute: OurCultureRoute,
+  OurPhilosophyRoute: OurPhilosophyRoute,
+  OurPrinciplesRoute: OurPrinciplesRoute,
   OurStoryRoute: OurStoryRoute,
   OurSystemsRoute: OurSystemsRoute,
   ResourcesRoute: ResourcesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  StewardshipRoute: StewardshipRoute,
   WhatWeDoRoute: WhatWeDoRoute,
   WhyZekanoRoute: WhyZekanoRoute,
   ZekleaseRoute: ZekleaseRoute,
@@ -313,13 +418,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
