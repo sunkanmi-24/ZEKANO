@@ -165,21 +165,24 @@ export function PhilosophyLayout({
   title,
   tagline,
   body,
+  page,
   children,
 }: {
   current: string;
   title: string;
   tagline: string[];
   body: string[];
+  page?: string;
   children: React.ReactNode;
 }) {
   return (
     <div className="zekano-phil-page min-h-screen bg-background">
       <Header />
       <PhilosophyBreadcrumbs current={current} />
-      <PhilosophyHero title={title} tagline={tagline} body={body} />
+      <PhilosophyHero title={title} tagline={tagline} body={body} page={page} />
       <main className="pb-16">{children}</main>
       <Footer />
     </div>
   );
 }
+
