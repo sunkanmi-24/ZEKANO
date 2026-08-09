@@ -57,6 +57,7 @@ const promises = [
 function OurCommitmentPage() {
   return (
     <PhilosophyLayout
+      page="our-commitment"
       current="Our Commitment"
       title="Our Commitment"
       tagline={["A promise is only meaningful", "when it is consistently kept."]}

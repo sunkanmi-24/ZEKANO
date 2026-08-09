@@ -95,6 +95,7 @@ const principles = [
 function OurPrinciplesPage() {
   return (
     <PhilosophyLayout
+      page="our-principles"
       current="Our Principles"
       title="Our Principles"
       tagline={["Principles are the architecture of", "enduring institutions."]}

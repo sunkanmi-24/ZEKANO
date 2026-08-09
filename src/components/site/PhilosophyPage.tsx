@@ -49,20 +49,26 @@ export function PhilosophyHero({
   title,
   tagline,
   body,
+  page,
 }: {
   title: string;
   tagline: string[];
   body: string[];
+  page?: string;
 }) {
+  // Per-page override first, then the shared "philosophy" key, then the bundled default.
+  const shared = getImage("philosophy", "hero", heroImg);
+  const src = page ? getImage(page, "hero", shared) : shared;
   return (
     <section className="zekano-phil-hero relative overflow-hidden bg-brand-dark px-5 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
       <img
-        src={getImage("philosophy", "hero", heroImg)}
+        src={src}
         alt="ZEKANO vehicle on a highway at sunset with a city skyline"
         width={1920}
         height={912}
         className="pointer-events-none absolute inset-0 h-full w-full object-cover object-right opacity-60"
       />
+
       <div
         aria-hidden
         className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-brand-dark/20"
@@ -159,21 +165,24 @@ export function PhilosophyLayout({
   title,
   tagline,
   body,
+  page,
   children,
 }: {
   current: string;
   title: string;
   tagline: string[];
   body: string[];
+  page?: string;
   children: React.ReactNode;
 }) {
   return (
     <div className="zekano-phil-page min-h-screen bg-background">
       <Header />
       <PhilosophyBreadcrumbs current={current} />
-      <PhilosophyHero title={title} tagline={tagline} body={body} />
+      <PhilosophyHero title={title} tagline={tagline} body={body} page={page} />
       <main className="pb-16">{children}</main>
       <Footer />
     </div>
   );
 }
+

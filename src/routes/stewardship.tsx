@@ -57,6 +57,7 @@ const questions = [
 function StewardshipPage() {
   return (
     <PhilosophyLayout
+      page="stewardship"
       current="Stewardship"
       title="Stewardship"
       tagline={["Leadership gives authority.", "Stewardship gives responsibility."]}

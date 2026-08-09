@@ -71,6 +71,7 @@ const culture = [
 function OurCulturePage() {
   return (
     <PhilosophyLayout
+      page="our-culture"
       current="Our Culture"
       title="Our Culture"
       tagline={["The invisible system that shapes", "every visible action."]}
