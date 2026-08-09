@@ -6,11 +6,14 @@ const columns = [
   {
     title: "COMPANY",
     links: [
-      { label: "About Us", to: "/company" },
-      { label: "Our Story", to: "/company" },
-      { label: "Mission & Vision", to: "/company" },
-      { label: "Leadership", to: "/company" },
-      { label: "Careers", to: "/company" },
+      { label: "About Us", to: "/about-us" },
+      { label: "Our Story", to: "/our-story" },
+      { label: "Leadership", to: "/leadership" },
+      { label: "Our Philosophy", to: "/our-philosophy" },
+      { label: "Our Principles", to: "/our-principles" },
+      { label: "Our Culture", to: "/our-culture" },
+      { label: "Stewardship", to: "/stewardship" },
+      { label: "Our Commitment", to: "/our-commitment" },
     ],
   },
   {
