@@ -54,6 +54,7 @@ const items: Item[] = [
     body: "Everything you need to know about partnering with ZEKANO and maximizing your vehicle's income.",
     cta: "Read More",
     image: heroCars.url,
+    order: 1,
   },
   {
     tag: "GUIDE",
@@ -62,6 +63,7 @@ const items: Item[] = [
     body: "Learn how our systems support drivers to build sustainable income and grow.",
     cta: "Read More",
     image: driver.url,
+    order: 2,
   },
   {
     tag: "INSIGHT",
@@ -70,6 +72,7 @@ const items: Item[] = [
     body: "Key trends shaping the mobility industry and how structured solutions drive the future.",
     cta: "Read More",
     image: cityRoad,
+    order: 3,
   },
   {
     tag: "DOWNLOAD",
@@ -78,6 +81,7 @@ const items: Item[] = [
     body: "Download our operational standards summary.",
     cta: "Download PDF",
     image: philosophyHero,
+    order: 4,
   },
   {
     tag: "NEWS",
@@ -86,6 +90,7 @@ const items: Item[] = [
     body: "Stay up to date with our latest news and milestones.",
     cta: "Read More",
     image: holdingPhone.url,
+    order: 5,
   },
 ];
 
