@@ -1,0 +1,43 @@
+{
+  "_readme": "Replace any image on the site by pasting a URL below. Keys are page -> position. Leave a value empty (\"\") to keep the built-in default image.",
+  "global": {
+    "logo": ""
+  },
+  "home": {
+    "hero": "",
+    "city-skyline": "",
+    "system-lease": "",
+    "system-manage": "",
+    "founder": ""
+  },
+  "about-us": {
+    "hero": "",
+    "founder": ""
+  },
+  "our-story": {
+    "hero": ""
+  },
+  "leadership": {
+    "hero": "",
+    "leader-1": "",
+    "leader-2": "",
+    "leader-3": ""
+  },
+  "zeklease": {
+    "hero": ""
+  },
+  "zekmanage": {
+    "hero": ""
+  },
+  "philosophy": {
+    "hero": ""
+  },
+  "resources": {
+    "hero": "",
+    "card-1": "",
+    "card-2": "",
+    "card-3": "",
+    "card-4": "",
+    "card-5": ""
+  }
+}

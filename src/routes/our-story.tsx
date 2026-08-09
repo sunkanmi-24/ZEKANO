@@ -4,6 +4,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { ZekanoLogo } from "@/components/site/ZekanoLogo";
 import cityRoad from "@/assets/story-city-road.jpg";
+import { getImage } from "@/lib/site-images";
 
 export const Route = createFileRoute("/our-story")({
   head: () => ({
@@ -100,7 +101,7 @@ function OurStoryPage() {
           </div>
           <div className="overflow-hidden rounded-2xl">
             <img
-              src={cityRoad}
+              src={getImage("our-story", "hero", cityRoad)}
               alt="Highway leading into a modern city skyline"
               width={1280}
               height={1024}

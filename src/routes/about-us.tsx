@@ -5,6 +5,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import aboutHq from "@/assets/about-hq.jpg";
 import founder from "@/assets/founder.jpg";
+import { getImage } from "@/lib/site-images";
 
 export const Route = createFileRoute("/about-us")({
   head: () => ({
@@ -100,7 +101,7 @@ function AboutUsPage() {
 
           <div className="overflow-hidden rounded-2xl">
             <img
-              src={aboutHq}
+              src={getImage("about-us", "hero", aboutHq)}
               alt="ZEKANO headquarters building with vehicles parked in front"
               width={1280}
               height={912}
@@ -116,7 +117,7 @@ function AboutUsPage() {
           <div className="grid gap-8 lg:grid-cols-[380px_1fr] lg:gap-12">
             <div className="overflow-hidden rounded-xl border border-border bg-background">
               <img
-                src={founder}
+                src={getImage("about-us", "founder", founder)}
                 alt="A.A. Adekunle, Founder & CEO of ZEKANO Mobility Limited"
                 loading="lazy"
                 className="h-80 w-full object-cover sm:h-[420px] lg:h-[440px]"
