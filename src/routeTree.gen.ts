@@ -17,6 +17,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as OurSystemsRouteImport } from './routes/our-systems'
 import { Route as OurStoryRouteImport } from './routes/our-story'
+import { Route as OurPhilosophyRouteImport } from './routes/our-philosophy'
 import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CompanyRouteImport } from './routes/company'
@@ -63,6 +64,11 @@ const OurStoryRoute = OurStoryRouteImport.update({
   path: '/our-story',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OurPhilosophyRoute = OurPhilosophyRouteImport.update({
+  id: '/our-philosophy',
+  path: '/our-philosophy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LeadershipRoute = LeadershipRouteImport.update({
   id: '/leadership',
   path: '/leadership',
@@ -95,6 +101,7 @@ export interface FileRoutesByFullPath {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/leadership': typeof LeadershipRoute
+  '/our-philosophy': typeof OurPhilosophyRoute
   '/our-story': typeof OurStoryRoute
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
@@ -110,6 +117,7 @@ export interface FileRoutesByTo {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/leadership': typeof LeadershipRoute
+  '/our-philosophy': typeof OurPhilosophyRoute
   '/our-story': typeof OurStoryRoute
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
@@ -126,6 +134,7 @@ export interface FileRoutesById {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/leadership': typeof LeadershipRoute
+  '/our-philosophy': typeof OurPhilosophyRoute
   '/our-story': typeof OurStoryRoute
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
@@ -143,6 +152,7 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/leadership'
+    | '/our-philosophy'
     | '/our-story'
     | '/our-systems'
     | '/resources'
@@ -158,6 +168,7 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/leadership'
+    | '/our-philosophy'
     | '/our-story'
     | '/our-systems'
     | '/resources'
@@ -173,6 +184,7 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/leadership'
+    | '/our-philosophy'
     | '/our-story'
     | '/our-systems'
     | '/resources'
@@ -189,6 +201,7 @@ export interface RootRouteChildren {
   CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
   LeadershipRoute: typeof LeadershipRoute
+  OurPhilosophyRoute: typeof OurPhilosophyRoute
   OurStoryRoute: typeof OurStoryRoute
   OurSystemsRoute: typeof OurSystemsRoute
   ResourcesRoute: typeof ResourcesRoute
@@ -257,6 +270,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OurStoryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/our-philosophy': {
+      id: '/our-philosophy'
+      path: '/our-philosophy'
+      fullPath: '/our-philosophy'
+      preLoaderRoute: typeof OurPhilosophyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/leadership': {
       id: '/leadership'
       path: '/leadership'
@@ -301,6 +321,7 @@ const rootRouteChildren: RootRouteChildren = {
   CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
   LeadershipRoute: LeadershipRoute,
+  OurPhilosophyRoute: OurPhilosophyRoute,
   OurStoryRoute: OurStoryRoute,
   OurSystemsRoute: OurSystemsRoute,
   ResourcesRoute: ResourcesRoute,
@@ -313,13 +334,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
