@@ -96,7 +96,26 @@ const items: Item[] = [
 
 function ResourcesPage() {
   const [active, setActive] = useState<(typeof tabs)[number]>("All Resources");
-  const visible = active === "All Resources" ? items : items.filter((i) => i.category === active);
+  const [query, setQuery] = useState("");
+  const [sort, setSort] = useState<(typeof sortOptions)[number]>("Newest");
+
+  const visible = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    let list = items.filter((i) => {
+      const inCategory = active === "All Resources" || i.category === active;
+      const inQuery =
+        q === "" ||
+        i.title.toLowerCase().includes(q) ||
+        i.body.toLowerCase().includes(q) ||
+        i.tag.toLowerCase().includes(q) ||
+        i.category.toLowerCase().includes(q);
+      return inCategory && inQuery;
+    });
+    if (sort === "A–Z") list = [...list].sort((a, b) => a.title.localeCompare(b.title));
+    else if (sort === "Z–A") list = [...list].sort((a, b) => b.title.localeCompare(a.title));
+    else list = [...list].sort((a, b) => a.order - b.order);
+    return list;
+  }, [active, query, sort]);
 
   return (
     <div className="zekano-resources min-h-screen bg-white flex flex-col">
