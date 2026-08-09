@@ -71,6 +71,7 @@ const beliefs = [
 function OurPhilosophyPage() {
   return (
     <PhilosophyLayout
+      page="our-philosophy"
       current="Our Philosophy"
       title="Our Philosophy"
       tagline={["The beliefs that shape everything we do."]}
