@@ -42,6 +42,8 @@ const nav: NavItem[] = [
 export function Header() {
   const [open, setOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [mobileOpenMenu, setMobileOpenMenu] = useState<string | null>(null);
+
 
   return (
     <header className="zekano-header sticky top-0 z-50 w-full bg-white border-b border-border">
@@ -122,14 +124,33 @@ export function Header() {
           <nav className="flex flex-col px-4 py-4 gap-1">
             {nav.map((item) => (
               <div key={item.label} className="zekano-mobile-nav-group">
-                <Link
-                  to={item.to}
-                  onClick={() => !item.children && setOpen(false)}
-                  className="zekano-mobile-nav-link py-3 px-2 text-base font-medium text-brand-dark hover:text-brand-green"
-                >
-                  {item.label}
-                </Link>
-                {item.children && (
+                <div className="flex items-center justify-between">
+                  <Link
+                    to={item.to}
+                    onClick={() => setOpen(false)}
+                    className="zekano-mobile-nav-link flex-1 py-3 px-2 text-base font-medium text-brand-dark hover:text-brand-green"
+                  >
+                    {item.label}
+                  </Link>
+                  {item.children && (
+                    <button
+                      type="button"
+                      aria-label={`Toggle ${item.label} submenu`}
+                      aria-expanded={mobileOpenMenu === item.label}
+                      onClick={() =>
+                        setMobileOpenMenu(mobileOpenMenu === item.label ? null : item.label)
+                      }
+                      className="zekano-mobile-submenu-toggle p-3 text-brand-dark hover:text-brand-green"
+                    >
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform ${
+                          mobileOpenMenu === item.label ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                  )}
+                </div>
+                {item.children && mobileOpenMenu === item.label && (
                   <div className="zekano-mobile-submenu flex flex-col pl-4 border-l border-border ml-4">
                     {item.children.map((child) => (
                       <Link
@@ -145,6 +166,7 @@ export function Header() {
                 )}
               </div>
             ))}
+
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
