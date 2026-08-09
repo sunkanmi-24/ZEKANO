@@ -13,6 +13,7 @@ import { Route as ZekmanageRouteImport } from './routes/zekmanage'
 import { Route as ZekleaseRouteImport } from './routes/zeklease'
 import { Route as WhyZekanoRouteImport } from './routes/why-zekano'
 import { Route as WhatWeDoRouteImport } from './routes/what-we-do'
+import { Route as StewardshipRouteImport } from './routes/stewardship'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as OurSystemsRouteImport } from './routes/our-systems'
@@ -44,6 +45,11 @@ const WhyZekanoRoute = WhyZekanoRouteImport.update({
 const WhatWeDoRoute = WhatWeDoRouteImport.update({
   id: '/what-we-do',
   path: '/what-we-do',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StewardshipRoute = StewardshipRouteImport.update({
+  id: '/stewardship',
+  path: '/stewardship',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -120,6 +126,7 @@ export interface FileRoutesByFullPath {
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/stewardship': typeof StewardshipRoute
   '/what-we-do': typeof WhatWeDoRoute
   '/why-zekano': typeof WhyZekanoRoute
   '/zeklease': typeof ZekleaseRoute
@@ -138,6 +145,7 @@ export interface FileRoutesByTo {
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/stewardship': typeof StewardshipRoute
   '/what-we-do': typeof WhatWeDoRoute
   '/why-zekano': typeof WhyZekanoRoute
   '/zeklease': typeof ZekleaseRoute
@@ -157,6 +165,7 @@ export interface FileRoutesById {
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/stewardship': typeof StewardshipRoute
   '/what-we-do': typeof WhatWeDoRoute
   '/why-zekano': typeof WhyZekanoRoute
   '/zeklease': typeof ZekleaseRoute
@@ -177,6 +186,7 @@ export interface FileRouteTypes {
     | '/our-systems'
     | '/resources'
     | '/sitemap.xml'
+    | '/stewardship'
     | '/what-we-do'
     | '/why-zekano'
     | '/zeklease'
@@ -195,6 +205,7 @@ export interface FileRouteTypes {
     | '/our-systems'
     | '/resources'
     | '/sitemap.xml'
+    | '/stewardship'
     | '/what-we-do'
     | '/why-zekano'
     | '/zeklease'
@@ -213,6 +224,7 @@ export interface FileRouteTypes {
     | '/our-systems'
     | '/resources'
     | '/sitemap.xml'
+    | '/stewardship'
     | '/what-we-do'
     | '/why-zekano'
     | '/zeklease'
@@ -232,6 +244,7 @@ export interface RootRouteChildren {
   OurSystemsRoute: typeof OurSystemsRoute
   ResourcesRoute: typeof ResourcesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  StewardshipRoute: typeof StewardshipRoute
   WhatWeDoRoute: typeof WhatWeDoRoute
   WhyZekanoRoute: typeof WhyZekanoRoute
   ZekleaseRoute: typeof ZekleaseRoute
@@ -266,6 +279,13 @@ declare module '@tanstack/react-router' {
       path: '/what-we-do'
       fullPath: '/what-we-do'
       preLoaderRoute: typeof WhatWeDoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/stewardship': {
+      id: '/stewardship'
+      path: '/stewardship'
+      fullPath: '/stewardship'
+      preLoaderRoute: typeof StewardshipRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -368,6 +388,7 @@ const rootRouteChildren: RootRouteChildren = {
   OurSystemsRoute: OurSystemsRoute,
   ResourcesRoute: ResourcesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  StewardshipRoute: StewardshipRoute,
   WhatWeDoRoute: WhatWeDoRoute,
   WhyZekanoRoute: WhyZekanoRoute,
   ZekleaseRoute: ZekleaseRoute,
