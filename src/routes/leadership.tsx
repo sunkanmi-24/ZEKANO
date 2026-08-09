@@ -7,6 +7,7 @@ import boardroomAsset from "@/assets/leadership-boardroom.jpg.asset.json";
 import ceoAsset from "@/assets/leader-ceo.jpg.asset.json";
 import cooAsset from "@/assets/leader-coo.jpg.asset.json";
 import financeAsset from "@/assets/leader-finance.jpg.asset.json";
+import { getImage } from "@/lib/site-images";
 
 export const Route = createFileRoute("/leadership")({
   head: () => ({
@@ -25,8 +26,8 @@ export const Route = createFileRoute("/leadership")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/leadership" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:image", content: boardroomAsset.url },
-      { name: "twitter:image", content: boardroomAsset.url },
+      { property: "og:image", content: getImage("leadership", "hero", boardroomAsset.url) },
+      { name: "twitter:image", content: getImage("leadership", "hero", boardroomAsset.url) },
     ],
     links: [{ rel: "canonical", href: "/leadership" }],
   }),
@@ -36,7 +37,7 @@ export const Route = createFileRoute("/leadership")({
 const ceo = {
   name: "A.A. Adekunle",
   role: "Founder & CEO",
-  image: ceoAsset.url,
+  image: getImage("leadership", "leader-1", ceoAsset.url),
   bio: "Visionary leader with a passion for building systems that solve real-world problems. A.A. drives ZEKANO's strategy, partnerships, and long-term vision for transforming mobility across Africa.",
   points: ["Strategic Vision & Direction", "Business Development", "Stakeholder Partnerships", "Innovation & Growth"],
 };
@@ -45,14 +46,14 @@ const team = [
   {
     name: "BELLO WALIU LANRE",
     role: "Co-Founder & COO",
-    image: cooAsset.url,
+    image: getImage("leadership", "leader-2", cooAsset.url),
     bio: "Leads day-to-day operations with a focus on efficiency, compliance, and excellence. Ensures our systems run smoothly and deliver value.",
     points: ["Operations Management", "Process Excellence", "Team Leadership", "Compliance & Risk"],
   },
   {
     name: "Head of Finance",
     role: "",
-    image: financeAsset.url,
+    image: getImage("leadership", "leader-3", financeAsset.url),
     bio: "Responsible for financial strategy, planning, and controls. Ensures sustainability, transparency, and responsible growth.",
     points: ["Financial Planning", "Risk Management", "Reporting & Controls", "Investor Relations"],
   },
@@ -115,7 +116,7 @@ function LeadershipPage() {
 
             <div className="leadership-hero-media overflow-hidden rounded-2xl">
               <img
-                src={boardroomAsset.url}
+                src={getImage("leadership", "hero", boardroomAsset.url)}
                 alt="ZEKANO boardroom with branded wall and conference table"
                 className="h-56 sm:h-72 lg:h-[340px] w-full object-cover"
                 width={1280}

@@ -14,6 +14,7 @@ import {
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import zekmanageHero from "@/assets/zekmanage-hero.jpg";
+import { getImage } from "@/lib/site-images";
 
 export const Route = createFileRoute("/zekmanage")({
   head: () => ({
@@ -74,7 +75,7 @@ function ZekmanagePage() {
         <section className="zekmanage-hero relative bg-secondary overflow-hidden">
           <div className="zekmanage-hero-media absolute inset-y-0 right-0 hidden lg:block w-1/2">
             <img
-              src={zekmanageHero}
+              src={getImage("zekmanage", "hero", zekmanageHero)}
               alt="Mobility asset owner reviewing performance on a tablet"
               className="h-full w-full object-cover"
               width={1200}
@@ -105,7 +106,7 @@ function ZekmanagePage() {
 
             <div className="zekmanage-hero-image mt-8 lg:hidden rounded-xl overflow-hidden">
               <img
-                src={zekmanageHero}
+                src={getImage("zekmanage", "hero", zekmanageHero)}
                 alt="Mobility asset owner reviewing performance on a tablet"
                 className="h-56 w-full object-cover"
                 width={1200}

@@ -9,6 +9,7 @@ import driver from "@/assets/driver.png.asset.json";
 import cityRoad from "@/assets/story-city-road.jpg";
 import philosophyHero from "@/assets/philosophy-hero.jpg";
 import holdingPhone from "@/assets/holdingphone.png.asset.json";
+import { getImage } from "@/lib/site-images";
 
 export const Route = createFileRoute("/resources")({
   head: () => ({
@@ -53,7 +54,7 @@ const items: Item[] = [
     title: "A Guide for Vehicle Owners",
     body: "Everything you need to know about partnering with ZEKANO and maximizing your vehicle's income.",
     cta: "Read More",
-    image: heroCars.url,
+    image: getImage("resources", "card-1", heroCars.url),
     order: 1,
   },
   {
@@ -62,7 +63,7 @@ const items: Item[] = [
     title: "A Guide for Mobility Professionals",
     body: "Learn how our systems support drivers to build sustainable income and grow.",
     cta: "Read More",
-    image: driver.url,
+    image: getImage("resources", "card-2", driver.url),
     order: 2,
   },
   {
@@ -71,7 +72,7 @@ const items: Item[] = [
     title: "The Future of Structured Mobility in Africa",
     body: "Key trends shaping the mobility industry and how structured solutions drive the future.",
     cta: "Read More",
-    image: cityRoad,
+    image: getImage("resources", "card-3", cityRoad),
     order: 3,
   },
   {
@@ -80,7 +81,7 @@ const items: Item[] = [
     title: "Operational Standards Overview",
     body: "Download our operational standards summary.",
     cta: "Download PDF",
-    image: philosophyHero,
+    image: getImage("resources", "card-4", philosophyHero),
     order: 4,
   },
   {
@@ -89,7 +90,7 @@ const items: Item[] = [
     title: "ZEKANO Milestones & Updates",
     body: "Stay up to date with our latest news and milestones.",
     cta: "Read More",
-    image: holdingPhone.url,
+    image: getImage("resources", "card-5", holdingPhone.url),
     order: 5,
   },
 ];
@@ -147,7 +148,7 @@ function ResourcesPage() {
             </div>
             <div className="zekano-resources-hero-image relative min-h-[240px] lg:min-h-[420px]">
               <img
-                src={resourcesHero}
+                src={getImage("resources", "hero", resourcesHero)}
                 alt="ZEKANO insights dashboard on a laptop beside a branded mug"
                 width={1280}
                 height={960}

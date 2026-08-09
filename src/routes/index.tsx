@@ -19,8 +19,9 @@ import citySkyline from "@/assets/city-skyline.jpg";
 import founder from "@/assets/founder.jpg";
 import driverAsset from "@/assets/driver.png.asset.json";
 import phoneAppAsset from "@/assets/holdingphone.png.asset.json";
-const driver = driverAsset.url;
-const phoneApp = phoneAppAsset.url;
+import { getImage } from "@/lib/site-images";
+const driver = getImage("home", "system-lease", driverAsset.url);
+const phoneApp = getImage("home", "system-manage", phoneAppAsset.url);
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -92,7 +93,7 @@ function HomePage() {
       <section className="zekano-hero relative bg-brand-dark overflow-hidden">
         <div className="zekano-hero-bg absolute inset-0">
           <img
-            src={heroCars.url}
+            src={getImage("home", "hero", heroCars.url)}
             alt="Vehicles on highway"
             className="h-full w-full object-cover opacity-70"
             width={1600}
@@ -216,7 +217,7 @@ function HomePage() {
 
           <div className="zekano-purpose-card relative rounded-2xl overflow-hidden min-h-[280px]">
             <img
-              src={citySkyline}
+              src={getImage("home", "city-skyline", citySkyline)}
               alt="City skyline"
               className="absolute inset-0 h-full w-full object-cover"
               width={1200}
@@ -342,7 +343,7 @@ function HomePage() {
         <div className="zekano-founder-cta-inner mx-auto max-w-none px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="zekano-founder rounded-2xl border border-border overflow-hidden grid grid-cols-1 sm:grid-cols-[auto_1fr]">
             <img
-              src={founder}
+              src={getImage("home", "founder", founder)}
               alt="Founder"
               className="zekano-founder-img h-full w-full sm:w-48 object-cover"
               width={600}

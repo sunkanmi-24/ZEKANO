@@ -4,6 +4,7 @@ import type { LucideIcon } from "lucide-react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import heroImg from "@/assets/philosophy-hero.jpg";
+import { getImage } from "@/lib/site-images";
 
 export type PhilosophyItem = {
   icon: LucideIcon;
@@ -56,7 +57,7 @@ export function PhilosophyHero({
   return (
     <section className="zekano-phil-hero relative overflow-hidden bg-brand-dark px-5 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
       <img
-        src={heroImg}
+        src={getImage("philosophy", "hero", heroImg)}
         alt="ZEKANO vehicle on a highway at sunset with a city skyline"
         width={1920}
         height={912}

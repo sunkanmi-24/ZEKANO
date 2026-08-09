@@ -14,6 +14,7 @@ import {
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import driverAsset from "@/assets/driver.png.asset.json";
+import { getImage } from "@/lib/site-images";
 
 export const Route = createFileRoute("/zeklease")({
   head: () => ({
@@ -33,8 +34,8 @@ export const Route = createFileRoute("/zeklease")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/zeklease" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:image", content: driverAsset.url },
-      { name: "twitter:image", content: driverAsset.url },
+      { property: "og:image", content: getImage("zeklease", "hero", driverAsset.url) },
+      { name: "twitter:image", content: getImage("zeklease", "hero", driverAsset.url) },
     ],
     links: [{ rel: "canonical", href: "/zeklease" }],
   }),
@@ -76,7 +77,7 @@ function ZekleasePage() {
         <section className="zeklease-hero relative bg-secondary overflow-hidden">
           <div className="zeklease-hero-media absolute inset-y-0 right-0 hidden lg:block w-1/2">
             <img
-              src={driverAsset.url}
+              src={getImage("zeklease", "hero", driverAsset.url)}
               alt="Smiling ZEKLEASE driver giving a thumbs up from a vehicle"
               className="h-full w-full object-cover"
               width={1200}
@@ -107,7 +108,7 @@ function ZekleasePage() {
 
             <div className="zeklease-hero-image mt-8 lg:hidden rounded-xl overflow-hidden">
               <img
-                src={driverAsset.url}
+                src={getImage("zeklease", "hero", driverAsset.url)}
                 alt="Smiling ZEKLEASE driver giving a thumbs up from a vehicle"
                 className="h-56 w-full object-cover"
                 width={1200}
