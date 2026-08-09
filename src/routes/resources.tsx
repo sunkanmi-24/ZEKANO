@@ -241,7 +241,7 @@ function ResourcesPage() {
           </div>
           {visible.length === 0 && (
             <p className="py-10 text-center text-muted-foreground">
-              New {active.toLowerCase()} are coming soon.
+              No resources found{query.trim() ? ` for "${query.trim()}"` : ` in ${active.toLowerCase()}`}. Try a different keyword or filter.
             </p>
           )}
         </section>
