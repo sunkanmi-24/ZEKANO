@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-import { ArrowRight, MailOpen } from "lucide-react";
+import { useMemo, useState } from "react";
+import { ArrowRight, MailOpen, Search, ChevronDown } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import resourcesHero from "@/assets/resources-hero.jpg";
@@ -17,12 +17,12 @@ export const Route = createFileRoute("/resources")({
       {
         name: "description",
         content:
-          "Guides, insights, news, downloads and videos from ZEKANO to keep you informed about mobility, our systems, and industry trends.",
+          "Search, filter and sort guides, insights, news, downloads and videos from ZEKANO to keep you informed about mobility, our systems, and industry trends.",
       },
       { property: "og:title", content: "Resources — Knowledge. Insights. Better Decisions." },
       {
         property: "og:description",
-        content: "Helpful guides, insights and updates on structured mobility from ZEKANO.",
+        content: "Search, filter and sort helpful guides, insights and updates on structured mobility from ZEKANO.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/resources" },
@@ -34,6 +34,7 @@ export const Route = createFileRoute("/resources")({
 });
 
 const tabs = ["All Resources", "Guides", "Insights", "News", "Downloads", "Videos"] as const;
+const sortOptions = ["Newest", "A–Z", "Z–A"] as const;
 
 type Item = {
   tag: string;
@@ -42,6 +43,7 @@ type Item = {
   body: string;
   cta: string;
   image: string;
+  order: number;
 };
 
 const items: Item[] = [
