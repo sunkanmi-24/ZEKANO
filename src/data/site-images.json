@@ -1,65 +1,58 @@
 {
   "_readme": "Replace any image on the site by pasting a URL below. Keys are page -> position. Leave a value empty (\"\") to keep the built-in default image.",
   "global": {
-    "logo": ""
+    "logo": "https://res.cloudinary.com/luhpnubn/image/upload/v1786365482/zekano-logo.png"
   },
   "home": {
-    "hero": "",
-    "city-skyline": "",
-    "system-lease": "",
-    "system-manage": "",
-    "founder": ""
+    "hero": "https://res.cloudinary.com/luhpnubn/image/upload/v1786361844/hero-cars.jpg",
+    "city-skyline": "https://res.cloudinary.com/luhpnubn/image/upload/v1786361840/city-skyline-DZ4gGByn.jpg",
+    "system-lease": "https://res.cloudinary.com/luhpnubn/image/upload/v1786361843/driver.png",
+    "system-manage": "https://res.cloudinary.com/luhpnubn/image/upload/v1786361842/holdingphone.png",
+    "founder": "https://res.cloudinary.com/luhpnubn/image/upload/v1786361839/founder-Hupmuz7H.jpg"
   },
   "about-us": {
     "hero": "https://res.cloudinary.com/aremssy/image/upload/v1786310257/about-hq-CxEsscLx_v56ofh.jpg",
-    "founder": ""
+    "founder": "https://res.cloudinary.com/luhpnubn/image/upload/v1786361839/founder-Hupmuz7H.jpg"
   },
   "our-story": {
-    "hero": ""
-  },
-  "what-we-do": {
-    "hero": ""
+    "hero": "https://res.cloudinary.com/luhpnubn/image/upload/v1786365483/story-city-road-BJP4Nb7r.jpg"
   },
   "leadership": {
-
-    "hero": "",
-    "leader-1": "",
-    "leader-2": "",
-    "leader-3": ""
+    "hero": "https://res.cloudinary.com/luhpnubn/image/upload/v1786361840/leadership-boardroom.jpg",
+    "leader-1": "https://res.cloudinary.com/luhpnubn/image/upload/v1786361842/leader-ceo.jpg",
+    "leader-2": "https://res.cloudinary.com/luhpnubn/image/upload/v1786361841/leader-coo.jpg",
+    "leader-3": "https://res.cloudinary.com/luhpnubn/image/upload/v1786360816/leader-finance.jpg"
   },
   "zeklease": {
-    "hero": ""
+    "hero": "https://res.cloudinary.com/luhpnubn/image/upload/v1786361843/driver.png"
   },
   "zekmanage": {
-    "hero": ""
+    "hero": "https://res.cloudinary.com/luhpnubn/image/upload/v1786367349/zekmanage-hero-BPvQzKxe.jpg"
   },
   "philosophy": {
-    "hero": ""
+    "hero": "https://res.cloudinary.com/luhpnubn/image/upload/v1786368758/philosophy-hero-DDyWwqrf.jpg"
   },
   "our-philosophy": {
-    "hero": ""
+    "hero": "https://res.cloudinary.com/luhpnubn/image/upload/v1786368758/philosophy-hero-DDyWwqrf.jpg"
   },
   "our-principles": {
-    "hero": ""
+    "hero": "https://res.cloudinary.com/luhpnubn/image/upload/v1786368758/philosophy-hero-DDyWwqrf.jpg"
   },
   "our-culture": {
-    "hero": ""
+    "hero": "https://res.cloudinary.com/luhpnubn/image/upload/v1786368758/philosophy-hero-DDyWwqrf.jpg"
   },
   "stewardship": {
-    "hero": ""
+    "hero": "https://res.cloudinary.com/luhpnubn/image/upload/v1786368758/philosophy-hero-DDyWwqrf.jpg"
   },
   "our-commitment": {
-    "hero": ""
-  },
-  "contact": {
-    "hero": ""
+    "hero": "https://res.cloudinary.com/luhpnubn/image/upload/v1786368758/philosophy-hero-DDyWwqrf.jpg"
   },
   "resources": {
-    "hero": "",
-    "card-1": "",
-    "card-2": "",
-    "card-3": "",
-    "card-4": "",
-    "card-5": ""
+    "hero": "https://res.cloudinary.com/luhpnubn/image/upload/v1786369241/resources-hero-DrsQinlE.jpg",
+    "card-1": "https://res.cloudinary.com/luhpnubn/image/upload/v1786361844/hero-cars.jpg",
+    "card-2": "https://res.cloudinary.com/luhpnubn/image/upload/v1786361843/driver.png",
+    "card-3": "https://res.cloudinary.com/luhpnubn/image/upload/v1786365483/story-city-road-BJP4Nb7r.jpg",
+    "card-4": "https://res.cloudinary.com/luhpnubn/image/upload/v1786368758/philosophy-hero-DDyWwqrf.jpg",
+    "card-5": "https://res.cloudinary.com/luhpnubn/image/upload/v1786361842/holdingphone.png"
   }
 }
