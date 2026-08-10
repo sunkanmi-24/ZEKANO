@@ -80,10 +80,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "ZEKANO — Structured Mobility. Professionally Managed." },
       { name: "description", content: "ZEKANO designs, operates, and continuously improves systems that connect mobility assets with qualified mobility professionals for productive use." },
       { property: "og:title", content: "ZEKANO — Structured Mobility. Professionally Managed." },
-      { property: "og:description", content: "Building the future of mobility through structure, people, and technology." },
+      { property: "og:description", content: "ZEKANO designs, operates, and continuously improves systems that connect mobility assets with qualified mobility professionals for productive use." },
       { property: "og:site_name", content: "ZEKANO" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "ZEKANO — Structured Mobility. Professionally Managed." },
+      { name: "twitter:description", content: "ZEKANO designs, operates, and continuously improves systems that connect mobility assets with qualified mobility professionals for productive use." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/iY6BltFdDCU1b4jWHqeSsKLH9WG2/social-images/social-1786344174019-social-image.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/iY6BltFdDCU1b4jWHqeSsKLH9WG2/social-images/social-1786344174019-social-image.webp" },
     ],
     links: [
       {
