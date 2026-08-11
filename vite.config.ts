@@ -12,4 +12,8 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Pin the Nitro deploy target to Netlify (Node serverless) for self-hosting.
+  // Inside a Lovable build this is ignored (forced to Cloudflare); it only takes
+  // effect when building outside Lovable (e.g. Netlify CI or a local build).
+  nitro: { preset: "netlify" },
 });
