@@ -1,12 +1,12 @@
 # Netlify deploy config for the ZEKANO TanStack Start (Vite + Nitro) app.
-# Nitro's `netlify` preset writes static/prerendered assets to `.output/public`
-# and generates a serverless function under `.netlify/functions-internal/`
-# which Netlify auto-detects — no explicit functions dir or manual redirect needed
-# (this is SSR, so every route is rendered by the function).
+# Nitro's `netlify` preset writes static/prerendered assets to `dist/` and the
+# SSR serverless function to `.netlify/functions-internal/server/`, which
+# Netlify auto-detects — no explicit functions dir or manual redirect needed
+# (this is SSR, so every unmatched route is rendered by the function).
 
 [build]
   command = "bun run build"
-  publish = ".output/public"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
