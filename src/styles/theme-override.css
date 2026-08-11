@@ -7,7 +7,7 @@
 
 :root {
   /* Accent (was green) — currently a deep teal */
-  --brand-green: oklch(0.6 0.12 200);
+  --brand-green: #c29b0c; //oklch(0.6 0.12 200);#c29b0c
   --brand-green-dark: oklch(0.5 0.12 200);
 
   /* Philosophy pages accent (was gold in the mockups) — default brand green.
