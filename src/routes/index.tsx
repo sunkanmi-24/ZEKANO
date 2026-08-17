@@ -107,7 +107,7 @@ function HomePage() {
               <h1 className="zekano-hero-title text-[40px] font-bold text-white leading-tight">
                 Structured Mobility.
                 <br />
-                <span className="text-brand-green">Professionally Managed.</span>
+                <span className="zekano-gold-text">Professionally Managed.</span>
               </h1>
               <p className="zekano-hero-subtitle mt-6 text-base sm:text-lg text-white/85 max-w-xl">
                 ZEKANO designs, operates, and continuously improves systems that connect mobility assets with qualified
