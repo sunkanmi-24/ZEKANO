@@ -169,3 +169,8 @@ button.bg-brand-green:hover,
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
+
+.zekano-who-we-serve-title .bg-brand-green,
+.zekano-who-we-serve-title .border-brand-green {
+  background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
