@@ -128,3 +128,44 @@
 .bg-brand-blue {
   background-color: oklch(0.24 0.07 255.27);
 }
+
+/* --------------------------------------------------------------------------
+   Gold gradient buttons + highlighted text
+   -------------------------------------------------------------------------- */
+a.bg-brand-green,
+button.bg-brand-green,
+.zekano-contact-btn,
+.zekano-mobile-contact-btn,
+.zekano-contact-submit,
+.zekano-hero-btn,
+.zekano-cta-btn,
+.zekano-why-btn-primary,
+.zekano-resources-hero-btn,
+.zekano-newsletter-btn {
+  background-image: var(--brand-gold-gradient) !important;
+  background-color: transparent !important;
+  color: oklch(0.24 0.07 255.27) !important;
+  border: none;
+}
+a.bg-brand-green:hover,
+button.bg-brand-green:hover,
+.zekano-contact-btn:hover,
+.zekano-mobile-contact-btn:hover,
+.zekano-contact-submit:hover,
+.zekano-hero-btn:hover,
+.zekano-cta-btn:hover,
+.zekano-why-btn-primary:hover,
+.zekano-resources-hero-btn:hover,
+.zekano-newsletter-btn:hover {
+  filter: brightness(1.06);
+  background-image: var(--brand-gold-gradient) !important;
+  background-color: transparent !important;
+}
+
+.zekano-gold-text {
+  background-image: var(--brand-gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
