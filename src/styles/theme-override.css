@@ -1,21 +1,22 @@
 /* ==========================================================================
    ZEKANO Color Override
-   Change the brand accent color here — every green in the site is driven by
-   these three variables (buttons, icons, links, hovers, focus rings).
-   Swap the values below for any color you like.
+   Change the brand accent color here — every "green" in the site is driven by
+   these variables (icons, links, hovers, focus rings, accent bands).
+   Buttons use the gold gradient defined in custom.css.
    ========================================================================== */
 
 :root {
-  /* Accent (was green) — currently a deep teal */
-  --brand-green: #c29b0c; //oklch(0.6 0.12 200);#c29b0c
-  --brand-green-dark: #c29b0c;
+  /* Accent (was green) — deep navy blue */
+  --brand-green: oklch(0.31 0.11 259.92);
+  --brand-green-dark: oklch(0.31 0.11 259.92);
 
-  /* Philosophy pages accent (was gold in the mockups) — default brand green.
-     Change this one value to switch the accent on Our Philosophy, Our
-     Principles, Our Culture, Stewardship and Our Commitment. */
-  --brand-accent: oklch(0.62 0.18 142);
+  /* Philosophy pages accent (was gold in the mockups) */
+  --brand-accent: oklch(0.31 0.11 259.92);
 
   /* Keep shadcn primary / ring in sync with the accent */
-  --primary: #c29b0c;
-  --ring: #c29b0c;
+  --primary: oklch(0.31 0.11 259.92);
+  --ring: oklch(0.31 0.11 259.92);
+
+  /* Gold gradient used on primary buttons and highlighted headline text */
+  --brand-gold-gradient: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
 }
