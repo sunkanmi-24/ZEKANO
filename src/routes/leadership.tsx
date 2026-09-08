@@ -61,9 +61,9 @@ const team = [
 
 function Bullet({ label }: { label: string }) {
   return (
-    <li className="flex items-start gap-3">
-      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-green" strokeWidth={2} />
-      <span className="min-w-0 text-sm text-brand-dark">{label}</span>
+    <li className="leadership-point flex items-start gap-3">
+      <CheckCircle2 className="leadership-point-icon mt-0.5 h-4 w-4 shrink-0 text-brand-green" strokeWidth={2} />
+      <span className="leadership-point-label min-w-0 text-sm text-brand-dark">{label}</span>
     </li>
   );
 }
@@ -128,21 +128,21 @@ function LeadershipPage() {
 
         {/* FEATURED LEADER */}
         <section className="leadership-featured mx-auto max-w-none w-full px-4 lg:px-8 pb-6">
-          <article className="rounded-2xl border border-border bg-secondary/40 p-5 lg:p-8">
+          <article className="leadership-featured-card rounded-2xl border border-border bg-secondary/40 p-5 lg:p-8">
             <div className="grid gap-6 lg:grid-cols-[300px_1fr] lg:gap-10">
               <img
                 src={ceo.image}
                 alt={`Portrait of ${ceo.name}, ${ceo.role}`}
                 loading="lazy"
-                className="h-72 sm:h-96 lg:h-[420px] w-full rounded-xl object-cover"
+                className="leadership-featured-photo h-72 sm:h-96 lg:h-[420px] w-full rounded-xl object-cover"
                 width={768}
                 height={1024}
               />
               <div className="min-w-0 lg:py-2">
-                <h2 className="text-2xl lg:text-3xl font-bold text-brand-dark">{ceo.name}</h2>
-                <p className="mt-2 text-base lg:text-lg font-semibold text-brand-green">{ceo.role}</p>
-                <p className="mt-5 text-sm lg:text-base text-muted-foreground leading-relaxed max-w-2xl">{ceo.bio}</p>
-                <ul className="mt-6 grid gap-3">
+                <h2 className="leadership-featured-name text-2xl lg:text-3xl font-bold text-brand-dark">{ceo.name}</h2>
+                <p className="leadership-featured-role mt-2 text-base lg:text-lg font-semibold text-brand-green">{ceo.role}</p>
+                <p className="leadership-featured-bio mt-5 text-sm lg:text-base text-muted-foreground leading-relaxed max-w-2xl">{ceo.bio}</p>
+                <ul className="leadership-featured-points mt-6 grid gap-3">
                   {ceo.points.map((p) => (
                     <Bullet key={p} label={p} />
                   ))}
@@ -156,21 +156,21 @@ function LeadershipPage() {
         <section className="leadership-team mx-auto max-w-none w-full px-4 lg:px-8 pb-6">
           <div className="grid gap-6 lg:grid-cols-2">
             {team.map((m) => (
-              <article key={m.name} className="rounded-2xl border border-border bg-secondary/40 p-5 lg:p-6">
+              <article key={m.name} className="leadership-team-card rounded-2xl border border-border bg-secondary/40 p-5 lg:p-6">
                 <div className="grid gap-5 sm:grid-cols-[180px_1fr] sm:gap-6">
                   <img
                     src={m.image}
                     alt={`Portrait of ${m.name}`}
                     loading="lazy"
-                    className="h-64 sm:h-[260px] w-full rounded-xl object-cover"
+                    className="leadership-team-photo h-64 sm:h-[260px] w-full rounded-xl object-cover"
                     width={768}
                     height={1024}
                   />
                   <div className="min-w-0">
-                    <h2 className="text-lg lg:text-xl font-bold text-brand-dark">{m.name}</h2>
-                    {m.role && <p className="mt-1.5 text-sm font-semibold text-brand-green">{m.role}</p>}
-                    <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{m.bio}</p>
-                    <ul className="mt-4 grid gap-2.5">
+                    <h2 className="leadership-team-name text-lg lg:text-xl font-bold text-brand-dark">{m.name}</h2>
+                    {m.role && <p className="leadership-team-role mt-1.5 text-sm font-semibold text-brand-green">{m.role}</p>}
+                    <p className="leadership-team-bio mt-3 text-sm text-muted-foreground leading-relaxed">{m.bio}</p>
+                    <ul className="leadership-team-points mt-4 grid gap-2.5">
                       {m.points.map((p) => (
                         <Bullet key={p} label={p} />
                       ))}
@@ -184,23 +184,20 @@ function LeadershipPage() {
 
         {/* CTA BAND */}
         <section className="leadership-cta mx-auto max-w-none w-full px-4 lg:px-8 py-10 lg:py-14">
-          <div className="rounded-2xl border border-border bg-secondary/40 px-5 py-7 lg:px-10 lg:py-9">
+          <div className="leadership-cta-band rounded-2xl border border-border bg-secondary/40 px-5 py-7 lg:px-10 lg:py-9">
             <div className="grid gap-6 lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-8">
-              <div className="grid h-20 w-20 shrink-0 place-items-center overflow-hidden rounded-full bg-white">
+              <div className="leadership-cta-logo grid h-20 w-20 shrink-0 place-items-center overflow-hidden rounded-full bg-white">
                 <div className="scale-[0.6]">
                   <ZekanoLogo />
                 </div>
               </div>
               <div className="min-w-0">
-                <h2 className="text-xl lg:text-2xl font-bold text-brand-dark">One Team. One Mission.</h2>
-                <p className="mt-2 text-sm lg:text-base text-muted-foreground leading-relaxed max-w-2xl">
-                  We are a team of professionals committed to building the most trusted structured mobility ecosystem in
-                  Africa.
-                </p>
-              </div>
+                <h2 className="leadership-cta-title text-xl lg:text-2xl font-bold text-brand-dark">One Team. One Mission.</h2>
+                <p className="leadership-cta-desc mt-2 text-sm lg:text-base text-muted-foreground leading-relaxed max-w-2xl">
+...
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-dark px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition"
+                className="leadership-cta-btn inline-flex items-center justify-center gap-2 rounded-lg bg-brand-dark px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition"
               >
                 Join Our Journey
                 <ArrowRight className="h-4 w-4" />

@@ -79,14 +79,14 @@ function OurStoryPage() {
       {/* Hero */}
       <section className="zekano-story-hero px-5 py-10 sm:px-8 lg:px-12 lg:py-14">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
-          <div>
-            <p className="text-xs font-bold tracking-[0.2em] text-brand-green sm:text-sm">OUR STORY</p>
-            <h1 className="mt-3 text-3xl font-bold leading-tight text-brand-dark sm:text-4xl lg:text-[44px]">
+          <div className="zekano-story-intro">
+            <p className="zekano-story-eyebrow text-xs font-bold tracking-[0.2em] text-brand-green sm:text-sm">OUR STORY</p>
+            <h1 className="zekano-story-title mt-3 text-3xl font-bold leading-tight text-brand-dark sm:text-4xl lg:text-[44px]">
               Built From a Real Problem.
               <br />
-              <span className="text-brand-green">Driven by a Bigger Purpose.</span>
+              <span className="zekano-story-title-accent text-brand-green">Driven by a Bigger Purpose.</span>
             </h1>
-            <div className="mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+            <div className="zekano-story-body mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
               <p>
                 ZEKANO was born out of a simple observation—mobility assets are underutilized, operations are
                 unstructured, and opportunities are lost because systems don't work for the people they should.
@@ -99,7 +99,7 @@ function OurStoryPage() {
               <p className="font-bold text-brand-dark">So we decided to build it.</p>
             </div>
           </div>
-          <div className="overflow-hidden rounded-2xl">
+          <div className="zekano-story-hero-media overflow-hidden rounded-2xl">
             <img
               src={getImage("our-story", "hero", cityRoad)}
               alt="Highway leading into a modern city skyline"
@@ -114,21 +114,16 @@ function OurStoryPage() {
       {/* Our Journey */}
       <section className="zekano-story-journey px-5 pb-12 sm:px-8 lg:px-12">
         <div className="rounded-2xl bg-muted/50 p-6 sm:p-8 lg:p-12">
-          <p className="text-xs font-bold tracking-[0.2em] text-brand-green sm:text-sm">OUR JOURNEY</p>
-          <div className="mt-8 grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-14">
-            <ol className="relative space-y-8">
-              <span
-                aria-hidden
-                className="absolute left-[19px] top-3 hidden h-[calc(100%-2rem)] border-l border-dashed border-border sm:block"
-              />
+          <p className="zekano-story-journey-eyebrow text-xs font-bold tracking-[0.2em] text-brand-green sm:text-sm">OUR JOURNEY</p>
+...
               {journey.map((step) => (
-                <li key={step.title} className="relative flex gap-4">
-                  <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-dark">
+                <li key={step.title} className="zekano-story-step relative flex gap-4">
+                  <div className="zekano-story-step-icon relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-dark">
                     <step.icon className="h-5 w-5 text-brand-green" />
                   </div>
                   <div className="min-w-0">
-                    <h2 className="text-base font-bold text-brand-dark sm:text-lg">{step.title}</h2>
-                    <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{step.body}</p>
+                    <h2 className="zekano-story-step-title text-base font-bold text-brand-dark sm:text-lg">{step.title}</h2>
+                    <p className="zekano-story-step-body mt-1.5 text-sm leading-relaxed text-muted-foreground">{step.body}</p>
                   </div>
                 </li>
               ))}
@@ -136,7 +131,7 @@ function OurStoryPage() {
 
             <aside className="zekano-story-card self-start rounded-2xl border border-border bg-background p-6 sm:p-8">
               <div className="w-[110px]"><ZekanoLogo /></div>
-              <h2 className="mt-6 text-xl font-bold text-brand-dark sm:text-2xl">More Than a Company</h2>
+              <h2 className="zekano-story-card-title mt-6 text-xl font-bold text-brand-dark sm:text-2xl">More Than a Company</h2>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
                 ZEKANO is not just about mobility. We are building systems that create trust, opportunity, and lasting
                 impact.
@@ -156,15 +151,12 @@ function OurStoryPage() {
             <div className="w-10"><ZekanoLogo /></div>
           </div>
           <div className="min-w-0 flex-1">
-            <h2 className="text-lg font-bold text-primary-foreground sm:text-xl">Our Promise</h2>
-            <p className="mt-2 text-sm leading-relaxed text-primary-foreground/80 sm:text-base">
-              We will continue to innovate, operate with integrity, and build systems that empower people and transform
-              mobility across Africa.
-            </p>
-          </div>
+            <h2 className="zekano-story-promise-title text-lg font-bold text-primary-foreground sm:text-xl">Our Promise</h2>
+            <p className="zekano-story-promise-body mt-2 text-sm leading-relaxed text-primary-foreground/80 sm:text-base">
+...
           <Link
             to="/company"
-            className="inline-flex shrink-0 items-center gap-2 rounded-md bg-brand-green px-5 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+            className="zekano-story-promise-btn inline-flex shrink-0 items-center gap-2 rounded-md bg-brand-green px-5 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
           >
             Learn More About Us <ArrowRight className="h-4 w-4" />
           </Link>
