@@ -18,12 +18,12 @@ export const Route = createFileRoute("/company")({
 
 export function PlaceholderPage({ title, subtitle }: { title: string; subtitle: string }) {
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className="zekano-placeholder-page min-h-screen bg-white flex flex-col">
       <Header />
-      <main className="flex-1 mx-auto max-w-none w-full px-4 lg:px-8 py-20">
-        <h1 className="text-4xl lg:text-5xl font-bold text-brand-dark">{title}</h1>
-        <p className="mt-4 text-lg text-muted-foreground max-w-2xl">{subtitle}</p>
-        <p className="mt-8 text-sm text-muted-foreground">This page is coming soon.</p>
+      <main className="zekano-placeholder-main flex-1 mx-auto max-w-none w-full px-4 lg:px-8 py-20">
+        <h1 className="zekano-placeholder-title text-4xl lg:text-5xl font-bold text-brand-dark">{title}</h1>
+        <p className="zekano-placeholder-subtitle mt-4 text-lg text-muted-foreground max-w-2xl">{subtitle}</p>
+        <p className="zekano-placeholder-note mt-8 text-sm text-muted-foreground">This page is coming soon.</p>
       </main>
       <Footer />
     </div>
