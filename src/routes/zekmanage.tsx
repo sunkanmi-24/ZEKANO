@@ -119,32 +119,32 @@ function ZekmanagePage() {
         {/* GET STARTED CARD */}
         <section className="zekmanage-start mx-auto max-w-none w-full px-4 lg:px-8 -mt-4 lg:-mt-10 relative z-10">
           <div className="zekmanage-start-card rounded-xl border border-border bg-white p-6 lg:p-8 shadow-lg">
-            <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:divide-x divide-border">
-              <div className="flex items-start gap-5 lg:pr-8">
-                <div className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-brand-green">
+            <div className="zekmanage-start-grid grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:divide-x divide-border">
+              <div className="zekmanage-start-intro flex items-start gap-5 lg:pr-8">
+                <div className="zekmanage-start-icon grid h-14 w-14 shrink-0 place-items-center rounded-full bg-brand-green">
                   <Mail className="h-6 w-6 text-white" />
                 </div>
                 <div className="min-w-0">
-                  <h2 className="text-xl lg:text-2xl font-bold text-brand-green">Ready to get started?</h2>
-                  <p className="mt-3 text-base text-muted-foreground leading-relaxed">
+                  <h2 className="zekmanage-start-title text-xl lg:text-2xl font-bold text-brand-green">Ready to get started?</h2>
+                  <p className="zekmanage-start-desc mt-3 text-base text-muted-foreground leading-relaxed">
                     Send us an email expressing your interest and one of our Asset Management Advisors will contact you
                     within one business day to guide you through the next steps.
                   </p>
                 </div>
               </div>
 
-              <div className="lg:pl-8">
-                <div className="flex items-center gap-2 text-muted-foreground">
+              <div className="zekmanage-start-contact lg:pl-8">
+                <div className="zekmanage-start-email-label flex items-center gap-2 text-muted-foreground">
                   <Mail className="h-4 w-4" />
                   <span className="text-sm font-medium">Email Us</span>
                 </div>
                 <a
                   href="mailto:manage@zekano.co"
-                  className="mt-3 block text-xl lg:text-2xl font-bold text-brand-green break-all hover:underline"
+                  className="zekmanage-start-email mt-3 block text-xl lg:text-2xl font-bold text-brand-green break-all hover:underline"
                 >
                   manage@zekano.co
                 </a>
-                <p className="mt-3 text-sm text-brand-dark">
+                <p className="zekmanage-start-subject mt-3 text-sm text-brand-dark">
                   <span className="font-bold">Subject:</span> Interest in ZEKMANAGE
                 </p>
               </div>
@@ -154,30 +154,30 @@ function ZekmanagePage() {
 
         {/* WHAT HAPPENS NEXT */}
         <section className="zekmanage-steps mx-auto max-w-none w-full px-4 lg:px-8 py-14 lg:py-20">
-          <div className="flex items-center justify-center gap-4">
-            <span className="hidden sm:block h-0.5 w-16 lg:w-28 bg-brand-green/40" />
-            <h2 className="text-2xl lg:text-3xl font-bold text-brand-dark text-center">What Happens Next?</h2>
-            <span className="hidden sm:block h-0.5 w-16 lg:w-28 bg-brand-green/40" />
+          <div className="zekmanage-steps-heading flex items-center justify-center gap-4">
+            <span className="zekmanage-steps-rule hidden sm:block h-0.5 w-16 lg:w-28 bg-brand-green/40" />
+            <h2 className="zekmanage-steps-title text-2xl lg:text-3xl font-bold text-brand-dark text-center">What Happens Next?</h2>
+            <span className="zekmanage-steps-rule hidden sm:block h-0.5 w-16 lg:w-28 bg-brand-green/40" />
           </div>
 
           <div className="zekmanage-steps-grid mt-10 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4">
             {steps.map((s, i) => (
               <div key={s.title} className="zekmanage-step relative text-center">
                 <div className="relative mx-auto w-fit">
-                  <div className="grid h-16 w-16 place-items-center rounded-full border border-border bg-white">
+                  <div className="zekmanage-step-icon grid h-16 w-16 place-items-center rounded-full border border-border bg-white">
                     <s.icon className="h-7 w-7 text-brand-green" strokeWidth={1.75} />
                   </div>
-                  <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 grid h-6 w-6 place-items-center rounded-full bg-brand-green text-[11px] font-bold text-white">
+                  <span className="zekmanage-step-num absolute -bottom-2 left-1/2 -translate-x-1/2 grid h-6 w-6 place-items-center rounded-full bg-brand-green text-[11px] font-bold text-white">
                     {s.num}
                   </span>
                 </div>
-                <h3 className="mt-6 text-sm lg:text-base font-bold text-brand-dark">{s.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed px-2">{s.desc}</p>
+                <h3 className="zekmanage-step-title mt-6 text-sm lg:text-base font-bold text-brand-dark">{s.title}</h3>
+                <p className="zekmanage-step-desc mt-2 text-sm text-muted-foreground leading-relaxed px-2">{s.desc}</p>
 
                 {i < steps.length - 1 && (
                   <span
                     aria-hidden
-                    className="hidden lg:block absolute top-8 left-full -translate-x-1/2 w-10 border-t-2 border-dotted border-brand-green/60"
+                    className="zekmanage-step-connector hidden lg:block absolute top-8 left-full -translate-x-1/2 w-10 border-t-2 border-dotted border-brand-green/60"
                   />
                 )}
               </div>
@@ -187,15 +187,15 @@ function ZekmanagePage() {
 
         {/* WHAT YOU'LL EXPERIENCE */}
         <section className="zekmanage-experience mx-auto max-w-none w-full px-4 lg:px-8 pb-14">
-          <div className="rounded-2xl bg-secondary px-6 py-10 lg:px-10">
-            <h2 className="text-xl lg:text-2xl font-bold text-brand-green text-center">What You&apos;ll Experience</h2>
-            <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x divide-border">
+          <div className="zekmanage-experience-band rounded-2xl bg-secondary px-6 py-10 lg:px-10">
+            <h2 className="zekmanage-experience-title text-xl lg:text-2xl font-bold text-brand-green text-center">What You&apos;ll Experience</h2>
+            <div className="zekmanage-experience-grid mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x divide-border">
               {experience.map((e) => (
-                <div key={e.title} className="flex items-start gap-4 lg:px-6 first:lg:pl-0 last:lg:pr-0">
-                  <e.icon className="h-7 w-7 shrink-0 text-brand-green" strokeWidth={1.75} />
+                <div key={e.title} className="zekmanage-experience-item flex items-start gap-4 lg:px-6 first:lg:pl-0 last:lg:pr-0">
+                  <e.icon className="zekmanage-experience-icon h-7 w-7 shrink-0 text-brand-green" strokeWidth={1.75} />
                   <div className="min-w-0">
-                    <h3 className="text-sm lg:text-base font-bold text-brand-dark">{e.title}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{e.desc}</p>
+                    <h3 className="zekmanage-experience-item-title text-sm lg:text-base font-bold text-brand-dark">{e.title}</h3>
+                    <p className="zekmanage-experience-item-desc mt-2 text-sm text-muted-foreground leading-relaxed">{e.desc}</p>
                   </div>
                 </div>
               ))}
@@ -205,21 +205,21 @@ function ZekmanagePage() {
 
         {/* ASSISTANCE BAND */}
         <section className="zekmanage-assist mx-auto max-w-none w-full px-4 lg:px-8 pb-20">
-          <div className="rounded-2xl bg-brand-dark px-6 py-8 lg:px-10">
-            <div className="grid gap-6 lg:grid-cols-[1.2fr_1fr_1fr] lg:items-center">
+          <div className="zekmanage-assist-band rounded-2xl bg-brand-dark px-6 py-8 lg:px-10">
+            <div className="zekmanage-assist-grid grid gap-6 lg:grid-cols-[1.2fr_1fr_1fr] lg:items-center">
               <div className="min-w-0">
-                <h2 className="text-lg lg:text-xl font-bold text-white">Need immediate assistance?</h2>
-                <p className="mt-1 text-sm text-white/70">Our team is here to help you.</p>
+                <h2 className="zekmanage-assist-title text-lg lg:text-xl font-bold text-white">Need immediate assistance?</h2>
+                <p className="zekmanage-assist-desc mt-1 text-sm text-white/70">Our team is here to help you.</p>
               </div>
 
               <a
                 href="tel:+2348006000000"
-                className="flex items-center gap-4 rounded-xl bg-white/5 px-5 py-4 hover:bg-white/10 transition"
+                className="zekmanage-assist-call flex items-center gap-4 rounded-xl bg-white/5 px-5 py-4 hover:bg-white/10 transition"
               >
                 <Phone className="h-6 w-6 shrink-0 text-brand-green" />
                 <span className="min-w-0">
-                  <span className="block text-sm font-semibold text-white">Call Us</span>
-                  <span className="block text-sm text-white/70">+234 800 600 0000</span>
+                  <span className="zekmanage-assist-call-label block text-sm font-semibold text-white">Call Us</span>
+                  <span className="zekmanage-assist-call-value block text-sm text-white/70">+234 800 600 0000</span>
                 </span>
               </a>
 
@@ -227,12 +227,12 @@ function ZekmanagePage() {
                 href="https://wa.me/2348006000000"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded-xl bg-white/5 px-5 py-4 hover:bg-white/10 transition"
+                className="zekmanage-assist-whatsapp flex items-center gap-4 rounded-xl bg-white/5 px-5 py-4 hover:bg-white/10 transition"
               >
                 <MessageCircle className="h-6 w-6 shrink-0 text-brand-green" />
                 <span className="min-w-0">
-                  <span className="block text-sm font-semibold text-brand-green">WhatsApp Us</span>
-                  <span className="block text-sm text-white/70">Chat on WhatsApp</span>
+                  <span className="zekmanage-assist-whatsapp-label block text-sm font-semibold text-brand-green">WhatsApp Us</span>
+                  <span className="zekmanage-assist-whatsapp-value block text-sm text-white/70">Chat on WhatsApp</span>
                 </span>
               </a>
             </div>
