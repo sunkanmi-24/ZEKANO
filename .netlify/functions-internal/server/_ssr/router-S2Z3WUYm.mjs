@@ -6,10 +6,10 @@ import { t as leadership_boardroom_jpg_asset_default } from "./leadership-boardr
 import { n as Route$18 } from "./company-Cd6CCCEd.mjs";
 import { t as driver_png_asset_default } from "./driver.png.asset-BvpdJ_LQ.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-D9EN5m9y.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-S2Z3WUYm.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-B0HKSGVY.css";
+var styles_default = "/assets/styles-DoQTUMMt.css";
 function reportLovableError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__lovableEvents?.captureException?.(error, {

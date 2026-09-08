@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-BVilLgiI.js
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-XooYsmMq.js
 var tsrStartManifest = () => ({ routes: {
 	__root__: {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/__root.tsx",
@@ -22,26 +22,26 @@ var tsrStartManifest = () => ({ routes: {
 			"/zeklease",
 			"/zekmanage"
 		],
-		preloads: ["/assets/index-Ca1f92nC.js"],
+		preloads: ["/assets/index-Dr5fxaE1.js"],
 		scripts: [{ attrs: {
 			type: "module",
 			async: !0,
-			src: "/assets/index-Ca1f92nC.js"
+			src: "/assets/index-Dr5fxaE1.js"
 		} }]
 	},
 	"/": {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/index.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/routes-Bt9jbvKl.js",
-			"/assets/arrow-right-XsdU_LDl.js",
-			"/assets/car-B2G4xWY0.js",
-			"/assets/chart-column-DjymBqDS.js",
-			"/assets/founder-BBrUwKop.js",
-			"/assets/shield-D1L0MAqH.js",
-			"/assets/trending-up-D20ZjtPp.js",
-			"/assets/user-CYQXPzzm.js",
-			"/assets/users-BMR0bvWR.js",
+			"/assets/routes-w4SilTnB.js",
+			"/assets/arrow-right-BldOZ9Ek.js",
+			"/assets/car-ie03Scg8.js",
+			"/assets/chart-column-DpzVyic2.js",
+			"/assets/founder-Dxwiu_7o.js",
+			"/assets/shield-Cekx4F5v.js",
+			"/assets/trending-up-DkT2eWc5.js",
+			"/assets/user-1sRfI9aj.js",
+			"/assets/users-DEPHevCO.js",
 			"/assets/holdingphone.png.asset-B5Q3mH-e.js"
 		]
 	},
@@ -49,117 +49,117 @@ var tsrStartManifest = () => ({ routes: {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/about-us.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/about-us-CW2XI9tn.js",
-			"/assets/chevron-right-hhe8pKEt.js",
-			"/assets/eye-Dvcj4vF0.js",
-			"/assets/founder-BBrUwKop.js",
-			"/assets/users-BMR0bvWR.js"
+			"/assets/about-us-DeKZEgDw.js",
+			"/assets/chevron-right-v5ZMzi1h.js",
+			"/assets/eye-BqcHmGAu.js",
+			"/assets/founder-Dxwiu_7o.js",
+			"/assets/users-DEPHevCO.js"
 		]
 	},
 	"/company": {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/company.tsx",
 		children: void 0,
-		preloads: ["/assets/company-FnouvT7o.js"]
+		preloads: ["/assets/company-BrswAWoF.js"]
 	},
 	"/contact": {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/contact.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/contact-DSDvgGMs.js",
-			"/assets/arrow-right-XsdU_LDl.js",
-			"/assets/chevron-right-hhe8pKEt.js",
-			"/assets/message-circle-D2VxlvDy.js"
+			"/assets/contact-BeiZE8nW.js",
+			"/assets/arrow-right-BldOZ9Ek.js",
+			"/assets/chevron-right-v5ZMzi1h.js",
+			"/assets/message-circle-Cgv3o20l.js"
 		]
 	},
 	"/leadership": {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/leadership.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/leadership-n3mnCSJd.js",
-			"/assets/arrow-right-XsdU_LDl.js",
-			"/assets/chevron-right-hhe8pKEt.js"
+			"/assets/leadership-2P5G8LuG.js",
+			"/assets/arrow-right-BldOZ9Ek.js",
+			"/assets/chevron-right-v5ZMzi1h.js"
 		]
 	},
 	"/our-commitment": {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/our-commitment.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/our-commitment-G601sbKA.js",
-			"/assets/briefcase-Bk5YMaJ6.js",
-			"/assets/chart-column-DjymBqDS.js",
-			"/assets/eye-Dvcj4vF0.js",
-			"/assets/handshake-alX9L0Mw.js",
-			"/assets/settings-CuElJvCW.js",
-			"/assets/sparkles-0O91Ymi3.js",
-			"/assets/PhilosophyPage-ASw4zbR3.js"
+			"/assets/our-commitment-Bx2ZHC7P.js",
+			"/assets/briefcase-CEV7SRem.js",
+			"/assets/chart-column-DpzVyic2.js",
+			"/assets/eye-BqcHmGAu.js",
+			"/assets/handshake-CNPSknI5.js",
+			"/assets/settings-DqPRVvhc.js",
+			"/assets/sparkles-DkLGhzoG.js",
+			"/assets/PhilosophyPage-BheINegf.js"
 		]
 	},
 	"/our-culture": {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/our-culture.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/our-culture-DH0WsJYz.js",
-			"/assets/clock-C3B27gUb.js",
-			"/assets/search-xTs5pwCR.js",
-			"/assets/settings-CuElJvCW.js",
-			"/assets/shield-check-BgHJ0FKF.js",
-			"/assets/sparkles-0O91Ymi3.js",
-			"/assets/users-BMR0bvWR.js",
-			"/assets/PhilosophyPage-ASw4zbR3.js"
+			"/assets/our-culture-Rv6rJfcO.js",
+			"/assets/clock-CExQlOPj.js",
+			"/assets/search-73LxsibU.js",
+			"/assets/settings-DqPRVvhc.js",
+			"/assets/shield-check-D2ZM-Hu1.js",
+			"/assets/sparkles-DkLGhzoG.js",
+			"/assets/users-DEPHevCO.js",
+			"/assets/PhilosophyPage-BheINegf.js"
 		]
 	},
 	"/our-philosophy": {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/our-philosophy.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/our-philosophy-SDLe9cT1.js",
-			"/assets/chart-column-DjymBqDS.js",
-			"/assets/shield-check-BgHJ0FKF.js",
-			"/assets/sprout-Bga1wFxT.js",
-			"/assets/users-BMR0bvWR.js",
-			"/assets/PhilosophyPage-ASw4zbR3.js"
+			"/assets/our-philosophy-YN3lYRQV.js",
+			"/assets/chart-column-DpzVyic2.js",
+			"/assets/shield-check-D2ZM-Hu1.js",
+			"/assets/sprout-aasGgi6Z.js",
+			"/assets/users-DEPHevCO.js",
+			"/assets/PhilosophyPage-BheINegf.js"
 		]
 	},
 	"/our-principles": {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/our-principles.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/our-principles-BC1z3zGq.js",
-			"/assets/chart-column-DjymBqDS.js",
-			"/assets/clock-C3B27gUb.js",
-			"/assets/handshake-alX9L0Mw.js",
-			"/assets/settings-CuElJvCW.js",
-			"/assets/shield-check-BgHJ0FKF.js",
-			"/assets/sparkles-0O91Ymi3.js",
-			"/assets/users-BMR0bvWR.js",
-			"/assets/PhilosophyPage-ASw4zbR3.js"
+			"/assets/our-principles-C1vi9cRr.js",
+			"/assets/chart-column-DpzVyic2.js",
+			"/assets/clock-CExQlOPj.js",
+			"/assets/handshake-CNPSknI5.js",
+			"/assets/settings-DqPRVvhc.js",
+			"/assets/shield-check-D2ZM-Hu1.js",
+			"/assets/sparkles-DkLGhzoG.js",
+			"/assets/users-DEPHevCO.js",
+			"/assets/PhilosophyPage-BheINegf.js"
 		]
 	},
 	"/our-story": {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/our-story.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/our-story-WrDegnSU.js",
-			"/assets/arrow-right-XsdU_LDl.js",
-			"/assets/chevron-right-hhe8pKEt.js",
-			"/assets/eye-Dvcj4vF0.js",
-			"/assets/search-xTs5pwCR.js",
-			"/assets/users-BMR0bvWR.js",
+			"/assets/our-story-CY4ExfgP.js",
+			"/assets/arrow-right-BldOZ9Ek.js",
+			"/assets/chevron-right-v5ZMzi1h.js",
+			"/assets/eye-BqcHmGAu.js",
+			"/assets/search-73LxsibU.js",
+			"/assets/users-DEPHevCO.js",
 			"/assets/story-city-road-CPkM6S2Y.js"
 		]
 	},
 	"/our-systems": {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/our-systems.tsx",
 		children: void 0,
-		preloads: ["/assets/our-systems-TctCtX6q.js"]
+		preloads: ["/assets/our-systems-oQ6Mb1Mn.js"]
 	},
 	"/resources": {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/resources.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/resources-CuFARF6o.js",
-			"/assets/arrow-right-XsdU_LDl.js",
-			"/assets/search-xTs5pwCR.js",
+			"/assets/resources-PIonaxWT.js",
+			"/assets/arrow-right-BldOZ9Ek.js",
+			"/assets/search-73LxsibU.js",
 			"/assets/holdingphone.png.asset-B5Q3mH-e.js",
 			"/assets/philosophy-hero-v90UEzBj.js",
 			"/assets/story-city-road-CPkM6S2Y.js"
@@ -169,67 +169,67 @@ var tsrStartManifest = () => ({ routes: {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/stewardship.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/stewardship-DU2Koo97.js",
-			"/assets/award-CGUt8z84.js",
-			"/assets/briefcase-Bk5YMaJ6.js",
-			"/assets/settings-CuElJvCW.js",
-			"/assets/shield-check-BgHJ0FKF.js",
-			"/assets/sprout-Bga1wFxT.js",
-			"/assets/users-BMR0bvWR.js",
-			"/assets/PhilosophyPage-ASw4zbR3.js"
+			"/assets/stewardship-CmCxa1Wu.js",
+			"/assets/award-BgXigpMu.js",
+			"/assets/briefcase-CEV7SRem.js",
+			"/assets/settings-DqPRVvhc.js",
+			"/assets/shield-check-D2ZM-Hu1.js",
+			"/assets/sprout-aasGgi6Z.js",
+			"/assets/users-DEPHevCO.js",
+			"/assets/PhilosophyPage-BheINegf.js"
 		]
 	},
 	"/what-we-do": {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/what-we-do.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/what-we-do-BSIAPnNj.js",
-			"/assets/arrow-right-XsdU_LDl.js",
-			"/assets/car-B2G4xWY0.js",
-			"/assets/chart-column-DjymBqDS.js",
-			"/assets/chevron-right-hhe8pKEt.js",
-			"/assets/handshake-alX9L0Mw.js",
-			"/assets/settings-CuElJvCW.js",
-			"/assets/shield-check-BgHJ0FKF.js",
-			"/assets/target-hAjpjZCW.js",
-			"/assets/trending-up-D20ZjtPp.js",
-			"/assets/users-BMR0bvWR.js"
+			"/assets/what-we-do-DEgh3s0-.js",
+			"/assets/arrow-right-BldOZ9Ek.js",
+			"/assets/car-ie03Scg8.js",
+			"/assets/chart-column-DpzVyic2.js",
+			"/assets/chevron-right-v5ZMzi1h.js",
+			"/assets/handshake-CNPSknI5.js",
+			"/assets/settings-DqPRVvhc.js",
+			"/assets/shield-check-D2ZM-Hu1.js",
+			"/assets/target-CSYJnwdm.js",
+			"/assets/trending-up-DkT2eWc5.js",
+			"/assets/users-DEPHevCO.js"
 		]
 	},
 	"/why-zekano": {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/why-zekano.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/why-zekano-BzOBo2_q.js",
-			"/assets/arrow-right-XsdU_LDl.js",
-			"/assets/award-CGUt8z84.js",
-			"/assets/settings-CuElJvCW.js",
-			"/assets/shield-check-BgHJ0FKF.js",
-			"/assets/target-hAjpjZCW.js"
+			"/assets/why-zekano-B-Az__29.js",
+			"/assets/arrow-right-BldOZ9Ek.js",
+			"/assets/award-BgXigpMu.js",
+			"/assets/settings-DqPRVvhc.js",
+			"/assets/shield-check-D2ZM-Hu1.js",
+			"/assets/target-CSYJnwdm.js"
 		]
 	},
 	"/zeklease": {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/zeklease.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/zeklease-k0QJpt0w.js",
-			"/assets/car-B2G4xWY0.js",
-			"/assets/chart-column-DjymBqDS.js",
-			"/assets/message-circle-D2VxlvDy.js",
-			"/assets/shield-check-BgHJ0FKF.js",
-			"/assets/user-CYQXPzzm.js"
+			"/assets/zeklease-BY_7EPdq.js",
+			"/assets/car-ie03Scg8.js",
+			"/assets/chart-column-DpzVyic2.js",
+			"/assets/message-circle-Cgv3o20l.js",
+			"/assets/shield-check-D2ZM-Hu1.js",
+			"/assets/user-1sRfI9aj.js"
 		]
 	},
 	"/zekmanage": {
 		filePath: "/Users/responsearchitects/Documents/Arems/zekano_new_website/zekano-ui-replica/src/routes/zekmanage.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/zekmanage-Oiy3jPcc.js",
-			"/assets/eye-Dvcj4vF0.js",
-			"/assets/message-circle-D2VxlvDy.js",
-			"/assets/shield-check-BgHJ0FKF.js",
-			"/assets/shield-D1L0MAqH.js",
-			"/assets/users-BMR0bvWR.js"
+			"/assets/zekmanage-BptryQL7.js",
+			"/assets/eye-BqcHmGAu.js",
+			"/assets/message-circle-Cgv3o20l.js",
+			"/assets/shield-check-D2ZM-Hu1.js",
+			"/assets/shield-Cekx4F5v.js",
+			"/assets/users-DEPHevCO.js"
 		]
 	}
 } });
