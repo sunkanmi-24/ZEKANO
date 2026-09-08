@@ -26,7 +26,7 @@
 .zekano-mobile-nav-link {
 }
 
-/* --------------------------------------------------------------------------
+--------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */
 .zekano-footer {
@@ -173,4 +173,64 @@ button.bg-brand-green:hover,
 .zekano-who-we-serve-title .bg-brand-green,
 .zekano-who-we-serve-title .border-brand-green {
   background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
+.zekano-hero-pillar svg {
+    color: white;
+}
+.zekano-footer-col-title {
+    color: white;
+}
+.zekano-stat-icon svg {
+    color: white;
+}
+.zekano-stat-icon {
+    background: oklch(0.24 0.07 254.72);
+}
+.zekano-stat-value {
+    color: #082c67;
+}
+.text-brand-green {
+    color: #082c67;
+}
+.zekano-serve-icon.grid {
+    background-color: #082c7f;
+}
+.zekano-ecosystem-icon.grid {
+    background-color: #082c7f;
+}
+.bg-brand-green, .bg-brand-green\/10 {
+    background-color: oklch(0.74 0.11 87.6);
+}
+.svg.lucide.lucide-users.h-5.w-5.text-brand-green {
+    color: white;
+}
+.svg.lucide.lucide-eye.h-5.w-5.text-brand-green {
+    color: white;
+}
+.flex.h-11.w-11.shrink-0.items-center {
+    background-color: #082c93;
+}
+.zekano-stat-icon.mx-auto.grid {
+    background-color: #082c7f;
+}
+.svg.lucide.lucide-users.h-5.w-5.text-brand-green {
+    color: white;
+}
+.svg.lucide.lucide-eye.h-5.w-5.text-brand-green {
+    color: white;
+}
+.svg.lucide.lucide-circle-user.h-5.w-5.text-brand-green {
+    color: white;
+}
+.svg.lucide.lucide-chart-column.h-5.w-5.text-brand-green {
+    color: white;
+}
+.svg.lucide.lucide-shield.h-5.w-5.text-brand-green {
+    color: white;
+}
+svg.lucide.lucide-building2.lucide-building-2.h-5.w-5.text-brand-green {
+    color: white;
+}
+a.inline-flex.items-center.justify-center.gap-2.rounded-lg.bg-brand-dark.px-6.py-3.text-sm.font-semibold.text-white.hover\:opacity-90.transition {
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 }
