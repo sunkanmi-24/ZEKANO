@@ -21,7 +21,8 @@ export const Route = createFileRoute("/leadership")({
       { property: "og:title", content: "Leadership — Experienced Leaders. Clear Vision." },
       {
         property: "og:description",
-        content: "The ZEKANO leadership team building Africa's most trusted structured mobility ecosystem.",
+        content:
+          "The ZEKANO leadership team building Africa's most trusted structured mobility ecosystem.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/leadership" },
@@ -39,7 +40,12 @@ const ceo = {
   role: "Founder & CEO",
   image: getImage("leadership", "leader-1", ceoAsset.url),
   bio: "Visionary leader with a passion for building systems that solve real-world problems. A.A. drives ZEKANO's strategy, partnerships, and long-term vision for transforming mobility across Africa.",
-  points: ["Strategic Vision & Direction", "Business Development", "Stakeholder Partnerships", "Innovation & Growth"],
+  points: [
+    "Strategic Vision & Direction",
+    "Business Development",
+    "Stakeholder Partnerships",
+    "Innovation & Growth",
+  ],
 };
 
 const team = [
@@ -62,7 +68,10 @@ const team = [
 function Bullet({ label }: { label: string }) {
   return (
     <li className="leadership-point flex items-start gap-3">
-      <CheckCircle2 className="leadership-point-icon mt-0.5 h-4 w-4 shrink-0 text-brand-green" strokeWidth={2} />
+      <CheckCircle2
+        className="leadership-point-icon mt-0.5 h-4 w-4 shrink-0 text-brand-green"
+        strokeWidth={2}
+      />
       <span className="leadership-point-label min-w-0 text-sm text-brand-dark">{label}</span>
     </li>
   );
@@ -109,8 +118,9 @@ function LeadershipPage() {
                 <span className="text-brand-green">Clear Vision.</span>
               </h1>
               <p className="leadership-hero-desc mt-6 text-base text-muted-foreground leading-relaxed max-w-xl">
-                Our leadership team brings together deep experience in mobility, operations, technology, and finance to
-                build systems that create sustainable value for all stakeholders.
+                Our leadership team brings together deep experience in mobility, operations,
+                technology, and finance to build systems that create sustainable value for all
+                stakeholders.
               </p>
             </div>
 
@@ -139,9 +149,15 @@ function LeadershipPage() {
                 height={1024}
               />
               <div className="min-w-0 lg:py-2">
-                <h2 className="leadership-featured-name text-2xl lg:text-3xl font-bold text-brand-dark">{ceo.name}</h2>
-                <p className="leadership-featured-role mt-2 text-base lg:text-lg font-semibold text-brand-green">{ceo.role}</p>
-                <p className="leadership-featured-bio mt-5 text-sm lg:text-base text-muted-foreground leading-relaxed max-w-2xl">{ceo.bio}</p>
+                <h2 className="leadership-featured-name text-2xl lg:text-3xl font-bold text-brand-dark">
+                  {ceo.name}
+                </h2>
+                <p className="leadership-featured-role mt-2 text-base lg:text-lg font-semibold text-brand-green">
+                  {ceo.role}
+                </p>
+                <p className="leadership-featured-bio mt-5 text-sm lg:text-base text-muted-foreground leading-relaxed max-w-2xl">
+                  {ceo.bio}
+                </p>
                 <ul className="leadership-featured-points mt-6 grid gap-3">
                   {ceo.points.map((p) => (
                     <Bullet key={p} label={p} />
@@ -156,7 +172,10 @@ function LeadershipPage() {
         <section className="leadership-team mx-auto max-w-none w-full px-4 lg:px-8 pb-6">
           <div className="grid gap-6 lg:grid-cols-2">
             {team.map((m) => (
-              <article key={m.name} className="leadership-team-card rounded-2xl border border-border bg-secondary/40 p-5 lg:p-6">
+              <article
+                key={m.name}
+                className="leadership-team-card rounded-2xl border border-border bg-secondary/40 p-5 lg:p-6"
+              >
                 <div className="grid gap-5 sm:grid-cols-[180px_1fr] sm:gap-6">
                   <img
                     src={m.image}
@@ -167,9 +186,17 @@ function LeadershipPage() {
                     height={1024}
                   />
                   <div className="min-w-0">
-                    <h2 className="leadership-team-name text-lg lg:text-xl font-bold text-brand-dark">{m.name}</h2>
-                    {m.role && <p className="leadership-team-role mt-1.5 text-sm font-semibold text-brand-green">{m.role}</p>}
-                    <p className="leadership-team-bio mt-3 text-sm text-muted-foreground leading-relaxed">{m.bio}</p>
+                    <h2 className="leadership-team-name text-lg lg:text-xl font-bold text-brand-dark">
+                      {m.name}
+                    </h2>
+                    {m.role && (
+                      <p className="leadership-team-role mt-1.5 text-sm font-semibold text-brand-green">
+                        {m.role}
+                      </p>
+                    )}
+                    <p className="leadership-team-bio mt-3 text-sm text-muted-foreground leading-relaxed">
+                      {m.bio}
+                    </p>
                     <ul className="leadership-team-points mt-4 grid gap-2.5">
                       {m.points.map((p) => (
                         <Bullet key={p} label={p} />
@@ -192,9 +219,14 @@ function LeadershipPage() {
                 </div>
               </div>
               <div className="min-w-0">
-                <h2 className="leadership-cta-title text-xl lg:text-2xl font-bold text-brand-dark">One Team. One Mission.</h2>
+                <h2 className="leadership-cta-title text-xl lg:text-2xl font-bold text-brand-dark">
+                  One Team. One Mission.
+                </h2>
                 <p className="leadership-cta-desc mt-2 text-sm lg:text-base text-muted-foreground leading-relaxed max-w-2xl">
-...
+                  Building Africa's most trusted structured mobility ecosystem — together with
+                  vehicle owners, drivers, and partners.
+                </p>
+              </div>
               <Link
                 to="/contact"
                 className="leadership-cta-btn inline-flex items-center justify-center gap-2 rounded-lg bg-brand-dark px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition"
