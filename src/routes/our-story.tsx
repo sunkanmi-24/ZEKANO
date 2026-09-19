@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ChevronRight, Search, Eye, Zap, Users } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
@@ -9,15 +9,15 @@ import { getImage } from "@/lib/site-images";
 export const Route = createFileRoute("/our-story")({
   head: () => ({
     meta: [
-      { title: "Our Story — Built From a Real Problem | ZEKANO" },
+      { title: "Our Story ΓÇö Built From a Real Problem | ZEKANO" },
       {
         name: "description",
         content:
-          "ZEKANO was born out of a simple observation — mobility assets are underutilized and operations unstructured. Read the story behind our structured mobility systems.",
+          "ZEKANO was born out of a simple observation ΓÇö mobility assets are underutilized and operations unstructured. Read the story behind our structured mobility systems.",
       },
       {
         property: "og:title",
-        content: "Our Story — Built From a Real Problem. Driven by a Bigger Purpose.",
+        content: "Our Story ΓÇö Built From a Real Problem. Driven by a Bigger Purpose.",
       },
       {
         property: "og:description",
@@ -36,7 +36,7 @@ const journey = [
   {
     icon: Search,
     title: "The Insight",
-    body: "We identified the gaps in the mobility industry—fragmented operations, lack of transparency, and inefficient management of assets.",
+    body: "We identified the gaps in the mobility industryΓÇöfragmented operations, lack of transparency, and inefficient management of assets.",
   },
   {
     icon: Eye,
@@ -95,7 +95,7 @@ function OurStoryPage() {
             </h1>
             <div className="zekano-story-body mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
               <p>
-                ZEKANO was born out of a simple observation—mobility assets are underutilized,
+                ZEKANO was born out of a simple observationΓÇömobility assets are underutilized,
                 operations are unstructured, and opportunities are lost because systems don't work
                 for the people they should.
               </p>
@@ -159,7 +159,7 @@ function OurStoryPage() {
                 opportunity, and lasting impact.
               </p>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Our story is still being written—and the best chapters are ahead of us.
+                Our story is still being writtenΓÇöand the best chapters are ahead of us.
               </p>
             </aside>
           </div>

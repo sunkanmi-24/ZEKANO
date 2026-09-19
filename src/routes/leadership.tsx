@@ -218,12 +218,13 @@ function LeadershipPage() {
                   <ZekanoLogo />
                 </div>
               </div>
+
               <div className="min-w-0">
                 <h2 className="leadership-cta-title text-xl lg:text-2xl font-bold text-brand-dark">
                   One Team. One Mission.
                 </h2>
                 <p className="leadership-cta-desc mt-2 text-sm lg:text-base text-muted-foreground leading-relaxed max-w-2xl">
-                  Building Africa's most trusted structured mobility ecosystem — together with
+                  Building Africa&apos;s most trusted structured mobility ecosystem — together with
                   vehicle owners, drivers, and partners.
                 </p>
               </div>

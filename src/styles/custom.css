@@ -7,7 +7,7 @@
 /* --------------------------------------------------------------------------
    Header
    -------------------------------------------------------------------------- */
-.zekano-header {
+/* .zekano-header {
 }
 .zekano-header-inner {
 }
@@ -26,10 +26,10 @@
 .zekano-mobile-nav-link {
 }
 
-/* --------------------------------------------------------------------------
+--------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */
-.zekano-footer {
+ /*.zekano-footer {
 }
 .zekano-footer-inner {
 }
@@ -53,7 +53,7 @@
 /* --------------------------------------------------------------------------
    Home Page Sections
    -------------------------------------------------------------------------- */
-.zekano-hero {
+/*.zekano-hero {
 }
 .zekano-hero-bg {
 }
@@ -91,7 +91,8 @@
 .zekano-founder {
 }
 .zekano-cta {
-}
+} */
+
 .zekano-serve-grid {
   margin: 10px !important;
 }
@@ -127,4 +128,247 @@
 .bg-brand-dark,
 .bg-brand-blue {
   background-color: oklch(0.24 0.07 255.27);
+}
+
+/* --------------------------------------------------------------------------
+   Gold gradient buttons + highlighted text
+   -------------------------------------------------------------------------- */
+a.bg-brand-green,
+button.bg-brand-green,
+.zekano-contact-btn,
+.zekano-mobile-contact-btn,
+.zekano-contact-submit,
+.zekano-hero-btn,
+.zekano-cta-btn,
+.zekano-why-btn-primary,
+.zekano-resources-hero-btn,
+.zekano-newsletter-btn {
+  background-image: var(--brand-gold-gradient) !important;
+  background-color: transparent !important;
+  color: oklch(0.24 0.07 255.27) !important;
+  border: none;
+}
+a.bg-brand-green:hover,
+button.bg-brand-green:hover,
+.zekano-contact-btn:hover,
+.zekano-mobile-contact-btn:hover,
+.zekano-contact-submit:hover,
+.zekano-hero-btn:hover,
+.zekano-cta-btn:hover,
+.zekano-why-btn-primary:hover,
+.zekano-resources-hero-btn:hover,
+.zekano-newsletter-btn:hover {
+  filter: brightness(1.06);
+  background-image: var(--brand-gold-gradient) !important;
+  background-color: transparent !important;
+}
+
+.zekano-gold-text {
+  background-image: var(--brand-gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.zekano-who-we-serve-title .bg-brand-green,
+.zekano-who-we-serve-title .border-brand-green {
+  background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
+.zekano-hero-pillar svg {
+    color: white;
+}
+.zekano-footer-col-title {
+    color: white;
+}
+.zekano-stat-icon svg {
+    color: white;
+}
+.zekano-stat-icon {
+    background: oklch(0.24 0.07 254.72);
+}
+.zekano-stat-value {
+    color: #082c67;
+}
+.text-brand-green {
+    color: #082c67;
+}
+.zekano-serve-icon.grid {
+    background-color: #082c7f;
+}
+.zekano-ecosystem-icon.grid {
+    background-color: #082c7f;
+}
+.bg-brand-green, .bg-brand-green\/10 {
+    background-color: oklch(0.74 0.11 87.6);
+}
+.svg.lucide.lucide-users.h-5.w-5.text-brand-green {
+    color: white;
+}
+.svg.lucide.lucide-eye.h-5.w-5.text-brand-green {
+    color: white;
+}
+.flex.h-11.w-11.shrink-0.items-center {
+    background-color: #082c93;
+}
+.zekano-stat-icon.mx-auto.grid {
+    background-color: #082c7f;
+}
+.svg.lucide.lucide-users.h-5.w-5.text-brand-green {
+    color: white;
+}
+.svg.lucide.lucide-eye.h-5.w-5.text-brand-green {
+    color: white;
+}
+.svg.lucide.lucide-circle-user.h-5.w-5.text-brand-green {
+    color: white;
+}
+.svg.lucide.lucide-chart-column.h-5.w-5.text-brand-green {
+    color: white;
+}
+.svg.lucide.lucide-shield.h-5.w-5.text-brand-green {
+    color: white;
+}
+svg.lucide.lucide-building2.lucide-building-2.h-5.w-5.text-brand-green {
+    color: white;
+}
+a.inline-flex.items-center.justify-center.gap-2.rounded-lg.bg-brand-dark.px-6.py-3.text-sm.font-semibold.text-white.hover\:opacity-90.transition {
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
+.zekano-phil-hero .text-brand-accent {
+    color: white;
+}
+.zekano-phil-hero .border-brand-accent {
+    border-color: white;
+}
+.zekano-footer-col-title {
+    color: white;
+}
+
+/* --------------------------------------------------------------------------
+   Leadership
+   -------------------------------------------------------------------------- */
+.leadership-eyebrow,
+.leadership-featured-role,
+.leadership-team-role,
+.leadership-point-icon {
+  color: #082c67 !important;
+}
+.leadership-title .text-brand-green {
+  color: #082c67 !important;
+}
+.leadership-featured-card,
+.leadership-team-card,
+.leadership-cta-band {
+  background-color: color-mix(in oklab, oklch(0.97 0.01 255) 80%, white) !important;
+  border-color: oklch(0.9 0.02 255) !important;
+}
+/* --------------------------------------------------------------------------
+   Global icon normalization: white icon on brand-blue (#082c67)
+   Icons only — does NOT target buttons (a/button/link).
+   -------------------------------------------------------------------------- */
+.zekano-serve-icon,
+.zekano-ecosystem-icon,
+.zekano-stat-icon,
+.zekano-story-step-icon,
+.zekano-system-icon,
+.zekano-why-icon {
+  background-color: #082c67 !important;
+}
+
+.zekano-serve-icon svg,
+.zekano-ecosystem-icon svg,
+.zekano-stat-icon svg,
+.zekano-story-step-icon svg,
+.zekano-system-icon svg,
+.zekano-why-icon svg {
+  color: white !important;
+  stroke: white !important;
+}
+/* Philosophy grid: all icons blue */
+.zekano-phil-grid svg,
+.zekano-phil-grid .text-brand-accent,
+.zekano-phil-grid svg.lucide {
+  color: #082c67 !important;
+  stroke: #082c67 !important;
+}
+svg.lucide.lucide-circle-question-mark.h-5.w-5.shrink-0.text-brand-accent {
+    color: white;
+}
+svg.lucide.lucide-handshake.h-6.w-6.shrink-0.text-brand-accent {
+    color: #082c67;
+}
+svg.h-5.w-5 {
+    color: white;
+}
+.text-brand-accent {
+    color: white;
+}
+    .bg-brand-accent\/10 {
+        background-color: #082c67;
+    }
+
+.border-brand-accent {
+    border-color: oklch(0.74 0.11 87.6);
+}
+    .hover\:bg-brand-accent:hover {
+        background-color:oklch(0.74 0.11 87.6);
+    }
+    .bg-brand-accent {
+    background-color: oklch(0.74 0.11 87.6);
+
+}
+
+
+
+.zeklease-start-icon.grid.h-14.w-14.shrink-0.place-items-center.rounded-full.bg-brand-green {
+    background-color: #082c67;
+}
+span.zeklease-step-num {
+    background-color: #082c67;
+}
+svg.lucide.lucide-phone {
+    color: white;
+}
+svg.lucide.lucide-message-circle.h-6.w-6.shrink-0.text-brand-green {
+    color: white;
+}
+span.zeklease-assist-whatsapp-label.block.text-sm.font-semibold.text-brand-green {
+    color: white;
+}
+.zekmanage-start-icon.grid.h-14.w-14.shrink-0.place-items-center.rounded-full.bg-brand-green {
+    background-color: #082c67;
+}
+
+span.zekmanage-assist-whatsapp-label.block.text-sm.font-semibold.text-brand-green {
+    color: white;
+}
+
+span.zekmanage-step-num.absolute.-bottom-2.left-1\/2.-translate-x-1\/2.grid.h-6.w-6.place-items-center.rounded-full.bg-brand-green.text-\[11px\].font-bold.text-white {
+    background-color: #082c67;
+}
+.zekmanage-step-icon.grid.h-16.w-16.place-items-center.rounded-full.border.border-border.bg-white {
+    background-color: #082c67;
+}
+svg.lucide.lucide-mail.h-7.w-7.text-brand-green {
+    color: white;
+}
+svg.lucide.lucide-file-text.h-7.w-7.text-brand-green {
+    color: white;
+}
+svg.lucide.lucide-shield-check.h-7.w-7.text-brand-green {
+    color: white;
+}
+svg.lucide.lucide-users.h-7.w-7.text-brand-green {
+    color: white;
+}
+.zekano-why-commit-value.text-2xl.lg\:text-3xl.font-bold.text-brand-green {
+    color: white;
+}
+
+a.zekano-why-btn-secondary.inline-flex.items-center.justify-center.gap-2.rounded-md.bg-brand-blue.px-6.py-3.text-sm.font-semibold.text-white.hover\:opacity-90.transition {
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
+a.zekano-why-btn-secondary.inline-flex.items-center.justify-center.gap-2.rounded-md.bg-brand-blue.px-6.py-3.text-sm.font-semibold.text-white.hover\:opacity-90.transition {
+    color:#082c67;
 }
