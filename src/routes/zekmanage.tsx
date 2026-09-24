@@ -1,248 +1,130 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-  Mail,
-  Phone,
-  FileText,
-  ShieldCheck,
-  Users,
-  Wallet,
-  ClipboardList,
-  Eye,
-  Shield,
-  MessageCircle,
-} from "lucide-react";
+import { ArrowRight, ChevronRight, Shield, Eye, Users, Wallet, CheckCircle2 } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import zekmanageHero from "@/assets/zekmanage-hero.jpg";
 import { getImage } from "@/lib/site-images";
 
-export const Route = createFileRoute("/zekmanage")({
-  head: () => ({
-    meta: [
-      { title: "ZEKMANAGE — Professional Mobility Asset Management | ZEKANO" },
-      {
-        name: "description",
-        content:
-          "ZEKMANAGE is a structured mobility management system helping vehicle owners earn predictable income through professional management of their mobility assets.",
-      },
-      { property: "og:title", content: "ZEKMANAGE — Professional Mobility Asset Management" },
-      {
-        property: "og:description",
-        content:
-          "Earn predictable income from your vehicle with ZEKANO's structured asset management, transparency and peace of mind.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/zekmanage" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/zekmanage" }],
-  }),
-  component: ZekmanagePage,
-});
+export const Route = createFileRoute("/zekmanage")({ component: Page });
 
-const steps = [
-  { icon: Mail, num: "1", title: "Send Email", desc: "Send us an email expressing your interest." },
-  { icon: Phone, num: "2", title: "We'll Contact You", desc: "Our team will reach out within one business day." },
-  { icon: FileText, num: "3", title: "We Guide You", desc: "We'll guide you through the onboarding process." },
-  {
-    icon: ShieldCheck,
-    num: "4",
-    title: "Complete Verification",
-    desc: "Vehicle assessment, document verification and inspection.",
-  },
-  {
-    icon: Users,
-    num: "5",
-    title: "Welcome to ZEKMANAGE",
-    desc: "Your asset is managed professionally and you start earning.",
-  },
-];
-
-const experience = [
-  { icon: Wallet, title: "Predictable Income", desc: "Earn consistent monthly income from your asset." },
-  { icon: ClipboardList, title: "Professional Management", desc: "We handle operations, maintenance & reporting." },
-  { icon: Eye, title: "Transparency", desc: "Real-time updates and clear performance reports." },
-  { icon: Shield, title: "Peace of Mind", desc: "Your asset is protected and well maintained." },
-];
-
-function ZekmanagePage() {
+function Eyebrow({ children }: { children: string }) {
+  return <p className="text-xs font-bold tracking-[0.2em] text-brand-green">{children}</p>;
+}
+function Section({ eyebrow, title, children, altBg }: { eyebrow: string; title: string; children: React.ReactNode; altBg?: boolean }) {
   return (
-    <div className="zekmanage-page min-h-screen bg-white flex flex-col">
+    <section className={`px-5 sm:px-8 lg:px-12 py-10 ${altBg ? "bg-secondary/40" : ""}`}>
+      <Eyebrow>{eyebrow}</Eyebrow>
+      <h2 className="mt-3 text-2xl font-bold text-brand-dark">{title}</h2>
+      <div className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed space-y-3">{children}</div>
+    </section>
+  );
+}
+
+function Page() {
+  return (
+    <div className="min-h-screen bg-white">
       <Header />
+      <nav className="px-5 pt-6 sm:px-8 lg:px-12"><ol className="flex items-center gap-1 text-xs text-muted-foreground"><li><Link to="/" className="hover:text-brand-green">Home</Link></li><ChevronRight className="h-3.5 w-3.5" /><li className="text-brand-dark">ZEKMANAGE</li></ol></nav>
 
-      <main className="flex-1">
-        {/* HERO */}
-        <section className="zekmanage-hero relative bg-secondary overflow-hidden">
-          <div className="zekmanage-hero-media absolute inset-y-0 right-0 hidden lg:block w-1/2">
-            <img
-              src={getImage("zekmanage", "hero", zekmanageHero)}
-              alt="Mobility asset owner reviewing performance on a tablet"
-              className="h-full w-full object-cover"
-              width={1200}
-              height={912}
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/60 to-transparent" />
+      <section className="px-5 sm:px-8 lg:px-12 py-10 lg:py-14">
+        <div className="grid gap-8 lg:grid-cols-2 items-center">
+          <div>
+            <Eyebrow>ZEKMANAGE</Eyebrow>
+            <h1 className="mt-3 text-3xl lg:text-[42px] font-bold text-brand-dark">Structured Mobility Asset Management.</h1>
+            <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">ZEKMANAGE is ZEKANO Mobility's structured mobility asset management solution. It provides Asset Owners with professional management, oversight, coordination, and accountability for their mobility assets. We create the management structure through which mobility assets can be responsibly positioned, operated, monitored, and stewarded toward their productive potential.</p>
           </div>
-
-          <div className="zekmanage-hero-inner relative mx-auto max-w-none w-full px-4 lg:px-8 py-12 lg:py-20">
-            <div className="lg:max-w-[52%]">
-              <p className="zekmanage-eyebrow text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] text-brand-green">
-                ZEKMANAGE
-              </p>
-              <h1 className="zekmanage-title mt-4 text-3xl sm:text-4xl lg:text-[42px] font-bold text-brand-dark leading-[1.15]">
-                Thank You for Your Interest
-                <br />
-                in <span className="text-brand-green">ZEKMANAGE</span>
-              </h1>
-              <div className="mt-6 h-0.5 w-24 bg-brand-green" />
-              <p className="zekmanage-hero-desc mt-6 text-base text-muted-foreground leading-relaxed max-w-xl">
-                We appreciate your interest in partnering with ZEKANO.
-              </p>
-              <p className="zekmanage-hero-desc mt-4 text-base text-muted-foreground leading-relaxed max-w-xl">
-                ZEKMANAGE is a structured mobility management system designed to help vehicle owners earn predictable
-                income through the professional management of their mobility assets.
-              </p>
-            </div>
-
-            <div className="zekmanage-hero-image mt-8 lg:hidden rounded-xl overflow-hidden">
-              <img
-                src={getImage("zekmanage", "hero", zekmanageHero)}
-                alt="Mobility asset owner reviewing performance on a tablet"
-                className="h-56 w-full object-cover"
-                width={1200}
-                height={912}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* GET STARTED CARD */}
-        <section className="zekmanage-start mx-auto max-w-none w-full px-4 lg:px-8 -mt-4 lg:-mt-10 relative z-10">
-          <div className="zekmanage-start-card rounded-xl border border-border bg-white p-6 lg:p-8 shadow-lg">
-            <div className="zekmanage-start-grid grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:divide-x divide-border">
-              <div className="zekmanage-start-intro flex items-start gap-5 lg:pr-8">
-                <div className="zekmanage-start-icon grid h-14 w-14 shrink-0 place-items-center rounded-full bg-brand-green">
-                  <Mail className="h-6 w-6 text-white" />
-                </div>
-                <div className="min-w-0">
-                  <h2 className="zekmanage-start-title text-xl lg:text-2xl font-bold text-brand-green">Ready to get started?</h2>
-                  <p className="zekmanage-start-desc mt-3 text-base text-muted-foreground leading-relaxed">
-                    Send us an email expressing your interest and one of our Asset Management Advisors will contact you
-                    within one business day to guide you through the next steps.
-                  </p>
-                </div>
-              </div>
-
-              <div className="zekmanage-start-contact lg:pl-8">
-                <div className="zekmanage-start-email-label flex items-center gap-2 text-muted-foreground">
-                  <Mail className="h-4 w-4" />
-                  <span className="text-sm font-medium">Email Us</span>
-                </div>
-                <a
-                  href="mailto:manage@zekano.co"
-                  className="zekmanage-start-email mt-3 block text-xl lg:text-2xl font-bold text-brand-green break-all hover:underline"
-                >
-                  manage@zekano.co
-                </a>
-                <p className="zekmanage-start-subject mt-3 text-sm text-brand-dark">
-                  <span className="font-bold">Subject:</span> Interest in ZEKMANAGE
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* WHAT HAPPENS NEXT */}
-        <section className="zekmanage-steps mx-auto max-w-none w-full px-4 lg:px-8 py-14 lg:py-20">
-          <div className="zekmanage-steps-heading flex items-center justify-center gap-4">
-            <span className="zekmanage-steps-rule hidden sm:block h-0.5 w-16 lg:w-28 bg-brand-green/40" />
-            <h2 className="zekmanage-steps-title text-2xl lg:text-3xl font-bold text-brand-dark text-center">What Happens Next?</h2>
-            <span className="zekmanage-steps-rule hidden sm:block h-0.5 w-16 lg:w-28 bg-brand-green/40" />
-          </div>
-
-          <div className="zekmanage-steps-grid mt-10 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4">
-            {steps.map((s, i) => (
-              <div key={s.title} className="zekmanage-step relative text-center">
-                <div className="relative mx-auto w-fit">
-                  <div className="zekmanage-step-icon grid h-16 w-16 place-items-center rounded-full border border-border bg-white">
-                    <s.icon className="h-7 w-7 text-brand-green" strokeWidth={1.75} />
-                  </div>
-                  <span className="zekmanage-step-num absolute -bottom-2 left-1/2 -translate-x-1/2 grid h-6 w-6 place-items-center rounded-full bg-brand-green text-[11px] font-bold text-white">
-                    {s.num}
-                  </span>
-                </div>
-                <h3 className="zekmanage-step-title mt-6 text-sm lg:text-base font-bold text-brand-dark">{s.title}</h3>
-                <p className="zekmanage-step-desc mt-2 text-sm text-muted-foreground leading-relaxed px-2">{s.desc}</p>
-
-                {i < steps.length - 1 && (
-                  <span
-                    aria-hidden
-                    className="zekmanage-step-connector hidden lg:block absolute top-8 left-full -translate-x-1/2 w-10 border-t-2 border-dotted border-brand-green/60"
-                  />
-                )}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* WHAT YOU'LL EXPERIENCE */}
-        <section className="zekmanage-experience mx-auto max-w-none w-full px-4 lg:px-8 pb-14">
-          <div className="zekmanage-experience-band rounded-2xl bg-secondary px-6 py-10 lg:px-10">
-            <h2 className="zekmanage-experience-title text-xl lg:text-2xl font-bold text-brand-green text-center">What You&apos;ll Experience</h2>
-            <div className="zekmanage-experience-grid mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x divide-border">
-              {experience.map((e) => (
-                <div key={e.title} className="zekmanage-experience-item flex items-start gap-4 lg:px-6 first:lg:pl-0 last:lg:pr-0">
-                  <e.icon className="zekmanage-experience-icon h-7 w-7 shrink-0 text-brand-green" strokeWidth={1.75} />
-                  <div className="min-w-0">
-                    <h3 className="zekmanage-experience-item-title text-sm lg:text-base font-bold text-brand-dark">{e.title}</h3>
-                    <p className="zekmanage-experience-item-desc mt-2 text-sm text-muted-foreground leading-relaxed">{e.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ASSISTANCE BAND */}
-        <section className="zekmanage-assist mx-auto max-w-none w-full px-4 lg:px-8 pb-20">
-          <div className="zekmanage-assist-band rounded-2xl bg-brand-dark px-6 py-8 lg:px-10">
-            <div className="zekmanage-assist-grid grid gap-6 lg:grid-cols-[1.2fr_1fr_1fr] lg:items-center">
-              <div className="min-w-0">
-                <h2 className="zekmanage-assist-title text-lg lg:text-xl font-bold text-white">Need immediate assistance?</h2>
-                <p className="zekmanage-assist-desc mt-1 text-sm text-white/70">Our team is here to help you.</p>
-              </div>
-
-              <a
-                href="tel:+2348006000000"
-                className="zekmanage-assist-call flex items-center gap-4 rounded-xl bg-white/5 px-5 py-4 hover:bg-white/10 transition"
-              >
-                <Phone className="h-6 w-6 shrink-0 text-brand-green" />
-                <span className="min-w-0">
-                  <span className="zekmanage-assist-call-label block text-sm font-semibold text-white">Call Us</span>
-                  <span className="zekmanage-assist-call-value block text-sm text-white/70">+234 800 600 0000</span>
-                </span>
-              </a>
-
-              <a
-                href="https://wa.me/2348006000000"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="zekmanage-assist-whatsapp flex items-center gap-4 rounded-xl bg-white/5 px-5 py-4 hover:bg-white/10 transition"
-              >
-                <MessageCircle className="h-6 w-6 shrink-0 text-brand-green" />
-                <span className="min-w-0">
-                  <span className="zekmanage-assist-whatsapp-label block text-sm font-semibold text-brand-green">WhatsApp Us</span>
-                  <span className="zekmanage-assist-whatsapp-value block text-sm text-white/70">Chat on WhatsApp</span>
-                </span>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <div className="sr-only">
-          <Link to="/contact">Contact ZEKANO</Link>
+          <div className="overflow-hidden rounded-2xl"><img src={getImage("zekmanage", "hero", zekmanageHero)} alt="ZEKMANAGE" className="h-72 w-full object-cover lg:h-[380px]" width={1200} height={800} /></div>
         </div>
-      </main>
+      </section>
+
+      <Section eyebrow="YOUR ASSET DESERVES MORE THAN OWNERSHIP" title="Ownership Gives Responsibility. Management Provides Structure." altBg>
+        <p>Owning a mobility asset creates responsibility. The asset needs to be properly managed, its use coordinated, its condition monitored, and relationships responsibly maintained. Without structure, ownership can become difficult to manage. ZEKMANAGE provides the management framework through which Asset Owners can entrust day-to-day management to a structured system.</p>
+        <p className="font-semibold text-brand-dark italic">Ownership gives responsibility. Management provides structure. Stewardship protects potential.</p>
+      </Section>
+
+      <Section eyebrow="WHAT ZEKMANAGE PROVIDES" title="A Management Framework Built Around Stewardship">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { t: "Professional Management", d: "Structured management of the asset and surrounding activities." },
+            { t: "Operational Oversight", d: "Ongoing oversight for visibility, consistency, and responsible operation." },
+            { t: "Coordination", d: "Coordination between asset, Mobility Professionals, and ecosystem relationships." },
+            { t: "Accountability", d: "Defined responsibilities and standards that make the relationship clear." },
+            { t: "Responsible Stewardship", d: "Protecting the asset's ability to continue creating value." },
+          ].map((c) => (
+            <div key={c.t} className="rounded-xl border border-border p-5 bg-white">
+              <h3 className="text-sm font-bold text-brand-dark">{c.t}</h3>
+              <p className="mt-1 text-xs text-muted-foreground">{c.d}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="HOW WE THINK ABOUT ASSET MANAGEMENT" title="We Steward Potential, Not Just Vehicles" altBg>
+        <p>We do not view a mobility asset simply as a vehicle. It can represent capital, savings, investment, opportunity, livelihood, and future plans. That is why our responsibility extends beyond keeping an asset active. We seek to maximize what the asset can responsibly create while protecting its ability to continue creating value.</p>
+      </Section>
+
+      <section className="px-5 sm:px-8 lg:px-12 py-10">
+        <Eyebrow>ESTIMATE YOUR MONTHLY PAYOUT</Eyebrow>
+        <h2 className="mt-3 text-2xl font-bold text-brand-dark">See Your Estimated Monthly Payout</h2>
+        <p className="mt-2 text-sm text-muted-foreground">Every asset has a different operating profile. Enter your vehicle details for an initial indication.</p>
+        <div className="mt-6 max-w-2xl rounded-2xl border border-border p-6 grid sm:grid-cols-2 gap-4 bg-secondary/30">
+          <label className="text-sm">Vehicle Value<input placeholder="₦ Enter value" className="mt-1 w-full rounded-md border border-border px-3 py-2 text-sm" /></label>
+          <label className="text-sm">Vehicle Model<input placeholder="Enter model" className="mt-1 w-full rounded-md border border-border px-3 py-2 text-sm" /></label>
+          <label className="text-sm">Vehicle Year<input placeholder="Select year" className="mt-1 w-full rounded-md border border-border px-3 py-2 text-sm" /></label>
+          <label className="text-sm">Vehicle Condition<select className="mt-1 w-full rounded-md border border-border px-3 py-2 text-sm"><option>Foreign Used</option><option>Nigerian Used</option></select></label>
+          <button className="sm:col-span-2 mt-2 rounded-md px-6 py-3 text-sm font-semibold" style={{ backgroundImage: "var(--brand-gold-gradient)", color: "oklch(0.24 0.07 255.27)" }}>Calculate Estimated Payout</button>
+        </div>
+        <div className="mt-4 max-w-2xl rounded-xl bg-brand-dark text-white p-6 text-center">
+          <p className="text-xs tracking-widest text-white/60">ESTIMATED MONTHLY PAYOUT</p>
+          <p className="mt-2 text-3xl font-bold">₦XXX,XXX</p>
+          <p className="mt-2 text-xs text-white/60">Estimate only — final terms determined during onboarding.</p>
+        </div>
+      </section>
+
+      <Section eyebrow="WHAT THE RELATIONSHIP LOOKS LIKE" title="Clear Framework, Clear Responsibilities" altBg>
+        <p>The Asset Owner retains ownership. ZEKANO provides the management structure, professional oversight, coordination, and accountability. The objective is a clear framework in which responsibilities are understood and the asset can be responsibly put to productive use.</p>
+      </Section>
+
+      <Section eyebrow="BUILT AROUND STEWARDSHIP" title="Productivity. Protection. Accountability. Sustainability.">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { icon: Wallet, t: "Productivity", d: "Putting the asset to meaningful and productive use." },
+            { icon: Shield, t: "Protection", d: "Protecting condition, purpose, and long-term potential." },
+            { icon: Eye, t: "Accountability", d: "Maintaining clear responsibilities across the relationship." },
+            { icon: Users, t: "Sustainability", d: "Creating value today while considering tomorrow." },
+          ].map((c) => (
+            <div key={c.t} className="rounded-xl border border-border p-5 flex gap-3 bg-white">
+              <c.icon className="h-6 w-6 text-brand-green shrink-0" />
+              <div><h3 className="text-sm font-bold text-brand-dark">{c.t}</h3><p className="text-xs text-muted-foreground">{c.d}</p></div>
+            </div>
+          ))}
+        </div>
+        <p className="font-semibold text-brand-dark">An asset entrusted to us is a responsibility before it is an opportunity.</p>
+      </Section>
+
+      <Section eyebrow="WHAT WE ARE RESPONSIBLE FOR" title="Quality of Management" >
+        <p>When an Asset Owner entrusts an asset to ZEKMANAGE, our responsibility is to manage that asset within the agreed structure and operating scope — maintaining standards, coordinating relevant parties, and acting with care and accountability. Our role is not simply to keep an asset active. It is to responsibly manage the conditions through which that asset can create productive value.</p>
+      </Section>
+
+      <Section eyebrow="WHAT WE CANNOT CONTROL" title="Structure Improves Conditions — It Does Not Guarantee Outcomes" altBg>
+        <p>Mobility operates in a real-world environment. Utilization, operating costs, market conditions, unforeseen events, downtime, and other external factors can affect outcomes. For that reason, ZEKMANAGE does not represent its management service as a guarantee of a particular income, return, utilization level, or financial outcome.</p>
+        <p className="font-semibold text-brand-dark">We are responsible for the quality of the management. We cannot honestly guarantee every outcome produced by the environment in which the asset operates.</p>
+      </Section>
+
+      <section className="px-5 sm:px-8 lg:px-12 py-10">
+        <Eyebrow>A STRUCTURED APPROACH</Eyebrow>
+        <h2 className="mt-3 text-2xl font-bold text-brand-dark">Positioning → Utilization → Stewardship → Evaluation → Improvement → Transition</h2>
+        <p className="mt-3 text-sm text-muted-foreground">The objective is not simply to keep an asset active. It is to manage the asset responsibly throughout its useful life and continually consider how its potential can be protected and improved.</p>
+        <Link to="/our-systems" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-green">Explore Our Mobility System <ArrowRight className="h-4 w-4" /></Link>
+      </section>
+
+      <section className="px-5 sm:px-8 lg:px-12 pb-14">
+        <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10">
+          <h2 className="text-xl font-bold">Request ZEKMANAGE</h2>
+          <p className="mt-2 text-sm text-white/70">Let's Discuss Your Mobility Asset. Interested in ZEKMANAGE? Send us an email at <a href="mailto:zekmanage@zekano.co" className="underline">zekmanage@zekano.co</a></p>
+          <a href="mailto:zekmanage@zekano.co" className="mt-6 inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold" style={{ backgroundImage: "var(--brand-gold-gradient)", color: "oklch(0.24 0.07 255.27)" }}>Request ZEKMANAGE <ArrowRight className="h-4 w-4" /></a>
+        </div>
+      </section>
 
       <Footer />
     </div>

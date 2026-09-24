@@ -1,88 +1,91 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { BarChart3, Sprout, Users, Cpu, ShieldCheck, Star, Home, Hand } from "lucide-react";
-import { GuidingPurpose, PhilosophyGrid, PhilosophyLayout } from "@/components/site/PhilosophyPage";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, ChevronRight, Lightbulb, Layers, Shield, Users, Heart, TrendingUp } from "lucide-react";
+import { Header } from "@/components/site/Header";
+import { Footer } from "@/components/site/Footer";
+import philosophyHero from "@/assets/philosophy-hero.jpg";
+import { getImage } from "@/lib/site-images";
 
-export const Route = createFileRoute("/our-philosophy")({
-  head: () => ({
-    meta: [
-      { title: "Our Philosophy — The Beliefs That Shape Everything | ZEKANO" },
-      {
-        name: "description",
-        content:
-          "ZEKANO's philosophy defines how we think, decide, and act — structure creates trust, every asset has potential, and purpose comes before profit.",
-      },
-      { property: "og:title", content: "Our Philosophy — The beliefs that shape everything we do" },
-      {
-        property: "og:description",
-        content: "The beliefs that guide ZEKANO's systems, culture, and every decision we make.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/our-philosophy" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/our-philosophy" }],
-  }),
-  component: OurPhilosophyPage,
-});
+export const Route = createFileRoute("/our-philosophy")({ component: OurPhilosophyPage });
 
-const beliefs = [
-  {
-    icon: BarChart3,
-    title: "Structure Creates Trust",
-    body: "Sustainable businesses are built on systems, not improvisation.",
-  },
-  {
-    icon: Sprout,
-    title: "Every Asset Has Potential",
-    body: "Every asset, system, and resource can create lasting value when responsibly stewarded.",
-  },
-  {
-    icon: Users,
-    title: "People Deserve Trusted Systems",
-    body: "Communities deserve order, trust, and opportunity, not uncertainty and broken systems.",
-  },
-  {
-    icon: Cpu,
-    title: "Technology Strengthens Relationships",
-    body: "We use technology to improve transparency, accountability, and efficiency.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Discipline Builds Long-Term Value",
-    body: "We create long-term value through discipline, not shortcuts.",
-  },
-  {
-    icon: Star,
-    title: "We Measure Impact, Not Just Growth",
-    body: "Our success is measured by the lives we positively impact, not just numbers.",
-  },
-  {
-    icon: Home,
-    title: "Opportunity Through Responsible Stewardship",
-    body: "We create opportunity by stewarding assets, people, and systems responsibly.",
-  },
-  {
-    icon: Hand,
-    title: "Purpose Over Profit",
-    body: "Money is an outcome of doing the right things consistently and faithfully.",
-  },
-];
+function Eyebrow({ children }: { children: string }) {
+  return <p className="text-xs font-bold tracking-[0.2em] text-brand-green">{children}</p>;
+}
+
+function Section({ eyebrow, title, children, altBg, icon: Icon }: { eyebrow: string; title: string; children: React.ReactNode; altBg?: boolean; icon?: any }) {
+  return (
+    <section className={`px-5 sm:px-8 lg:px-12 py-10 ${altBg ? "bg-secondary/40" : ""}`}>
+      <div className="flex gap-4">
+        {Icon && <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand-dark"><Icon className="h-5 w-5 text-white" /></div>}
+        <div className="flex-1 min-w-0">
+          <Eyebrow>{eyebrow}</Eyebrow>
+          <h2 className="mt-3 text-2xl font-bold text-brand-dark">{title}</h2>
+          <div className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed space-y-3">{children}</div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function OurPhilosophyPage() {
   return (
-    <PhilosophyLayout
-      page="our-philosophy"
-      current="Our Philosophy"
-      title="Our Philosophy"
-      tagline={["The beliefs that shape everything we do."]}
-      body={[
-        "Our philosophy defines how we think, decide, and act. These beliefs guide our systems, shape our culture, and influence every decision we make.",
-      ]}
-    >
-      <GuidingPurpose />
-      <section className="px-5 pt-8 sm:px-8 lg:px-12">
-        <PhilosophyGrid items={beliefs} columns={4} />
+    <div className="min-h-screen bg-white">
+      <Header />
+      <nav aria-label="Breadcrumb" className="px-5 pt-6 sm:px-8 lg:px-12">
+        <ol className="flex items-center gap-1 text-xs text-muted-foreground">
+          <li><Link to="/" className="hover:text-brand-green">Home</Link></li><ChevronRight className="h-3.5 w-3.5" />
+          <li><Link to="/company" className="hover:text-brand-green">Company</Link></li><ChevronRight className="h-3.5 w-3.5" />
+          <li className="text-brand-dark">Our Philosophy</li>
+        </ol>
+      </nav>
+
+      <section className="px-5 sm:px-8 lg:px-12 py-10 lg:py-14 grid lg:grid-cols-2 gap-8 items-center">
+        <div>
+        <Eyebrow>OUR PHILOSOPHY</Eyebrow>
+        <h1 className="mt-3 text-3xl lg:text-[42px] font-bold text-brand-dark">Purpose Shapes What We Build.</h1>
+        <div className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed space-y-3">
+          <p>ZEKANO believes that an institution should exist for more than its own growth. It should create meaningful value for the people and communities it serves.</p>
+          <p>Our philosophy begins with a simple belief: <span className="font-semibold text-brand-dark">Business is a means through which purpose can be expressed.</span></p>
+          <p>We therefore do not begin by asking what we can build, what we can sell, or how quickly we can grow. We begin by asking:</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>What problem are we responsible for helping solve?</li>
+            <li>Who are we building for?</li>
+            <li>How can we create meaningful value without compromising trust or responsibility?</li>
+          </ul>
+        </div>
+        </div>
+        <div className="overflow-hidden rounded-2xl"><img src={getImage("philosophy", "hero", philosophyHero)} alt="Philosophy" className="h-80 w-full object-cover" width={1200} height={800} /></div>
       </section>
-    </PhilosophyLayout>
+
+      <section className="px-5 sm:px-8 lg:px-12 py-10"><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { icon: TrendingUp, eyebrow: "PURPOSE BEFORE GROWTH", title: "Growth Should Follow Purpose", body: "We grow to carry greater responsibility." },
+            { icon: Layers, eyebrow: "SYSTEMS", title: "Responsibility Made Practical", body: "Systems make responsibility easier to practise." },
+            { icon: Shield, eyebrow: "TRUST", title: "Trust Before Growth", body: "Built through consistent responsible action." },
+            { icon: Users, eyebrow: "PEOPLE", title: "Technology Serves People", body: "People are at the centre." },
+            { icon: Heart, eyebrow: "STEWARDSHIP", title: "Responsibility Before Opportunity", body: "Protect potential while creating value." },
+            { icon: Lightbulb, eyebrow: "BUILD FOR NEXT", title: "Preserve & Evolve", body: "Preserve what must endure, improve what should evolve." },
+          ].map((c) => (
+            <div key={c.title} className="group rounded-xl border border-border p-6 bg-white hover:shadow-lg hover:-translate-y-1 transition-all">
+              <c.icon className="h-7 w-7 text-brand-green group-hover:scale-110 transition-transform" />
+              <p className="mt-3 text-xs font-bold tracking-widest text-brand-green">{c.eyebrow}</p>
+              <h3 className="mt-1 text-sm font-bold text-brand-dark">{c.title}</h3>
+              <p className="mt-2 text-xs text-muted-foreground">{c.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="px-5 sm:px-8 lg:px-12 pb-10">
+        <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10 text-center">
+          <p className="text-xs font-bold tracking-widest text-brand-green">THE ZEKANO APPROACH</p>
+          <p className="mt-3 font-mono text-sm">Purpose → Responsibility → Structure → Trust → Value → Impact</p>
+          <p className="mt-3 text-sm text-white/70">Purpose determines why we exist. Responsibility determines how we act. Structure creates the systems. Trust is strengthened through responsible action. Value is created when systems serve people well.</p>
+          <p className="mt-2 text-sm font-semibold text-white">We build with purpose. We operate with responsibility. We grow with discipline.</p>
+          <Link to="/our-principles" className="mt-6 inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold" style={{ backgroundImage: "var(--brand-gold-gradient)", color: "oklch(0.24 0.07 255.27)" }}>Explore Our Principles <ArrowRight className="h-4 w-4" /></Link>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   );
 }

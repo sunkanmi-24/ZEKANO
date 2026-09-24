@@ -1,244 +1,89 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ChevronRight, CheckCircle2, Target, Shield, Crown, Users, TrendingUp } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { ZekanoLogo } from "@/components/site/ZekanoLogo";
-import boardroomAsset from "@/assets/leadership-boardroom.jpg.asset.json";
 import ceoAsset from "@/assets/leader-ceo.jpg.asset.json";
 import cooAsset from "@/assets/leader-coo.jpg.asset.json";
-import financeAsset from "@/assets/leader-finance.jpg.asset.json";
 import { getImage } from "@/lib/site-images";
 
-export const Route = createFileRoute("/leadership")({
-  head: () => ({
-    meta: [
-      { title: "Leadership — Experienced Leaders, Clear Vision | ZEKANO" },
-      {
-        name: "description",
-        content:
-          "Meet the ZEKANO leadership team — deep experience in mobility, operations, technology and finance, building systems that create sustainable value.",
-      },
-      { property: "og:title", content: "Leadership — Experienced Leaders. Clear Vision." },
-      {
-        property: "og:description",
-        content:
-          "The ZEKANO leadership team building Africa's most trusted structured mobility ecosystem.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/leadership" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:image", content: getImage("leadership", "hero", boardroomAsset.url) },
-      { name: "twitter:image", content: getImage("leadership", "hero", boardroomAsset.url) },
-    ],
-    links: [{ rel: "canonical", href: "/leadership" }],
-  }),
-  component: LeadershipPage,
-});
+export const Route = createFileRoute("/leadership")({ component: LeadershipPage });
 
-const ceo = {
-  name: "A.A. Adekunle",
-  role: "Founder & CEO",
-  image: getImage("leadership", "leader-1", ceoAsset.url),
-  bio: "Visionary leader with a passion for building systems that solve real-world problems. A.A. drives ZEKANO's strategy, partnerships, and long-term vision for transforming mobility across Africa.",
-  points: [
-    "Strategic Vision & Direction",
-    "Business Development",
-    "Stakeholder Partnerships",
-    "Innovation & Growth",
-  ],
-};
-
-const team = [
-  {
-    name: "BELLO WALIU LANRE",
-    role: "Co-Founder & COO",
-    image: getImage("leadership", "leader-2", cooAsset.url),
-    bio: "Leads day-to-day operations with a focus on efficiency, compliance, and excellence. Ensures our systems run smoothly and deliver value.",
-    points: ["Operations Management", "Process Excellence", "Team Leadership", "Compliance & Risk"],
-  },
-  {
-    name: "Head of Finance",
-    role: "",
-    image: getImage("leadership", "leader-3", financeAsset.url),
-    bio: "Responsible for financial strategy, planning, and controls. Ensures sustainability, transparency, and responsible growth.",
-    points: ["Financial Planning", "Risk Management", "Reporting & Controls", "Investor Relations"],
-  },
-];
-
-function Bullet({ label }: { label: string }) {
-  return (
-    <li className="leadership-point flex items-start gap-3">
-      <CheckCircle2
-        className="leadership-point-icon mt-0.5 h-4 w-4 shrink-0 text-brand-green"
-        strokeWidth={2}
-      />
-      <span className="leadership-point-label min-w-0 text-sm text-brand-dark">{label}</span>
-    </li>
-  );
+function Eyebrow({ children }: { children: string }) {
+  return <p className="text-xs font-bold tracking-[0.2em] text-brand-green">{children}</p>;
 }
 
 function LeadershipPage() {
   return (
-    <div className="leadership-page min-h-screen bg-white flex flex-col">
+    <div className="min-h-screen bg-white">
       <Header />
+      <nav aria-label="Breadcrumb" className="px-5 pt-6 sm:px-8 lg:px-12">
+        <ol className="flex items-center gap-1 text-xs text-muted-foreground">
+          <li><Link to="/" className="hover:text-brand-green">Home</Link></li><ChevronRight className="h-3.5 w-3.5" />
+          <li><Link to="/company" className="hover:text-brand-green">Company</Link></li><ChevronRight className="h-3.5 w-3.5" />
+          <li className="text-brand-dark">Leadership</li>
+        </ol>
+      </nav>
 
-      <main className="flex-1">
-        {/* BREADCRUMBS */}
-        <nav
-          aria-label="Breadcrumb"
-          className="leadership-breadcrumb mx-auto max-w-none w-full px-4 lg:px-8 pt-6"
-        >
-          <ol className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
-            <li>
-              <Link to="/" className="hover:text-brand-green">
-                Home
-              </Link>
-            </li>
-            <ChevronRight className="h-3.5 w-3.5" aria-hidden />
-            <li>
-              <Link to="/company" className="hover:text-brand-green">
-                Company
-              </Link>
-            </li>
-            <ChevronRight className="h-3.5 w-3.5" aria-hidden />
-            <li className="font-medium text-brand-dark">Leadership</li>
-          </ol>
-        </nav>
+      <section className="px-5 sm:px-8 lg:px-12 py-10 lg:py-14 grid lg:grid-cols-2 gap-8 items-center">
+        <div>
+        <Eyebrow>LEADERSHIP</Eyebrow>
+        <h1 className="mt-3 text-3xl lg:text-[42px] font-bold text-brand-dark leading-tight">Leadership With Purpose. Responsibility With Trust.</h1>
+        <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">ZEKANO is built on the belief that leadership is not simply about directing an organization. It is about carrying responsibility for its purpose, its people, its decisions, and the communities it serves. Our leaders are responsible for ensuring that ZEKANO remains faithful to its purpose while building the capability, systems, and culture required to serve well.</p>
+        </div>
+        <div className="overflow-hidden rounded-2xl"><img src={getImage("leadership","hero","https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200")} alt="Leadership" className="h-72 w-full object-cover" width={1200} height={800} /></div>
+      </section>
 
-        {/* HERO */}
-        <section className="leadership-hero mx-auto max-w-none w-full px-4 lg:px-8 py-8 lg:py-12">
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-14">
-            <div className="min-w-0">
-              <p className="leadership-eyebrow text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] text-brand-green">
-                Leadership
-              </p>
-              <h1 className="leadership-title mt-4 text-3xl sm:text-4xl lg:text-[42px] font-bold text-brand-dark leading-[1.15]">
-                Experienced Leaders.
-                <br />
-                <span className="text-brand-green">Clear Vision.</span>
-              </h1>
-              <p className="leadership-hero-desc mt-6 text-base text-muted-foreground leading-relaxed max-w-xl">
-                Our leadership team brings together deep experience in mobility, operations,
-                technology, and finance to build systems that create sustainable value for all
-                stakeholders.
-              </p>
+      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-secondary/40">
+        <Eyebrow>LEADERSHIP AT ZEKANO</Eyebrow>
+        <h2 className="mt-3 text-2xl font-bold text-brand-dark">Purpose Before Position</h2>
+        <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { icon: Target, t: "Purpose Before Position", d: "Protect the purpose, decide with integrity, consider long-term consequences." },
+            { icon: Shield, t: "Responsibility Before Authority", d: "Authority enables responsible action. Leaders are accountable for standards they build." },
+            { icon: Crown, t: "Principles Before Convenience", d: "Preserve trust even when convenience suggests otherwise." },
+            { icon: Users, t: "People and Institution", d: "Responsible for people and systems, not just results." },
+            { icon: TrendingUp, t: "Long-Term Stewardship", d: "Strengthen what we have been entrusted with for the future." },
+          ].map((c) => (
+            <div key={c.t} className="group rounded-xl bg-white border border-border p-6 hover:shadow-lg hover:border-brand-green/20 hover:-translate-y-1 transition-all">
+              <c.icon className="h-7 w-7 text-brand-green group-hover:scale-110 transition-transform" />
+              <h3 className="mt-3 text-sm font-bold text-brand-dark">{c.t}</h3>
+              <p className="mt-2 text-xs text-muted-foreground">{c.d}</p>
             </div>
+          ))}
+        </div>
+      </section>
 
-            <div className="leadership-hero-media overflow-hidden rounded-2xl">
-              <img
-                src={getImage("leadership", "hero", boardroomAsset.url)}
-                alt="ZEKANO boardroom with branded wall and conference table"
-                className="h-56 sm:h-72 lg:h-[340px] w-full object-cover"
-                width={1280}
-                height={720}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* FEATURED LEADER */}
-        <section className="leadership-featured mx-auto max-w-none w-full px-4 lg:px-8 pb-6">
-          <article className="leadership-featured-card rounded-2xl border border-border bg-secondary/40 p-5 lg:p-8">
-            <div className="grid gap-6 lg:grid-cols-[300px_1fr] lg:gap-10">
-              <img
-                src={ceo.image}
-                alt={`Portrait of ${ceo.name}, ${ceo.role}`}
-                loading="lazy"
-                className="leadership-featured-photo h-72 sm:h-96 lg:h-[420px] w-full rounded-xl object-cover"
-                width={768}
-                height={1024}
-              />
-              <div className="min-w-0 lg:py-2">
-                <h2 className="leadership-featured-name text-2xl lg:text-3xl font-bold text-brand-dark">
-                  {ceo.name}
-                </h2>
-                <p className="leadership-featured-role mt-2 text-base lg:text-lg font-semibold text-brand-green">
-                  {ceo.role}
-                </p>
-                <p className="leadership-featured-bio mt-5 text-sm lg:text-base text-muted-foreground leading-relaxed max-w-2xl">
-                  {ceo.bio}
-                </p>
-                <ul className="leadership-featured-points mt-6 grid gap-3">
-                  {ceo.points.map((p) => (
-                    <Bullet key={p} label={p} />
+      <section className="px-5 sm:px-8 lg:px-12 py-10">
+        <Eyebrow>OUR LEADERSHIP</Eyebrow>
+        <div className="mt-6 grid lg:grid-cols-2 gap-6">
+          {[
+            { name: "ALIU AZEEZ ADEKUNLE", role: "Founder & CEO", img: getImage("leadership", "leader-1", ceoAsset.url), desc: "Provides overall direction, guiding purpose, long-term vision, strategic development, and institutional growth.", points: ["Institutional Vision & Direction", "Strategic Development", "Business Development", "Strategic Partnerships", "Institutional Governance"] },
+            { name: "BELLO WALIU LANRE", role: "Co-Founder & COO", img: getImage("leadership", "leader-2", cooAsset.url), desc: "Translates direction into effective day-to-day operations, ensuring systems, processes, and teams work together consistently.", points: ["Operations Management", "Operational Excellence", "System Implementation", "Team Leadership", "Quality & Compliance"] },
+          ].map((m) => (
+            <div key={m.name} className="group rounded-2xl border border-border bg-secondary/40 p-6 grid sm:grid-cols-[160px_1fr] gap-6 hover:shadow-lg hover:border-brand-green/20 hover:-translate-y-1 transition-all">
+              <img src={m.img} alt={m.name} className="h-64 w-full object-cover rounded-xl" width={400} height={500} loading="lazy" />
+              <div>
+                <h3 className="text-lg font-bold text-brand-dark">{m.name}</h3>
+                <p className="text-sm font-semibold text-brand-green">{m.role}</p>
+                <p className="mt-3 text-xs text-muted-foreground leading-relaxed">{m.desc}</p>
+                <ul className="mt-4 space-y-2">
+                  {m.points.map((p) => (
+                    <li key={p} className="flex gap-2 text-xs text-brand-dark"><CheckCircle2 className="h-4 w-4 text-brand-green shrink-0" />{p}</li>
                   ))}
                 </ul>
               </div>
             </div>
-          </article>
-        </section>
+          ))}
+        </div>
+      </section>
 
-        {/* TEAM GRID */}
-        <section className="leadership-team mx-auto max-w-none w-full px-4 lg:px-8 pb-6">
-          <div className="grid gap-6 lg:grid-cols-2">
-            {team.map((m) => (
-              <article
-                key={m.name}
-                className="leadership-team-card rounded-2xl border border-border bg-secondary/40 p-5 lg:p-6"
-              >
-                <div className="grid gap-5 sm:grid-cols-[180px_1fr] sm:gap-6">
-                  <img
-                    src={m.image}
-                    alt={`Portrait of ${m.name}`}
-                    loading="lazy"
-                    className="leadership-team-photo h-64 sm:h-[260px] w-full rounded-xl object-cover"
-                    width={768}
-                    height={1024}
-                  />
-                  <div className="min-w-0">
-                    <h2 className="leadership-team-name text-lg lg:text-xl font-bold text-brand-dark">
-                      {m.name}
-                    </h2>
-                    {m.role && (
-                      <p className="leadership-team-role mt-1.5 text-sm font-semibold text-brand-green">
-                        {m.role}
-                      </p>
-                    )}
-                    <p className="leadership-team-bio mt-3 text-sm text-muted-foreground leading-relaxed">
-                      {m.bio}
-                    </p>
-                    <ul className="leadership-team-points mt-4 grid gap-2.5">
-                      {m.points.map((p) => (
-                        <Bullet key={p} label={p} />
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        {/* CTA BAND */}
-        <section className="leadership-cta mx-auto max-w-none w-full px-4 lg:px-8 py-10 lg:py-14">
-          <div className="leadership-cta-band rounded-2xl border border-border bg-secondary/40 px-5 py-7 lg:px-10 lg:py-9">
-            <div className="grid gap-6 lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-8">
-              <div className="leadership-cta-logo grid h-20 w-20 shrink-0 place-items-center overflow-hidden rounded-full bg-white">
-                <div className="scale-[0.6]">
-                  <ZekanoLogo />
-                </div>
-              </div>
-
-              <div className="min-w-0">
-                <h2 className="leadership-cta-title text-xl lg:text-2xl font-bold text-brand-dark">
-                  One Team. One Mission.
-                </h2>
-                <p className="leadership-cta-desc mt-2 text-sm lg:text-base text-muted-foreground leading-relaxed max-w-2xl">
-                  Building Africa&apos;s most trusted structured mobility ecosystem — together with
-                  vehicle owners, drivers, and partners.
-                </p>
-              </div>
-              <Link
-                to="/contact"
-                className="leadership-cta-btn inline-flex items-center justify-center gap-2 rounded-lg bg-brand-dark px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition"
-              >
-                Join Our Journey
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
+      <section className="px-5 sm:px-8 lg:px-12 pb-14">
+        <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10">
+          <h2 className="text-xl font-bold">One Leadership Philosophy</h2>
+          <p className="mt-3 text-sm text-white/70 leading-relaxed">Leadership at ZEKANO is ultimately about stewardship. We believe those entrusted with responsibility should leave the institution stronger, more capable, and better prepared for what comes next. We preserve what must endure while improving what should evolve.</p>
+          <Link to="/our-philosophy" className="mt-6 inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold" style={{ backgroundImage: "var(--brand-gold-gradient)", color: "oklch(0.24 0.07 255.27)" }}>Explore Our Philosophy <ArrowRight className="h-4 w-4" /></Link>
+        </div>
+      </section>
 
       <Footer />
     </div>

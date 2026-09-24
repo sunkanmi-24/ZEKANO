@@ -25,17 +25,17 @@ const nav: NavItem[] = [
       { label: "Our Commitment", to: "/our-commitment" },
     ],
   },
-  { label: "What We Do", to: "/what-we-do" },
+  { label: "Our System", to: "/our-system" },
   {
-    label: "Our Systems",
-    to: "/our-systems",
+    label: "Our Solutions",
+    to: "/our-solutions",
     children: [
       { label: "ZEKLEASE", to: "/zeklease" },
       { label: "ZEKMANAGE", to: "/zekmanage" },
     ],
   },
   { label: "Why ZEKANO", to: "/why-zekano" },
-  { label: "Resources", to: "/resources" },
+  { label: "FAQs", to: "/faqs" },
 
 ];
 

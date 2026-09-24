@@ -1,251 +1,116 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-  Mail,
-  Phone,
-  User,
-  ShieldCheck,
-  Car,
-  Scale,
-  Headphones,
-  BarChart3,
-  MessageCircle,
-  KeyRound,
-} from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import driverAsset from "@/assets/driver.png.asset.json";
+import zekleaseHero from "@/assets/zekmanage-hero.jpg";
 import { getImage } from "@/lib/site-images";
 
-export const Route = createFileRoute("/zeklease")({
-  head: () => ({
-    meta: [
-      { title: "ZEKLEASE — Structured Vehicle Access for Drivers | ZEKANO" },
-      {
-        name: "description",
-        content:
-          "ZEKLEASE is a structured mobility access system enabling responsible, vetted drivers to earn sustainable income through access to professionally managed vehicles.",
-      },
-      { property: "og:title", content: "ZEKLEASE — Structured Vehicle Access for Drivers" },
-      {
-        property: "og:description",
-        content:
-          "Apply to ZEKLEASE and get access to a well-maintained vehicle with fair, transparent terms and dedicated driver support.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/zeklease" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:image", content: getImage("zeklease", "hero", driverAsset.url) },
-      { name: "twitter:image", content: getImage("zeklease", "hero", driverAsset.url) },
-    ],
-    links: [{ rel: "canonical", href: "/zeklease" }],
-  }),
-  component: ZekleasePage,
-});
+export const Route = createFileRoute("/zeklease")({ component: Page });
 
-const steps = [
-  { icon: Mail, num: "1", title: "Send Email", desc: "Send us an email expressing your interest." },
-  { icon: Phone, num: "2", title: "We'll Contact You", desc: "Our team will reach out within one business day." },
-  { icon: User, num: "3", title: "We Guide You", desc: "We'll guide you through the onboarding process." },
-  {
-    icon: ShieldCheck,
-    num: "4",
-    title: "Complete Verification",
-    desc: "Document verification, guarantor process and interview.",
-  },
-  {
-    icon: KeyRound,
-    num: "5",
-    title: "Welcome to ZEKLEASE",
-    desc: "Get access to a vehicle and start earning.",
-  },
-];
-
-const experience = [
-  { icon: Car, title: "Reliable Vehicles", desc: "Access well-maintained, road-ready vehicles." },
-  { icon: Scale, title: "Fair & Transparent", desc: "Clear terms, no hidden charges or surprises." },
-  { icon: Headphones, title: "Driver Support", desc: "We support you every step of the way." },
-  { icon: BarChart3, title: "Growth Opportunities", desc: "Earn consistently and grow your income." },
-];
-
-function ZekleasePage() {
+function Eyebrow({ children }: { children: string }) {
+  return <p className="text-xs font-bold tracking-[0.2em] text-brand-green">{children}</p>;
+}
+function Section({ eyebrow, title, children, altBg }: { eyebrow: string; title: string; children: React.ReactNode; altBg?: boolean }) {
   return (
-    <div className="zeklease-page min-h-screen bg-white flex flex-col">
+    <section className={`px-5 sm:px-8 lg:px-12 py-10 ${altBg ? "bg-secondary/40" : ""}`}>
+      <Eyebrow>{eyebrow}</Eyebrow>
+      <h2 className="mt-3 text-2xl font-bold text-brand-dark">{title}</h2>
+      <div className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed space-y-3">{children}</div>
+    </section>
+  );
+}
+
+function Page() {
+  return (
+    <div className="min-h-screen bg-white">
       <Header />
+      <nav className="px-5 pt-6 sm:px-8 lg:px-12"><ol className="flex items-center gap-1 text-xs text-muted-foreground"><li><Link to="/" className="hover:text-brand-green">Home</Link></li><ChevronRight className="h-3.5 w-3.5" /><li className="text-brand-dark">ZEKLEASE</li></ol></nav>
 
-      <main className="flex-1">
-        {/* HERO */}
-        <section className="zeklease-hero relative bg-secondary overflow-hidden">
-          <div className="zeklease-hero-media absolute inset-y-0 right-0 hidden lg:block w-1/2">
-            <img
-              src={getImage("zeklease", "hero", driverAsset.url)}
-              alt="Smiling ZEKLEASE driver giving a thumbs up from a vehicle"
-              className="h-full w-full object-cover"
-              width={1200}
-              height={912}
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/60 to-transparent" />
+      <section className="px-5 sm:px-8 lg:px-12 py-10 lg:py-14">
+        <div className="grid gap-8 lg:grid-cols-2 items-center">
+          <div>
+            <Eyebrow>ZEKLEASE</Eyebrow>
+            <h1 className="mt-3 text-3xl lg:text-[42px] font-bold text-brand-dark">Structured Mobility Access</h1>
+            <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">ZEKLEASE is ZEKANO Mobility's structured mobility access solution. It provides responsible Mobility Professionals with structured access to mobility assets for productive use. We create the framework through which Mobility Professionals can access mobility assets, operate within defined responsibilities, and participate with greater clarity and accountability.</p>
+            <p className="mt-3 text-sm font-semibold text-brand-dark italic">Access creates opportunity. Opportunity carries responsibility. Responsibility creates trust.</p>
           </div>
-
-          <div className="zeklease-hero-inner relative mx-auto max-w-none w-full px-4 lg:px-8 py-12 lg:py-20">
-            <div className="lg:max-w-[52%]">
-              <p className="zeklease-eyebrow text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] text-brand-green">
-                ZEKLEASE
-              </p>
-              <h1 className="zeklease-title mt-4 text-3xl sm:text-4xl lg:text-[42px] font-bold text-brand-dark leading-[1.15]">
-                Thank You for Your Interest
-                <br />
-                in <span className="text-brand-dark">ZEKLEASE</span>
-              </h1>
-              <div className="mt-6 h-0.5 w-24 bg-brand-green" />
-              <p className="zeklease-hero-desc mt-6 text-base text-muted-foreground leading-relaxed max-w-xl">
-                Thank you for choosing ZEKLEASE.
-              </p>
-              <p className="zeklease-hero-desc mt-4 text-base text-muted-foreground leading-relaxed max-w-xl">
-                ZEKLEASE is a structured mobility access system that enables responsible, vetted drivers to earn
-                sustainable income through access to professionally managed vehicles.
-              </p>
-            </div>
-
-            <div className="zeklease-hero-image mt-8 lg:hidden rounded-xl overflow-hidden">
-              <img
-                src={getImage("zeklease", "hero", driverAsset.url)}
-                alt="Smiling ZEKLEASE driver giving a thumbs up from a vehicle"
-                className="h-56 w-full object-cover"
-                width={1200}
-                height={912}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* GET STARTED CARD */}
-        <section className="zeklease-start mx-auto max-w-none w-full px-4 lg:px-8 -mt-4 lg:-mt-10 relative z-10">
-          <div className="zeklease-start-card rounded-xl border border-border bg-white p-6 lg:p-8 shadow-lg">
-            <div className="zeklease-start-grid grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:divide-x divide-border">
-              <div className="zeklease-start-intro flex items-start gap-5 lg:pr-8">
-                <div className="zeklease-start-icon grid h-14 w-14 shrink-0 place-items-center rounded-full bg-brand-green">
-                  <Mail className="h-6 w-6 text-white" />
-                </div>
-                <div className="min-w-0">
-                  <h2 className="zeklease-start-title text-xl lg:text-2xl font-bold text-brand-dark">Ready to get started?</h2>
-                  <p className="zeklease-start-desc mt-3 text-base text-muted-foreground leading-relaxed">
-                    Send us an email expressing your interest and one of our{" "}
-                    <span className="font-bold text-brand-dark">Driver Success Officers</span> will contact you within
-                    one business day and guide you through the next steps.
-                  </p>
-                </div>
-              </div>
-
-              <div className="zeklease-start-contact lg:pl-8">
-                <div className="zeklease-start-email-label flex items-center gap-2 text-muted-foreground">
-                  <Mail className="h-4 w-4" />
-                  <span className="text-sm font-medium">Email Us</span>
-                </div>
-                <a
-                  href="mailto:lease@zekano.co"
-                  className="zeklease-start-email mt-3 block text-xl lg:text-2xl font-bold text-brand-green break-all hover:underline"
-                >
-                  lease@zekano.co
-                </a>
-                <p className="zeklease-start-subject mt-3 text-sm text-brand-dark">
-                  <span className="font-bold">Subject:</span> Driver Application – ZEKLEASE
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* WHAT HAPPENS NEXT */}
-        <section className="zeklease-steps mx-auto max-w-none w-full px-4 lg:px-8 py-14 lg:py-20">
-          <div className="zeklease-steps-heading flex items-center justify-center gap-4">
-            <span className="zeklease-steps-rule hidden sm:block h-0.5 w-16 lg:w-28 bg-brand-green/40" />
-            <h2 className="zeklease-steps-title text-2xl lg:text-3xl font-bold text-brand-dark text-center">What Happens Next?</h2>
-            <span className="zeklease-steps-rule hidden sm:block h-0.5 w-16 lg:w-28 bg-brand-green/40" />
-          </div>
-
-          <div className="zeklease-steps-grid mt-10 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4">
-            {steps.map((s, i) => (
-              <div key={s.title} className="zeklease-step relative text-center">
-                <div className="relative mx-auto w-fit">
-                  <div className="zeklease-step-icon grid h-16 w-16 place-items-center rounded-full border border-border bg-white">
-                    <s.icon className="h-7 w-7 text-brand-green" strokeWidth={1.75} />
-                  </div>
-                  <span className="zeklease-step-num absolute -bottom-2 left-1/2 -translate-x-1/2 grid h-6 w-6 place-items-center rounded-full bg-brand-green text-[11px] font-bold text-white">
-                    {s.num}
-                  </span>
-                </div>
-                <h3 className="zeklease-step-title mt-6 text-sm lg:text-base font-bold text-brand-dark">{s.title}</h3>
-                <p className="zeklease-step-desc mt-2 text-sm text-muted-foreground leading-relaxed px-2">{s.desc}</p>
-
-                {i < steps.length - 1 && (
-                  <span
-                    aria-hidden
-                    className="zeklease-step-connector hidden lg:block absolute top-8 left-full -translate-x-1/2 w-10 border-t-2 border-dotted border-brand-green/60"
-                  />
-                )}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* WHAT YOU'LL EXPERIENCE */}
-        <section className="zeklease-experience mx-auto max-w-none w-full px-4 lg:px-8 pb-14">
-          <div className="zeklease-experience-band rounded-2xl bg-secondary px-6 py-10 lg:px-10">
-            <h2 className="zeklease-experience-title text-xl lg:text-2xl font-bold text-brand-dark text-center">What You&apos;ll Experience</h2>
-            <div className="zeklease-experience-grid mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x divide-border">
-              {experience.map((e) => (
-                <div key={e.title} className="zeklease-experience-item flex items-start gap-4 lg:px-6 first:lg:pl-0 last:lg:pr-0">
-                  <e.icon className="zeklease-experience-icon h-7 w-7 shrink-0 text-brand-green" strokeWidth={1.75} />
-                  <div className="min-w-0">
-                    <h3 className="zeklease-experience-item-title text-sm lg:text-base font-bold text-brand-dark">{e.title}</h3>
-                    <p className="zeklease-experience-item-desc mt-2 text-sm text-muted-foreground leading-relaxed">{e.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ASSISTANCE BAND */}
-        <section className="zeklease-assist mx-auto max-w-none w-full px-4 lg:px-8 pb-20">
-          <div className="zeklease-assist-band rounded-2xl bg-brand-dark px-6 py-8 lg:px-10">
-            <div className="zeklease-assist-grid grid gap-6 lg:grid-cols-[1.2fr_1fr_1fr] lg:items-center">
-              <div className="min-w-0">
-                <h2 className="zeklease-assist-title text-lg lg:text-xl font-bold text-white">Need immediate assistance?</h2>
-                <p className="zeklease-assist-desc mt-1 text-sm text-white/70">Our team is here to help you.</p>
-              </div>
-
-              <a
-                href="tel:+2348006000000"
-                className="zeklease-assist-call flex items-center gap-4 rounded-xl bg-white/5 px-5 py-4 hover:bg-white/10 transition"
-              >
-                <Phone className="h-6 w-6 shrink-0 text-brand-green" />
-                <span className="min-w-0">
-                  <span className="zeklease-assist-call-label block text-sm font-semibold text-white">Call Us</span>
-                  <span className="zeklease-assist-call-value block text-sm text-white/70">+234 800 600 0000</span>
-                </span>
-              </a>
-
-              <a
-                href="https://wa.me/2348006000000"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="zeklease-assist-whatsapp flex items-center gap-4 rounded-xl bg-white/5 px-5 py-4 hover:bg-white/10 transition"
-              >
-                <MessageCircle className="h-6 w-6 shrink-0 text-brand-green" />
-                <span className="min-w-0">
-                  <span className="zeklease-assist-whatsapp-label block text-sm font-semibold text-brand-green">WhatsApp Us</span>
-                  <span className="zeklease-assist-whatsapp-value block text-sm text-white/70">Chat on WhatsApp</span>
-                </span>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <div className="sr-only">
-          <Link to="/contact">Contact ZEKANO</Link>
+          <div className="overflow-hidden rounded-2xl"><img src={getImage("zeklease", "hero", zekleaseHero)} alt="ZEKLEASE" className="h-72 w-full object-cover lg:h-[380px]" width={1200} height={800} /></div>
         </div>
-      </main>
+      </section>
+
+      <Section eyebrow="ACCESS IS MORE THAN A VEHICLE" title="We Structure Access" altBg>
+        <p>For a Mobility Professional, access to a reliable mobility asset can create an opportunity to work, earn, and build a livelihood. But access without structure can create uncertainty. Who is responsible for the asset? What is expected of the person using it? How are operational issues handled? ZEKLEASE is designed to bring structure to these relationships.</p>
+      </Section>
+
+      <Section eyebrow="WHAT ZEKLEASE PROVIDES" title="A Pathway for Productive Mobility Participation">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { t: "Structured Access", d: "Defined pathway to gain access for productive use." },
+            { t: "Clear Responsibilities", d: "Responsibilities for operating and caring for the asset are established." },
+            { t: "Defined Standards", d: "Expectations for professional conduct, asset care, and responsible use." },
+            { t: "Operational Support", d: "Structured framework providing clarity when issues arise." },
+            { t: "Professional Accountability", d: "Access comes with responsibility and accountability." },
+          ].map((c) => (
+            <div key={c.t} className="rounded-xl border border-border p-5 bg-white">
+              <h3 className="text-sm font-bold text-brand-dark">{c.t}</h3>
+              <p className="mt-1 text-xs text-muted-foreground">{c.d}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="WHO IS ZEKLEASE FOR?" title="People Prepared to Take Responsibility" altBg>
+        <p>ZEKLEASE is designed for Mobility Professionals who want structured access to mobility assets and are prepared to take responsibility for the opportunity they receive. Access is not based simply on the desire to have a vehicle. It is based on the ability and willingness to operate within the standards and responsibilities of the ZEKANO Mobility System.</p>
+      </Section>
+
+      <Section eyebrow="ELIGIBILITY" title="Requirements for ZEKLEASE Access">
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Holding a valid professional driver's licence</li>
+          <li>Meeting age and driving experience requirements</li>
+          <li>Residing within our current operating area</li>
+          <li>Providing required identification and guarantor information</li>
+          <li>Meeting security deposit requirements</li>
+          <li>Demonstrating ability to meet financial and operational obligations</li>
+          <li>Passing onboarding and verification process</li>
+          <li>Agreeing to ZEKLEASE terms, standards, and responsibilities</li>
+        </ul>
+        <p className="font-semibold text-brand-dark">Access is not granted simply because someone needs a vehicle. It is granted when the person, asset, and arrangement can responsibly work together.</p>
+      </Section>
+
+      <Section eyebrow="OPPORTUNITY AND RESPONSIBILITY" title="Care. Operate Responsibly. Meet Obligations." altBg>
+        <p>ZEKLEASE provides access; the Mobility Professional is responsible for using it properly — caring for the asset, following operating requirements, meeting financial obligations, communicating appropriately, and maintaining professional standards.</p>
+      </Section>
+
+      <Section eyebrow="HOW THE RELATIONSHIP WORKS" title="Assets Enable People. People Enable Assets. Structure Connects Them.">
+        <p>The mobility asset provides infrastructure for productive mobility. ZEKANO provides the structure through which access is organized and managed. The Mobility Professional puts the asset to productive use while carrying the responsibilities associated with that access.</p>
+      </Section>
+
+      <Section eyebrow="WHAT WE EXPECT" title="Stewardship Is Earned" altBg>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {["Care for the Asset — treat the vehicle with care expected of someone entrusted with another person's asset.","Operate Responsibly — use the vehicle within the agreed operating framework.","Meet Their Obligations — fulfil financial and operational responsibilities.","Communicate Honestly — raise issues promptly.","Maintain Professional Standards — protect the trust placed in them."].map((t) => (
+            <div key={t} className="rounded-xl border border-border p-5 bg-white text-sm text-muted-foreground">{t}</div>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="WHAT ZEKLEASE DOES NOT GUARANTEE" title="Structure Creates Conditions — Not Guaranteed Outcomes">
+        <p>ZEKLEASE does not promise guaranteed income, earnings, demand, profitability, utilization, or elimination of operational risk. Mobility Professionals operate in a real-world environment where demand, operating conditions, costs, and downtime affect outcomes.</p>
+      </Section>
+
+      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-secondary/40">
+        <Eyebrow>ACCESS WITH A PATHWAY</Eyebrow>
+        <h2 className="mt-3 text-2xl font-bold text-brand-dark">The Opportunity Grows With Responsibility Carried</h2>
+        <p className="mt-3 text-sm text-muted-foreground">For the right Mobility Professional, structured access can provide a pathway to participate with clearer expectations, defined responsibilities, and an opportunity to build trust through consistent performance.</p>
+        <Link to="/our-systems" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-green">Explore the ZEKANO Mobility System <ArrowRight className="h-4 w-4" /></Link>
+      </section>
+
+      <section className="px-5 sm:px-8 lg:px-12 pb-14">
+        <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10">
+          <h2 className="text-xl font-bold">Apply for ZEKLEASE</h2>
+          <p className="mt-2 text-sm text-white/70">Interested in structured access? Email us at <a href="mailto:admin.mobility@zekano.co" className="underline">admin.mobility@zekano.co</a></p>
+          <a href="mailto:admin.mobility@zekano.co" className="mt-6 inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold" style={{ backgroundImage: "var(--brand-gold-gradient)", color: "oklch(0.24 0.07 255.27)" }}>Apply for ZEKLEASE <ArrowRight className="h-4 w-4" /></a>
+        </div>
+      </section>
 
       <Footer />
     </div>

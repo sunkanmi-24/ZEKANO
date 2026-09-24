@@ -1,15 +1,79 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { PlaceholderPage } from "./company";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, ChevronRight, Shield, Layers } from "lucide-react";
+import { Header } from "@/components/site/Header";
+import { Footer } from "@/components/site/Footer";
 
-export const Route = createFileRoute("/our-systems")({
-  head: () => ({
-    meta: [
-      { title: "Our Systems — ZEKANO" },
-      { name: "description", content: "Explore ZEKMANAGE and ZEKLEASE — the systems powering structured mobility." },
-      { property: "og:title", content: "Our Systems — ZEKANO" },
-      { property: "og:url", content: "/our-systems" },
-    ],
-    links: [{ rel: "canonical", href: "/our-systems" }],
-  }),
-  component: () => <PlaceholderPage title="Our Systems" subtitle="ZEKMANAGE and ZEKLEASE — connected, structured, accountable." />,
-});
+export const Route = createFileRoute("/our-systems")({ component: Page });
+
+function Eyebrow({ children }: { children: string }) {
+  return <p className="text-xs font-bold tracking-[0.2em] text-brand-green">{children}</p>;
+}
+
+function Page() {
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+      <nav className="px-5 pt-6 sm:px-8 lg:px-12"><ol className="flex items-center gap-1 text-xs text-muted-foreground"><li><Link to="/" className="hover:text-brand-green">Home</Link></li><ChevronRight className="h-3.5 w-3.5" /><li className="text-brand-dark">Our Solutions</li></ol></nav>
+
+      <section className="px-5 sm:px-8 lg:px-12 py-10 lg:py-14">
+        <Eyebrow>OUR SOLUTIONS</Eyebrow>
+        <h1 className="mt-3 text-3xl lg:text-[42px] font-bold text-brand-dark">Structured Solutions for Mobility.</h1>
+        <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">ZEKANO Mobility develops structured solutions that connect mobility assets, people, and opportunities in ways that create responsible and productive value. Our solutions are designed around real mobility needs while remaining grounded in the principles of structure, stewardship, accountability, and responsible value creation.</p>
+        <p className="mt-3 text-sm text-muted-foreground">A mobility solution is more than a service — it is a structured response to a mobility need, designed to create clarity, establish responsibility, and enable productive use.</p>
+      </section>
+
+      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-secondary/40">
+        <div className="grid lg:grid-cols-2 gap-6">
+          <div className="rounded-2xl bg-white border border-border p-8">
+            <div className="flex items-center gap-3"><div className="grid h-10 w-10 place-items-center rounded-full bg-brand-dark"><Shield className="h-5 w-5 text-white" /></div><h3 className="text-xl font-bold text-brand-green">ZEKMANAGE</h3></div>
+            <p className="mt-2 text-sm font-semibold text-brand-dark">Structured Mobility Asset Management</p>
+            <p className="mt-3 text-sm text-muted-foreground">ZEKMANAGE provides Asset Owners with professional management, oversight, coordination, and accountability for their mobility assets.</p>
+            <p className="mt-2 text-xs font-semibold text-brand-dark">For: Asset Owners</p>
+            <ul className="mt-3 space-y-1 text-xs text-muted-foreground list-disc pl-5">
+              <li>Professional asset management</li><li>Operational oversight</li><li>Coordination</li><li>Accountability</li><li>Responsible stewardship</li>
+            </ul>
+            <p className="mt-4 text-xs font-semibold italic text-brand-dark">Ownership gives responsibility. Management provides structure. Stewardship protects potential.</p>
+            <Link to="/zekmanage" className="mt-5 inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold" style={{ backgroundImage: "var(--brand-gold-gradient)", color: "oklch(0.24 0.07 255.27)" }}>Explore ZEKMANAGE <ArrowRight className="h-4 w-4" /></Link>
+          </div>
+          <div className="rounded-2xl bg-white border border-border p-8">
+            <div className="flex items-center gap-3"><div className="grid h-10 w-10 place-items-center rounded-full bg-brand-dark"><Layers className="h-5 w-5 text-white" /></div><h3 className="text-xl font-bold text-brand-blue">ZEKLEASE</h3></div>
+            <p className="mt-2 text-sm font-semibold text-brand-dark">Structured Mobility Access</p>
+            <p className="mt-3 text-sm text-muted-foreground">ZEKLEASE provides responsible Mobility Professionals with structured access to mobility assets for productive use.</p>
+            <p className="mt-2 text-xs font-semibold text-brand-dark">For: Mobility Professionals</p>
+            <ul className="mt-3 space-y-1 text-xs text-muted-foreground list-disc pl-5">
+              <li>Structured access to mobility assets</li><li>Defined responsibilities</li><li>Clear operating expectations</li><li>Professional standards</li><li>Pathway for productive mobility participation</li>
+            </ul>
+            <p className="mt-4 text-xs font-semibold italic text-brand-dark">Access creates opportunity. Opportunity carries responsibility. Responsibility creates trust.</p>
+            <Link to="/zeklease" className="mt-5 inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold" style={{ backgroundImage: "var(--brand-gold-gradient)", color: "oklch(0.24 0.07 255.27)" }}>Explore ZEKLEASE <ArrowRight className="h-4 w-4" /></Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 sm:px-8 lg:px-12 py-10">
+        <Eyebrow>ONE MOBILITY SYSTEM. DIFFERENT SOLUTIONS.</Eyebrow>
+        <h2 className="mt-3 text-2xl font-bold text-brand-dark">We Structure the Relationship</h2>
+        <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">ZEKMANAGE provides the structure through which mobility assets are managed and stewarded. ZEKLEASE provides the structure through which responsible Mobility Professionals gain access to those assets. Together, they connect the key relationships between assets, people, and productive mobility.</p>
+        <p className="mt-3 text-sm font-semibold text-brand-dark">We do not simply connect mobility assets with people. We structure the relationship between them.</p>
+      </section>
+
+      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-secondary/40">
+        <Eyebrow>BUILT TO EVOLVE</Eyebrow>
+        <h2 className="mt-3 text-2xl font-bold text-brand-dark">Purpose. Structure. Stewardship. Accountability. Responsible Value.</h2>
+        <p className="mt-4 text-sm text-muted-foreground leading-relaxed">Our solutions will continue to evolve as we learn from the mobility communities we serve. Any future solution must remain consistent with the principles that guide ZEKANO Mobility. We do not build solutions simply because they are possible. We build them when they can create meaningful value and responsibly strengthen the mobility system.</p>
+      </section>
+
+      <section className="px-5 sm:px-8 lg:px-12 pb-14">
+        <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10">
+          <h2 className="text-xl font-bold">Where Do You Fit?</h2>
+          <p className="mt-2 text-sm text-white/70">Whether you own a mobility asset or are looking for structured access to one, there is a place for you within the ZEKANO Mobility System.</p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link to="/zekmanage" className="inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold" style={{ backgroundImage: "var(--brand-gold-gradient)", color: "oklch(0.24 0.07 255.27)" }}>I Own a Mobility Asset <ArrowRight className="h-4 w-4" /></Link>
+            <Link to="/zeklease" className="inline-flex items-center gap-2 rounded-md border border-white/20 px-6 py-3 text-sm font-semibold text-white">I Need Mobility Access <ArrowRight className="h-4 w-4" /></Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}

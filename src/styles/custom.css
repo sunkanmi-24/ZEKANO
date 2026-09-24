@@ -134,19 +134,25 @@
    Gold gradient buttons + highlighted text
    -------------------------------------------------------------------------- */
 a.bg-brand-green,
+a.bg-brand-blue,
+a.bg-brand-dark,
+a.bg-white,
 button.bg-brand-green,
+button.bg-brand-blue,
+button.bg-brand-dark,
 .zekano-contact-btn,
 .zekano-mobile-contact-btn,
 .zekano-contact-submit,
 .zekano-hero-btn,
 .zekano-cta-btn,
 .zekano-why-btn-primary,
+.zekano-why-btn-secondary,
 .zekano-resources-hero-btn,
 .zekano-newsletter-btn {
   background-image: var(--brand-gold-gradient) !important;
   background-color: transparent !important;
   color: oklch(0.24 0.07 255.27) !important;
-  border: none;
+  border: none !important;
 }
 a.bg-brand-green:hover,
 button.bg-brand-green:hover,

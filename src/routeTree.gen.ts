@@ -13,12 +13,15 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutUsRouteImport } from './routes/about-us'
 import { Route as CompanyRouteImport } from './routes/company'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FaqsRouteImport } from './routes/faqs'
 import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as OurCommitmentRouteImport } from './routes/our-commitment'
 import { Route as OurCultureRouteImport } from './routes/our-culture'
 import { Route as OurPhilosophyRouteImport } from './routes/our-philosophy'
 import { Route as OurPrinciplesRouteImport } from './routes/our-principles'
+import { Route as OurSolutionsRouteImport } from './routes/our-solutions'
 import { Route as OurStoryRouteImport } from './routes/our-story'
+import { Route as OurSystemRouteImport } from './routes/our-system'
 import { Route as OurSystemsRouteImport } from './routes/our-systems'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -48,6 +51,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FaqsRoute = FaqsRouteImport.update({
+  id: '/faqs',
+  path: '/faqs',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LeadershipRoute = LeadershipRouteImport.update({
   id: '/leadership',
   path: '/leadership',
@@ -73,9 +81,19 @@ const OurPrinciplesRoute = OurPrinciplesRouteImport.update({
   path: '/our-principles',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OurSolutionsRoute = OurSolutionsRouteImport.update({
+  id: '/our-solutions',
+  path: '/our-solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OurStoryRoute = OurStoryRouteImport.update({
   id: '/our-story',
   path: '/our-story',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurSystemRoute = OurSystemRouteImport.update({
+  id: '/our-system',
+  path: '/our-system',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OurSystemsRoute = OurSystemsRouteImport.update({
@@ -124,12 +142,15 @@ export interface FileRoutesByFullPath {
   '/about-us': typeof AboutUsRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/faqs': typeof FaqsRoute
   '/leadership': typeof LeadershipRoute
   '/our-commitment': typeof OurCommitmentRoute
   '/our-culture': typeof OurCultureRoute
   '/our-philosophy': typeof OurPhilosophyRoute
   '/our-principles': typeof OurPrinciplesRoute
+  '/our-solutions': typeof OurSolutionsRoute
   '/our-story': typeof OurStoryRoute
+  '/our-system': typeof OurSystemRoute
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -144,12 +165,15 @@ export interface FileRoutesByTo {
   '/about-us': typeof AboutUsRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/faqs': typeof FaqsRoute
   '/leadership': typeof LeadershipRoute
   '/our-commitment': typeof OurCommitmentRoute
   '/our-culture': typeof OurCultureRoute
   '/our-philosophy': typeof OurPhilosophyRoute
   '/our-principles': typeof OurPrinciplesRoute
+  '/our-solutions': typeof OurSolutionsRoute
   '/our-story': typeof OurStoryRoute
+  '/our-system': typeof OurSystemRoute
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -165,12 +189,15 @@ export interface FileRoutesById {
   '/about-us': typeof AboutUsRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/faqs': typeof FaqsRoute
   '/leadership': typeof LeadershipRoute
   '/our-commitment': typeof OurCommitmentRoute
   '/our-culture': typeof OurCultureRoute
   '/our-philosophy': typeof OurPhilosophyRoute
   '/our-principles': typeof OurPrinciplesRoute
+  '/our-solutions': typeof OurSolutionsRoute
   '/our-story': typeof OurStoryRoute
+  '/our-system': typeof OurSystemRoute
   '/our-systems': typeof OurSystemsRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -187,12 +214,15 @@ export interface FileRouteTypes {
     | '/about-us'
     | '/company'
     | '/contact'
+    | '/faqs'
     | '/leadership'
     | '/our-commitment'
     | '/our-culture'
     | '/our-philosophy'
     | '/our-principles'
+    | '/our-solutions'
     | '/our-story'
+    | '/our-system'
     | '/our-systems'
     | '/resources'
     | '/sitemap.xml'
@@ -207,12 +237,15 @@ export interface FileRouteTypes {
     | '/about-us'
     | '/company'
     | '/contact'
+    | '/faqs'
     | '/leadership'
     | '/our-commitment'
     | '/our-culture'
     | '/our-philosophy'
     | '/our-principles'
+    | '/our-solutions'
     | '/our-story'
+    | '/our-system'
     | '/our-systems'
     | '/resources'
     | '/sitemap.xml'
@@ -227,12 +260,15 @@ export interface FileRouteTypes {
     | '/about-us'
     | '/company'
     | '/contact'
+    | '/faqs'
     | '/leadership'
     | '/our-commitment'
     | '/our-culture'
     | '/our-philosophy'
     | '/our-principles'
+    | '/our-solutions'
     | '/our-story'
+    | '/our-system'
     | '/our-systems'
     | '/resources'
     | '/sitemap.xml'
@@ -248,12 +284,15 @@ export interface RootRouteChildren {
   AboutUsRoute: typeof AboutUsRoute
   CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
+  FaqsRoute: typeof FaqsRoute
   LeadershipRoute: typeof LeadershipRoute
   OurCommitmentRoute: typeof OurCommitmentRoute
   OurCultureRoute: typeof OurCultureRoute
   OurPhilosophyRoute: typeof OurPhilosophyRoute
   OurPrinciplesRoute: typeof OurPrinciplesRoute
+  OurSolutionsRoute: typeof OurSolutionsRoute
   OurStoryRoute: typeof OurStoryRoute
+  OurSystemRoute: typeof OurSystemRoute
   OurSystemsRoute: typeof OurSystemsRoute
   ResourcesRoute: typeof ResourcesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -294,6 +333,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/faqs': {
+      id: '/faqs'
+      path: '/faqs'
+      fullPath: '/faqs'
+      preLoaderRoute: typeof FaqsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/leadership': {
       id: '/leadership'
       path: '/leadership'
@@ -329,11 +375,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OurPrinciplesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/our-solutions': {
+      id: '/our-solutions'
+      path: '/our-solutions'
+      fullPath: '/our-solutions'
+      preLoaderRoute: typeof OurSolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/our-story': {
       id: '/our-story'
       path: '/our-story'
       fullPath: '/our-story'
       preLoaderRoute: typeof OurStoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-system': {
+      id: '/our-system'
+      path: '/our-system'
+      fullPath: '/our-system'
+      preLoaderRoute: typeof OurSystemRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/our-systems': {
@@ -400,12 +460,15 @@ const rootRouteChildren: RootRouteChildren = {
   AboutUsRoute: AboutUsRoute,
   CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
+  FaqsRoute: FaqsRoute,
   LeadershipRoute: LeadershipRoute,
   OurCommitmentRoute: OurCommitmentRoute,
   OurCultureRoute: OurCultureRoute,
   OurPhilosophyRoute: OurPhilosophyRoute,
   OurPrinciplesRoute: OurPrinciplesRoute,
+  OurSolutionsRoute: OurSolutionsRoute,
   OurStoryRoute: OurStoryRoute,
+  OurSystemRoute: OurSystemRoute,
   OurSystemsRoute: OurSystemsRoute,
   ResourcesRoute: ResourcesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
