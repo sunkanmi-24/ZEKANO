@@ -115,6 +115,19 @@ var createLucideIcon = (iconName, iconNode) => {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var ArrowLeft = createLucideIcon("arrow-left", [["path", {
+	d: "m12 19-7-7 7-7",
+	key: "1l729n"
+}], ["path", {
+	d: "M19 12H5",
+	key: "x3x0zl"
+}]]);
+/**
+* @license lucide-react v0.575.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var ArrowRight = createLucideIcon("arrow-right", [["path", {
 	d: "M5 12h14",
 	key: "1ays0h"
@@ -258,6 +271,53 @@ var CircleCheck = createLucideIcon("circle-check", [["circle", {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var CircleQuestionMark = createLucideIcon("circle-question-mark", [
+	["circle", {
+		cx: "12",
+		cy: "12",
+		r: "10",
+		key: "1mglay"
+	}],
+	["path", {
+		d: "M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3",
+		key: "1u773s"
+	}],
+	["path", {
+		d: "M12 17h.01",
+		key: "p32p05"
+	}]
+]);
+/**
+* @license lucide-react v0.575.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var ClipboardCheck = createLucideIcon("clipboard-check", [
+	["rect", {
+		width: "8",
+		height: "4",
+		x: "8",
+		y: "2",
+		rx: "1",
+		ry: "1",
+		key: "tgr4d6"
+	}],
+	["path", {
+		d: "M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2",
+		key: "116196"
+	}],
+	["path", {
+		d: "m9 14 2 2 4-4",
+		key: "df797q"
+	}]
+]);
+/**
+* @license lucide-react v0.575.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var Crown = createLucideIcon("crown", [["path", {
 	d: "M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z",
 	key: "1vdc57"
@@ -318,6 +378,19 @@ var Handshake = createLucideIcon("handshake", [
 		key: "1ep09j"
 	}]
 ]);
+/**
+* @license lucide-react v0.575.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var Headset = createLucideIcon("headset", [["path", {
+	d: "M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z",
+	key: "12oyoe"
+}], ["path", {
+	d: "M21 16v2a4 4 0 0 1-4 4h-5",
+	key: "1x7m43"
+}]]);
 /**
 * @license lucide-react v0.575.0 - ISC
 *
@@ -695,4 +768,4 @@ var X = createLucideIcon("x", [["path", {
 	key: "d8bk6v"
 }]]);
 //#endregion
-export { ChevronDown as A, Heart as C, Crown as D, Eye as E, ArrowRight as F, Car as M, Building2 as N, CircleCheck as O, Award as P, Instagram as S, Facebook as T, Mail as _, User as a, Leaf as b, Star as c, RefreshCw as d, Quote as f, MapPin as g, Menu as h, Users as i, ChartColumn as j, ChevronRight as k, Shield as l, MessageCircle as m, Wrench as n, TrendingUp as o, Phone as p, Wallet as r, Target as s, X as t, Search as u, Linkedin as v, Handshake as w, Layers as x, Lightbulb as y };
+export { CircleQuestionMark as A, Heart as C, Eye as D, Facebook as E, Car as F, Building2 as I, Award as L, ChevronRight as M, ChevronDown as N, Crown as O, ChartColumn as P, ArrowRight as R, Instagram as S, Handshake as T, Mail as _, User as a, Leaf as b, Star as c, RefreshCw as d, Quote as f, MapPin as g, Menu as h, Users as i, CircleCheck as j, ClipboardCheck as k, Shield as l, MessageCircle as m, Wrench as n, TrendingUp as o, Phone as p, Wallet as r, Target as s, X as t, Search as u, Linkedin as v, Headset as w, Layers as x, Lightbulb as y, ArrowLeft as z };

@@ -19,7 +19,7 @@ function Page() {
 
       <section className="px-5 sm:px-8 lg:px-12 py-10 lg:py-14 grid lg:grid-cols-2 gap-8 items-center">
         <div>
-        <Eyebrow>OUR SYSTEM</Eyebrow>
+        <Eyebrow>OUR SYSTEM</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
         <h1 className="mt-3 text-3xl lg:text-[42px] font-bold text-brand-dark">The ZEKANO Mobility System</h1>
         <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">Mobility works through relationships between assets, people, and opportunities. The ZEKANO Mobility System brings these elements together through structure, enabling mobility assets to be responsibly and productively used.</p>
         <div className="mt-4 rounded-xl bg-brand-dark text-white p-4 text-center text-sm font-mono">Assets + Communities + Structure → Productive Mobility → Value → Impact</div>
@@ -30,7 +30,7 @@ function Page() {
       {/* RELATIONSHIPS - blue */}
       <section className="px-5 sm:px-8 lg:px-12 py-10 bg-brand-dark text-white">
         <div className="text-center">
-          <p className="text-xs font-bold tracking-[0.2em] text-white">A SYSTEM BUILT AROUND RELATIONSHIPS</p>
+          <p className="text-xs font-bold tracking-[0.2em] text-white">A SYSTEM BUILT AROUND RELATIONSHIPS</p><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
           <h2 className="mt-3 text-2xl font-bold text-white">Structure Connects Assets with Communities</h2>
         </div>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -58,14 +58,14 @@ function Page() {
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-border p-8">
             <Shield className="h-7 w-7 text-brand-green" />
-            <div className="mt-3"><Eyebrow>HOW THE SYSTEM CONNECTS</Eyebrow></div>
+            <div className="mt-3"><Eyebrow>HOW THE SYSTEM CONNECTS</Eyebrow></div><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h2 className="mt-3 text-xl font-bold text-brand-dark">Each Part Affects the Others</h2>
             <p className="mt-3 text-sm text-muted-foreground">An Asset Owner provides an asset. A Mobility Professional puts it to productive use. ZEKANO provides the structure. Customers and communities benefit. Each relationship carries responsibility.</p>
             <p className="mt-3 text-sm font-semibold text-brand-dark">Assets enable people. People enable assets. Structure connects them responsibly.</p>
           </div>
           <div className="rounded-2xl bg-secondary/40 border border-border p-8">
             <Layers className="h-7 w-7 text-brand-green" />
-            <div className="mt-3"><Eyebrow>OUR SOLUTIONS WITHIN THE SYSTEM</Eyebrow></div>
+            <div className="mt-3"><Eyebrow>OUR SOLUTIONS WITHIN THE SYSTEM</Eyebrow></div><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <div className="mt-4 grid gap-3">
               <Link to="/zekmanage" className="rounded-xl bg-white border border-border p-4 text-sm font-bold text-brand-dark hover:shadow-md transition">ZEKMANAGE — Asset Management <ArrowRight className="inline h-4 w-4 ml-1" /></Link>
               <Link to="/zeklease" className="rounded-xl bg-white border border-border p-4 text-sm font-bold text-brand-dark hover:shadow-md transition">ZEKLEASE — Mobility Access <ArrowRight className="inline h-4 w-4 ml-1" /></Link>
@@ -78,12 +78,12 @@ function Page() {
       <section className="px-5 sm:px-8 lg:px-12 py-10">
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-border p-8">
-            <Eyebrow>THE SYSTEM IN MOTION</Eyebrow>
+            <Eyebrow>THE SYSTEM IN MOTION</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h2 className="mt-3 text-xl font-bold text-brand-dark">Structure → Connect → Utilize → Create Value → Learn → Improve</h2>
             <p className="mt-3 text-sm text-muted-foreground">We preserve what must endure while improving what should evolve.</p>
           </div>
           <div className="rounded-2xl bg-secondary/40 border border-border p-8">
-            <Eyebrow>BUILT TO GROW RESPONSIBLY</Eyebrow>
+            <Eyebrow>BUILT TO GROW RESPONSIBLY</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h2 className="mt-3 text-xl font-bold text-brand-dark">Structure Must Grow With Responsibility</h2>
             <p className="mt-3 text-sm text-muted-foreground">More capable without losing the principles that make us trustworthy.</p>
           </div>
@@ -93,7 +93,7 @@ function Page() {
       {/* WHERE DO YOU FIT - blue */}
       <section className="px-5 sm:px-8 lg:px-12 py-10 bg-brand-dark text-white">
         <div className="text-center">
-          <p className="text-xs font-bold tracking-[0.2em] text-white">WHERE DO YOU FIT?</p>
+          <p className="text-xs font-bold tracking-[0.2em] text-white">WHERE DO YOU FIT?</p><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
           <h2 className="mt-3 text-2xl font-bold text-white">A Role for Everyone in the System</h2>
         </div>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

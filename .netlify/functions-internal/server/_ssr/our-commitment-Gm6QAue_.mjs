@@ -1,30 +1,14 @@
 import { s as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
 import { _ as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { C as Heart, P as Award, d as RefreshCw, i as Users, k as ChevronRight, l as Shield, m as MessageCircle, o as TrendingUp } from "../_libs/lucide-react.mjs";
-import { n as Header, r as getImage, t as Footer } from "./Footer-DpUl0FgZ.mjs";
+import { C as Heart, L as Award, M as ChevronRight, d as RefreshCw, i as Users, l as Shield, m as MessageCircle, o as TrendingUp } from "../_libs/lucide-react.mjs";
+import { n as Header, r as getImage, t as Footer } from "./Footer-DAG4i2k1.mjs";
 import { t as contact_office_default } from "./contact-office-BkSTKci4.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/our-commitment-BuuXPZO2.js
+//#region node_modules/.nitro/vite/services/ssr/assets/our-commitment-Gm6QAue_.js
 var import_jsx_runtime = require_jsx_runtime();
 function Eyebrow({ children }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 		className: "text-xs font-bold tracking-[0.2em] text-brand-green",
 		children
-	});
-}
-function Section({ eyebrow, title, children, altBg }) {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-		className: `px-5 sm:px-8 lg:px-12 py-10 ${altBg ? "bg-secondary/40" : ""}`,
-		children: [
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Eyebrow, { children: eyebrow }),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-				className: "mt-3 text-2xl font-bold text-brand-dark",
-				children: title
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed space-y-3",
-				children
-			})
-		]
 	});
 }
 function Page() {
@@ -73,88 +57,112 @@ function Page() {
 					})
 				})]
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
-				eyebrow: "WHAT WE COMMIT TO",
-				title: "Standards We Expect to Live By",
-				altBg: true,
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "grid sm:grid-cols-2 lg:grid-cols-3 gap-4",
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+				className: "px-5 sm:px-8 lg:px-12 py-10 bg-brand-dark text-white",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "text-center",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "text-xs font-bold tracking-[0.2em] text-white",
+						children: "WHAT WE COMMIT TO"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "mt-3 text-2xl font-bold text-white",
+						children: "Standards We Expect to Live By"
+					})]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4",
 					children: [
 						{
 							icon: Shield,
 							t: "Building Trusted Systems",
-							d: "Continually developing systems that bring structure, clarity, and consistency."
+							d: "Systems that bring structure, clarity, and consistency."
 						},
 						{
 							icon: Heart,
 							t: "Responsible Stewardship",
-							d: "Treating assets and opportunities as responsibilities before opportunities."
+							d: "Assets as responsibilities before opportunities."
 						},
 						{
 							icon: Award,
 							t: "Clear Accountability",
-							d: "Making responsibilities clear and holding ourselves accountable."
+							d: "Clear responsibilities, accountable actions."
 						},
 						{
 							icon: MessageCircle,
 							t: "Honest Communication",
-							d: "Communicating honestly, not creating false expectations."
+							d: "Honestly, no false expectations."
 						},
 						{
 							icon: Users,
 							t: "Respect for People",
-							d: "Treating all participants with dignity and respect."
+							d: "Dignity and respect for all participants."
 						},
 						{
 							icon: RefreshCw,
 							t: "Continuous Improvement",
-							d: "Learning from experience and improving the systems through which we operate."
+							d: "Learning and improving our systems."
 						},
 						{
 							icon: TrendingUp,
 							t: "Responsible Growth",
-							d: "Growing in proportion to our ability to carry greater responsibility."
+							d: "Grow with ability to carry responsibility."
 						}
 					].map((c) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "rounded-xl bg-white border border-border p-5",
+						className: "rounded-xl border border-white/10 bg-white/5 p-6 text-center",
 						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(c.icon, { className: "h-6 w-6 text-brand-green mb-2" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(c.icon, { className: "mx-auto h-7 w-7 text-white" }),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "text-sm font-bold text-brand-dark",
+								className: "mt-3 text-sm font-bold text-white",
 								children: c.t
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-1 text-xs text-muted-foreground",
+								className: "mt-1 text-xs text-white/60",
 								children: c.d
 							})
 						]
 					}, c.t))
-				})
+				})]
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
-				eyebrow: "A COMMITMENT WE CAN BE HELD TO",
-				title: "We Control How We Respond",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Our commitment is not that every outcome will be perfect. It is that we will approach our responsibilities with purpose, honesty, structure, and accountability. We cannot control every circumstance within mobility. We can control how we respond to the circumstances we encounter. That is where our commitment begins." })
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "h-10 bg-white",
+				"aria-hidden": true
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+				className: "px-5 sm:px-8 lg:px-12 py-10 bg-secondary/40 text-center",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Eyebrow, { children: "A COMMITMENT WE CAN BE HELD TO" }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "mt-3 mx-auto max-w-2xl text-2xl font-bold text-brand-dark",
+						children: "We Control How We Respond"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "mt-4 mx-auto max-w-2xl text-sm text-muted-foreground",
+						children: "Our commitment is not that every outcome will be perfect. It is that we will approach our responsibilities with purpose, honesty, structure, and accountability. That is where our commitment begins."
+					})
+				]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-				className: "px-5 sm:px-8 lg:px-12 pb-14",
+				className: "px-5 sm:px-8 lg:px-12 py-10 bg-white",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "rounded-2xl bg-brand-dark text-white p-8 lg:p-10",
+					className: "rounded-2xl bg-brand-dark text-white p-8 lg:p-10 text-center",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-							className: "text-xl font-bold",
+							className: "text-xl font-bold text-white",
 							children: "Building Something Worth Trusting"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-3 text-sm text-white/70 leading-relaxed",
+							className: "mt-3 mx-auto max-w-2xl text-sm text-white leading-relaxed",
 							children: "We build trusted systems that bring order, trust, and opportunity to the communities we serve. That is the commitment behind the work."
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-2 text-sm font-semibold text-brand-green",
+							className: "mt-2 text-sm font-semibold text-white",
 							children: "Purpose. Trust. Responsibility. Stewardship. Accountability. Continuous improvement."
 						})
 					]
 				})
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "h-10 bg-white",
+				"aria-hidden": true
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {})
 		]

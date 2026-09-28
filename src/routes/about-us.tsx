@@ -26,7 +26,7 @@ function AboutUsPage() {
       <section className="px-5 py-10 sm:px-8 lg:px-12 lg:py-14">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-14 items-center">
           <div>
-            <Eyebrow>ABOUT ZEKANO MOBILITY</Eyebrow>
+            <Eyebrow>ABOUT ZEKANO MOBILITY</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h1 className="mt-3 text-3xl lg:text-[44px] font-bold leading-tight text-brand-dark">Building Trusted Systems for Mobility.</h1>
             <p className="mt-5 text-sm sm:text-base text-muted-foreground leading-relaxed">ZEKANO Mobility is a structured mobility solutions company and an expression of ZEKANO's purpose. ZEKANO exists to positively impact lives by bringing order, trust, and opportunity to the communities we serve. In mobility, we express this purpose by building trusted systems that bring structure to the relationships between mobility assets, people, and opportunities.</p>
             <p className="mt-3 text-sm text-muted-foreground">We manage and connect mobility assets with mobility communities, creating the structure through which assets can be responsibly and productively used.</p>
@@ -40,7 +40,7 @@ function AboutUsPage() {
       {/* WHAT WE BELIEVE - blue */}
       <section className="px-5 sm:px-8 lg:px-12 py-10 bg-brand-dark text-white">
         <div className="text-center">
-          <p className="text-xs font-bold tracking-[0.2em] text-white">WHAT WE BELIEVE</p>
+          <p className="text-xs font-bold tracking-[0.2em] text-white">WHAT WE BELIEVE</p><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
           <h2 className="mt-3 text-2xl font-bold text-white">Structure Creates the Conditions for Trust</h2>
         </div>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -66,13 +66,13 @@ function AboutUsPage() {
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-border p-8">
             <Heart className="h-7 w-7 text-brand-green" />
-            <div className="mt-3"><Eyebrow>OUR PURPOSE</Eyebrow></div>
+            <div className="mt-3"><Eyebrow>OUR PURPOSE</Eyebrow></div><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h2 className="mt-3 text-2xl font-bold text-brand-dark">We Exist to Positively Impact Lives.</h2>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">ZEKANO Mobility is one expression of that purpose. Through mobility, we seek to create systems that enable assets to serve meaningful needs, people to participate responsibly, and productive value to be created.</p>
           </div>
           <div className="rounded-2xl bg-secondary/40 border border-border p-8">
             <Shield className="h-7 w-7 text-brand-green" />
-            <div className="mt-3"><Eyebrow>OUR ROLE IN MOBILITY</Eyebrow></div>
+            <div className="mt-3"><Eyebrow>OUR ROLE IN MOBILITY</Eyebrow></div><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h2 className="mt-3 text-2xl font-bold text-brand-dark">We Bring Structure to Mobility.</h2>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">Our role is not simply to own, operate, or connect vehicles. We build the structures through which mobility assets, people, and opportunities can work together responsibly.</p>
           </div>
@@ -80,7 +80,7 @@ function AboutUsPage() {
       </section>
 
       <section className="px-5 sm:px-8 lg:px-12 py-10 bg-secondary/40 text-center">
-        <Eyebrow>BUILDING FOR LONG TERM</Eyebrow>
+        <Eyebrow>BUILDING FOR LONG TERM</Eyebrow><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
         <h2 className="mt-3 text-2xl font-bold text-brand-dark">Preserve what must endure. Improve what should evolve.</h2>
         <p className="mt-4 mx-auto max-w-2xl text-sm text-muted-foreground leading-relaxed">ZEKANO Mobility is being built with a long-term perspective. We seek to build the capability, trust, and responsibility required to serve better as we grow. Because the systems we build today should be capable of creating value tomorrow.</p>
       </section>

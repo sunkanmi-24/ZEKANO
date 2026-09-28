@@ -1,6 +1,6 @@
 import { s as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
-import { n as Header, t as Footer } from "./Footer-DpUl0FgZ.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/company-S-6jjTPz.js
+import { n as Header, t as Footer } from "./Footer-DAG4i2k1.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/company-C3kDVBef.js
 var import_jsx_runtime = require_jsx_runtime();
 function PlaceholderPage({ title, subtitle }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {

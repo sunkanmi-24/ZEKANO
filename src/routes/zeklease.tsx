@@ -20,7 +20,7 @@ function Page() {
       <section className="px-5 sm:px-8 lg:px-12 py-10 lg:py-14">
         <div className="grid gap-8 lg:grid-cols-2 items-center">
           <div>
-            <Eyebrow>ZEKLEASE</Eyebrow>
+            <Eyebrow>ZEKLEASE</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h1 className="mt-3 text-3xl lg:text-[42px] font-bold text-brand-dark">Structured Mobility Access</h1>
             <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">ZEKLEASE is ZEKANO Mobility's structured mobility access solution. It provides responsible Mobility Professionals with structured access to mobility assets for productive use. We create the framework through which Mobility Professionals can access mobility assets, operate within defined responsibilities, and participate with greater clarity and accountability.</p>
             <p className="mt-3 text-sm font-semibold text-brand-dark italic">Access creates opportunity. Opportunity carries responsibility. Responsibility creates trust.</p>
@@ -32,7 +32,7 @@ function Page() {
       {/* WHAT ZEKLEASE PROVIDES - blue */}
       <section className="px-5 sm:px-8 lg:px-12 py-10 bg-brand-dark text-white">
         <div className="text-center">
-          <p className="text-xs font-bold tracking-[0.2em] text-white">WHAT ZEKLEASE PROVIDES</p>
+          <p className="text-xs font-bold tracking-[0.2em] text-white">WHAT ZEKLEASE PROVIDES</p><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
           <h2 className="mt-3 text-2xl font-bold text-white">A Pathway for Productive Mobility Participation</h2>
         </div>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -59,13 +59,13 @@ function Page() {
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-border p-8">
             <Car className="h-7 w-7 text-brand-green" />
-            <div className="mt-3"><Eyebrow>ACCESS IS MORE THAN A VEHICLE</Eyebrow></div>
+            <div className="mt-3"><Eyebrow>ACCESS IS MORE THAN A VEHICLE</Eyebrow></div><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h2 className="mt-3 text-2xl font-bold text-brand-dark">We Structure Access</h2>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">For a Mobility Professional, access to a reliable mobility asset can create an opportunity to work, earn, and build a livelihood. But access without structure can create uncertainty. Who is responsible for the asset? What is expected of the person using it? How are operational issues handled? ZEKLEASE is designed to bring structure to these relationships.</p>
           </div>
           <div className="rounded-2xl bg-secondary/40 border border-border p-8">
             <Users className="h-7 w-7 text-brand-green" />
-            <div className="mt-3"><Eyebrow>WHO IS ZEKLEASE FOR?</Eyebrow></div>
+            <div className="mt-3"><Eyebrow>WHO IS ZEKLEASE FOR?</Eyebrow></div><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h2 className="mt-3 text-2xl font-bold text-brand-dark">People Prepared to Take Responsibility</h2>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">ZEKLEASE is designed for Mobility Professionals who want structured access to mobility assets and are prepared to take responsibility for the opportunity they receive. Access is based on the ability and willingness to operate within the standards of the ZEKANO Mobility System.</p>
           </div>
@@ -75,7 +75,7 @@ function Page() {
       {/* ELIGIBILITY - blue */}
       <section className="px-5 sm:px-8 lg:px-12 py-10 bg-brand-dark text-white">
         <div className="text-center">
-          <p className="text-xs font-bold tracking-[0.2em] text-white">ELIGIBILITY</p>
+          <p className="text-xs font-bold tracking-[0.2em] text-white">ELIGIBILITY</p><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
           <h2 className="mt-3 text-2xl font-bold text-white">Requirements for ZEKLEASE Access</h2>
         </div>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -92,7 +92,7 @@ function Page() {
       <section className="px-5 sm:px-8 lg:px-12 py-10">
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-border p-8">
-            <Eyebrow>WHAT WE EXPECT</Eyebrow>
+            <Eyebrow>WHAT WE EXPECT</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h2 className="mt-3 text-2xl font-bold text-brand-dark">Stewardship Is Earned</h2>
             <div className="mt-4 grid gap-3">
               {[
@@ -107,19 +107,12 @@ function Page() {
             </div>
           </div>
           <div className="rounded-2xl bg-secondary/40 border border-border p-8">
-            <Eyebrow>HOW THE RELATIONSHIP WORKS</Eyebrow>
+            <Eyebrow>HOW THE RELATIONSHIP WORKS</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h2 className="mt-3 text-2xl font-bold text-brand-dark">Assets Enable People. People Enable Assets.</h2>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">The mobility asset provides infrastructure for productive mobility. ZEKANO provides the structure through which access is organized and managed. The Mobility Professional puts the asset to productive use while carrying the responsibilities associated with that access.</p>
             <div className="mt-4 flex items-center gap-3 rounded-xl bg-white border border-border p-4 text-sm"><Eye className="h-5 w-5 text-brand-green shrink-0" /><span className="text-muted-foreground">Structure creates conditions for opportunity; it does not guarantee outcome.</span></div>
           </div>
         </div>
-      </section>
-
-      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-secondary/40 text-center">
-        <Eyebrow>ACCESS WITH A PATHWAY</Eyebrow>
-        <h2 className="mt-3 text-2xl font-bold text-brand-dark">The Opportunity Grows With Responsibility Carried</h2>
-        <p className="mt-3 mx-auto max-w-2xl text-sm text-muted-foreground">For the right Mobility Professional, structured access can provide a pathway to participate with clearer expectations, defined responsibilities, and an opportunity to build trust through consistent performance.</p>
-        <Link to="/our-system" className="mt-4 inline-flex items-center gap-2 rounded-md bg-brand-green px-5 py-2.5 text-sm font-semibold text-white">Explore the ZEKANO Mobility System <ArrowRight className="h-4 w-4" /></Link>
       </section>
 
       <section className="px-5 sm:px-8 lg:px-12 py-10 bg-white">
@@ -128,6 +121,13 @@ function Page() {
           <p className="mt-2 mx-auto max-w-xl text-sm text-white/70">Interested in structured access? Email us at <a href="mailto:admin.mobility@zekano.co" className="underline text-white">admin.mobility@zekano.co</a></p>
           <Link to="/apply-zeklease" className="mt-6 inline-flex items-center gap-2 rounded-md bg-brand-green px-6 py-3 text-sm font-semibold text-white">Apply for ZEKLEASE <ArrowRight className="h-4 w-4" /></Link>
         </div>
+      </section>
+
+      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-secondary/40 text-center">
+        <Eyebrow>ACCESS WITH A PATHWAY</Eyebrow><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
+        <h2 className="mt-3 text-2xl font-bold text-brand-dark">The Opportunity Grows With Responsibility Carried</h2>
+        <p className="mt-3 mx-auto max-w-2xl text-sm text-muted-foreground">For the right Mobility Professional, structured access can provide a pathway to participate with clearer expectations, defined responsibilities, and an opportunity to build trust through consistent performance.</p>
+        <Link to="/our-system" className="mt-4 inline-flex items-center gap-2 rounded-md bg-brand-green px-5 py-2.5 text-sm font-semibold text-white">Explore the ZEKANO Mobility System <ArrowRight className="h-4 w-4" /></Link>
       </section>
       <div className="h-10 bg-white" aria-hidden />
 

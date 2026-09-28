@@ -1,9 +1,9 @@
 import { s as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
 import { _ as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { k as ChevronRight } from "../_libs/lucide-react.mjs";
-import { n as Header, r as getImage, t as Footer } from "./Footer-DpUl0FgZ.mjs";
+import { M as ChevronRight } from "../_libs/lucide-react.mjs";
+import { n as Header, r as getImage, t as Footer } from "./Footer-DAG4i2k1.mjs";
 import { a as resources_hero_default, i as AccordionTrigger, n as AccordionContent, r as AccordionItem, t as Accordion } from "./resources-hero-BKeEesC9.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/resources-BM9a7ZdA.js
+//#region node_modules/.nitro/vite/services/ssr/assets/resources-Nr0kuVqj.js
 var import_jsx_runtime = require_jsx_runtime();
 function Eyebrow({ children }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {

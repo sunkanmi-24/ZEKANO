@@ -1,8 +1,8 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { c as require_react, s as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
 import { _ as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { A as ChevronDown, S as Instagram, T as Facebook, _ as Mail, g as MapPin, h as Menu, p as Phone, t as X, v as Linkedin } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/Footer-DpUl0FgZ.js
+import { E as Facebook, N as ChevronDown, S as Instagram, _ as Mail, g as MapPin, h as Menu, p as Phone, t as X, v as Linkedin } from "../_libs/lucide-react.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/Footer-DAG4i2k1.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var zekano_logo_png_asset_default = {
@@ -132,11 +132,11 @@ var nav = [
 		label: "Our Solutions",
 		to: "/our-solutions",
 		children: [{
-			label: "ZEKLEASE",
-			to: "/zeklease"
-		}, {
 			label: "ZEKMANAGE",
 			to: "/zekmanage"
+		}, {
+			label: "ZEKLEASE",
+			to: "/zeklease"
 		}]
 	},
 	{
@@ -171,7 +171,7 @@ function Header() {
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
 							to: item.to,
 							className: "zekano-nav-link flex items-center gap-1 text-sm font-medium text-brand-dark hover:text-brand-green transition-colors",
-							activeProps: { className: "text-brand-green border-b-2 border-brand-green pb-1" },
+							activeProps: { className: "text-brand-green border-b-2 border-[#BF953F] pb-1" },
 							activeOptions: { exact: item.to === "/" },
 							children: [item.label, /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronDown, { className: "h-3.5 w-3.5" })]
 						}), activeMenu === item.label && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -189,7 +189,7 @@ function Header() {
 					}, item.label) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
 						to: item.to,
 						className: "zekano-nav-link flex items-center gap-1 text-sm font-medium text-brand-dark hover:text-brand-green transition-colors",
-						activeProps: { className: "text-brand-green border-b-2 border-brand-green pb-1" },
+						activeProps: { className: "text-brand-green border-b-2 border-[#BF953F] pb-1" },
 						activeOptions: { exact: item.to === "/" },
 						children: item.label
 					}, item.label))
@@ -385,13 +385,13 @@ function Footer() {
 					columns.map((col) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "zekano-footer-col",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-							className: "zekano-footer-col-title text-sm font-bold text-brand-green tracking-wider",
+							className: "zekano-footer-col-title text-sm font-bold text-white tracking-wider",
 							children: col.title
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 							className: "zekano-footer-link-list mt-4 space-y-2.5",
 							children: col.links.map((link) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
 								to: link.to,
-								className: "zekano-footer-link text-sm text-white/80 hover:text-brand-green transition",
+								className: "zekano-footer-link text-sm text-white/80 hover:text-white transition",
 								children: link.label
 							}) }, link.label))
 						})]
@@ -403,15 +403,15 @@ function Footer() {
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 									className: "zekano-footer-contact-item flex items-center gap-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, { className: "h-4 w-4 text-brand-green shrink-0" }), " Privacy Policy"]
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, { className: "h-4 w-4 text-white shrink-0" }), " Privacy Policy"]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 									className: "zekano-footer-contact-item flex items-center gap-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, { className: "h-4 w-4 text-brand-green shrink-0" }), " +234 800 600 0000"]
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, { className: "h-4 w-4 text-white shrink-0" }), " +234 800 600 0000"]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 									className: "zekano-footer-contact-item flex items-center gap-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, { className: "h-4 w-4 text-brand-green shrink-0" }), " hello@zekano.co"]
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, { className: "h-4 w-4 text-white shrink-0" }), " hello@zekano.co"]
 								})
 							]
 						})

@@ -40,7 +40,7 @@ function Page() {
 
       <section className="px-5 sm:px-8 lg:px-12 py-10 lg:py-14 grid lg:grid-cols-2 gap-8 items-center">
         <div>
-        <Eyebrow>FAQS</Eyebrow>
+        <Eyebrow>FAQS</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
         <h1 className="mt-3 text-3xl lg:text-[42px] font-bold text-brand-dark">Questions. Clear Answers.</h1>
         <p className="mt-4 text-sm sm:text-base text-muted-foreground">We believe trust is strengthened when people know what to expect.</p>
         </div>

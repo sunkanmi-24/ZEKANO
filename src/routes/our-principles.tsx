@@ -29,7 +29,7 @@ function Page() {
 
       <section className="px-5 sm:px-8 lg:px-12 py-10 lg:py-14 grid lg:grid-cols-2 gap-8 items-center">
         <div>
-        <Eyebrow>OUR PRINCIPLES</Eyebrow>
+        <Eyebrow>OUR PRINCIPLES</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
         <h1 className="mt-3 text-3xl lg:text-[42px] font-bold text-brand-dark">The Principles Behind How We Build.</h1>
         <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">Our principles guide how we make decisions, build relationships, manage mobility assets, and serve the communities connected to our work. They help us remain consistent as ZEKANO Mobility grows and as the systems around us evolve.</p>
         </div>
@@ -50,7 +50,7 @@ function Page() {
           ].map((c) => (
             <div key={c.title} className="group rounded-xl border border-border p-6 bg-white hover:shadow-lg hover:border-brand-green/20 hover:-translate-y-1 transition-all">
               <c.icon className="h-7 w-7 text-brand-green group-hover:scale-110 transition-transform" />
-              <p className="mt-3 text-xs font-bold tracking-widest text-brand-green">{c.eyebrow}</p>
+              <p className="mt-3 text-xs font-bold tracking-widest text-brand-green">{c.eyebrow}</p><span aria-hidden className="mt-2 block h-0.5 w-8 bg-[#BF953F]" />
               <h3 className="mt-1 text-sm font-bold text-brand-dark">{c.title}</h3>
               <p className="mt-2 text-xs text-muted-foreground">{c.body}</p>
             </div>

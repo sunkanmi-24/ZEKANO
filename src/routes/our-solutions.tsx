@@ -19,7 +19,7 @@ function Page() {
 
       <section className="px-5 sm:px-8 lg:px-12 py-10 lg:py-14 grid lg:grid-cols-2 gap-8 items-center">
         <div>
-          <Eyebrow>OUR SOLUTIONS</Eyebrow>
+          <Eyebrow>OUR SOLUTIONS</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
           <h1 className="mt-3 text-3xl lg:text-[42px] font-bold text-brand-dark">Structured Solutions for Mobility.</h1>
           <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">ZEKANO Mobility develops structured solutions that connect mobility assets, people, and opportunities in ways that create responsible and productive value. Our solutions are designed around real mobility needs while remaining grounded in the principles of structure, stewardship, accountability, and responsible value creation.</p>
           <p className="mt-3 text-sm text-muted-foreground">A mobility solution is more than a service — it is a structured response to a mobility need, designed to create clarity, establish responsibility, and enable productive use.</p>
@@ -57,13 +57,13 @@ function Page() {
       <section className="px-5 sm:px-8 lg:px-12 py-10">
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-border p-8">
-            <Eyebrow>ONE MOBILITY SYSTEM. DIFFERENT SOLUTIONS.</Eyebrow>
+            <Eyebrow>ONE MOBILITY SYSTEM. DIFFERENT SOLUTIONS.</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h2 className="mt-3 text-2xl font-bold text-brand-dark">We Structure the Relationship</h2>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">ZEKMANAGE provides the structure through which mobility assets are managed and stewarded. ZEKLEASE provides the structure through which responsible Mobility Professionals gain access to those assets. Together, they connect the key relationships between assets, people, and productive mobility.</p>
             <p className="mt-3 text-sm font-semibold text-brand-dark">We do not simply connect mobility assets with people. We structure the relationship between them.</p>
           </div>
           <div className="rounded-2xl bg-secondary/40 border border-border p-8">
-            <Eyebrow>BUILT TO EVOLVE</Eyebrow>
+            <Eyebrow>BUILT TO EVOLVE</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h2 className="mt-3 text-2xl font-bold text-brand-dark">Purpose. Structure. Stewardship. Accountability. Responsible Value.</h2>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">Our solutions will continue to evolve as we learn from the mobility communities we serve. Any future solution must remain consistent with the principles that guide ZEKANO Mobility. We do not build solutions simply because they are possible. We build them when they can create meaningful value and responsibly strengthen the mobility system.</p>
           </div>

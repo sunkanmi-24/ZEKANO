@@ -3,11 +3,11 @@ import { c as require_react, s as require_jsx_runtime } from "../_libs/@radix-ui
 import { _ as Link, f as createRouter, g as createRootRouteWithContext, h as createFileRoute, l as Scripts, m as lazyRouteComponent, p as Outlet, u as HeadContent, v as useRouter } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-DCbCVxxL.js
-var router_DCbCVxxL_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
+//#region node_modules/.nitro/vite/services/ssr/assets/router-BCo6e6MV.js
+var router_BCo6e6MV_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-CPq7OPPE.css";
+var styles_default = "/assets/styles-C0zGSzsQ.css";
 function reportLovableError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__lovableEvents?.captureException?.(error, {
@@ -94,7 +94,7 @@ function ErrorComponent({ error, reset }) {
 		})
 	});
 }
-var Route$21 = createRootRouteWithContext()({
+var Route$23 = createRootRouteWithContext()({
 	head: () => ({
 		meta: [
 			{ charSet: "utf-8" },
@@ -165,18 +165,20 @@ function RootShell({ children }) {
 	});
 }
 function RootComponent() {
-	const { queryClient } = Route$21.useRouteContext();
+	const { queryClient } = Route$23.useRouteContext();
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(QueryClientProvider, {
 		client: queryClient,
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})
 	});
 }
-var $$splitComponentImporter$19 = () => import("./routes-CLuSU5hS.mjs");
-var Route$20 = createFileRoute("/")({ component: lazyRouteComponent($$splitComponentImporter$19, "component") });
-var $$splitComponentImporter$18 = () => import("./about-us-Bd-Ktjjd.mjs");
-var Route$19 = createFileRoute("/about-us")({ component: lazyRouteComponent($$splitComponentImporter$18, "component") });
-var $$splitComponentImporter$17 = () => import("./company-S-6jjTPz.mjs");
-var Route$18 = createFileRoute("/company")({
+var $$splitComponentImporter$21 = () => import("./routes-DVl9vkU3.mjs");
+var Route$22 = createFileRoute("/")({ component: lazyRouteComponent($$splitComponentImporter$21, "component") });
+var $$splitComponentImporter$20 = () => import("./about-us-L4fGfu3J.mjs");
+var Route$21 = createFileRoute("/about-us")({ component: lazyRouteComponent($$splitComponentImporter$20, "component") });
+var $$splitComponentImporter$19 = () => import("./apply-zeklease-DcnG8PDU.mjs");
+var Route$20 = createFileRoute("/apply-zeklease")({ component: lazyRouteComponent($$splitComponentImporter$19, "component") });
+var $$splitComponentImporter$18 = () => import("./company-C3kDVBef.mjs");
+var Route$19 = createFileRoute("/company")({
 	head: () => ({
 		meta: [
 			{ title: "Company — ZEKANO" },
@@ -202,10 +204,10 @@ var Route$18 = createFileRoute("/company")({
 			href: "/company"
 		}]
 	}),
-	component: lazyRouteComponent($$splitComponentImporter$17, "component")
+	component: lazyRouteComponent($$splitComponentImporter$18, "component")
 });
-var $$splitComponentImporter$16 = () => import("./contact-DMFgAGb7.mjs");
-var Route$17 = createFileRoute("/contact")({
+var $$splitComponentImporter$17 = () => import("./contact-A6kksNPh.mjs");
+var Route$18 = createFileRoute("/contact")({
 	head: () => ({
 		meta: [
 			{ title: "Contact Us — Talk to the ZEKANO Team" },
@@ -239,29 +241,31 @@ var Route$17 = createFileRoute("/contact")({
 			href: "/contact"
 		}]
 	}),
-	component: lazyRouteComponent($$splitComponentImporter$16, "component")
+	component: lazyRouteComponent($$splitComponentImporter$17, "component")
 });
-var $$splitComponentImporter$15 = () => import("./faqs-Dw0IL9vQ.mjs");
-var Route$16 = createFileRoute("/faqs")({ component: lazyRouteComponent($$splitComponentImporter$15, "component") });
-var $$splitComponentImporter$14 = () => import("./leadership-DBPqP0E-.mjs");
-var Route$15 = createFileRoute("/leadership")({ component: lazyRouteComponent($$splitComponentImporter$14, "component") });
-var $$splitComponentImporter$13 = () => import("./our-commitment-BuuXPZO2.mjs");
-var Route$14 = createFileRoute("/our-commitment")({ component: lazyRouteComponent($$splitComponentImporter$13, "component") });
-var $$splitComponentImporter$12 = () => import("./our-culture-BFI-8ehs.mjs");
-var Route$13 = createFileRoute("/our-culture")({ component: lazyRouteComponent($$splitComponentImporter$12, "component") });
-var $$splitComponentImporter$11 = () => import("./our-philosophy-CPgxx1Lx.mjs");
-var Route$12 = createFileRoute("/our-philosophy")({ component: lazyRouteComponent($$splitComponentImporter$11, "component") });
-var $$splitComponentImporter$10 = () => import("./our-principles-CzD-z6VX.mjs");
-var Route$11 = createFileRoute("/our-principles")({ component: lazyRouteComponent($$splitComponentImporter$10, "component") });
-var $$splitComponentImporter$9 = () => import("./our-solutions-D8wiv6vY.mjs");
-var Route$10 = createFileRoute("/our-solutions")({ component: lazyRouteComponent($$splitComponentImporter$9, "component") });
-var $$splitComponentImporter$8 = () => import("./our-story-DVDtFfB2.mjs");
-var Route$9 = createFileRoute("/our-story")({ component: lazyRouteComponent($$splitComponentImporter$8, "component") });
-var $$splitComponentImporter$7 = () => import("./our-system-jiwb-sqj.mjs");
-var Route$8 = createFileRoute("/our-system")({ component: lazyRouteComponent($$splitComponentImporter$7, "component") });
-var $$splitComponentImporter$6 = () => import("./our-systems-ydQ_vH0D.mjs");
-var Route$7 = createFileRoute("/our-systems")({ component: lazyRouteComponent($$splitComponentImporter$6, "component") });
-var $$splitComponentImporter$5 = () => import("./resources-BM9a7ZdA.mjs");
+var $$splitComponentImporter$16 = () => import("./faqs-CtX_MRtS.mjs");
+var Route$17 = createFileRoute("/faqs")({ component: lazyRouteComponent($$splitComponentImporter$16, "component") });
+var $$splitComponentImporter$15 = () => import("./leadership-CSGRz1-J.mjs");
+var Route$16 = createFileRoute("/leadership")({ component: lazyRouteComponent($$splitComponentImporter$15, "component") });
+var $$splitComponentImporter$14 = () => import("./our-commitment-Gm6QAue_.mjs");
+var Route$15 = createFileRoute("/our-commitment")({ component: lazyRouteComponent($$splitComponentImporter$14, "component") });
+var $$splitComponentImporter$13 = () => import("./our-culture-DQWRDMpg.mjs");
+var Route$14 = createFileRoute("/our-culture")({ component: lazyRouteComponent($$splitComponentImporter$13, "component") });
+var $$splitComponentImporter$12 = () => import("./our-philosophy-WOU3BFhh.mjs");
+var Route$13 = createFileRoute("/our-philosophy")({ component: lazyRouteComponent($$splitComponentImporter$12, "component") });
+var $$splitComponentImporter$11 = () => import("./our-principles-BHzhv_39.mjs");
+var Route$12 = createFileRoute("/our-principles")({ component: lazyRouteComponent($$splitComponentImporter$11, "component") });
+var $$splitComponentImporter$10 = () => import("./our-solutions-CR7Xr1S8.mjs");
+var Route$11 = createFileRoute("/our-solutions")({ component: lazyRouteComponent($$splitComponentImporter$10, "component") });
+var $$splitComponentImporter$9 = () => import("./our-story-gJmsr12r.mjs");
+var Route$10 = createFileRoute("/our-story")({ component: lazyRouteComponent($$splitComponentImporter$9, "component") });
+var $$splitComponentImporter$8 = () => import("./our-system-DDzLiHxc.mjs");
+var Route$9 = createFileRoute("/our-system")({ component: lazyRouteComponent($$splitComponentImporter$8, "component") });
+var $$splitComponentImporter$7 = () => import("./our-systems-DgdOl_WE.mjs");
+var Route$8 = createFileRoute("/our-systems")({ component: lazyRouteComponent($$splitComponentImporter$7, "component") });
+var $$splitComponentImporter$6 = () => import("./request-zekmanage-BE_L2AQB.mjs");
+var Route$7 = createFileRoute("/request-zekmanage")({ component: lazyRouteComponent($$splitComponentImporter$6, "component") });
+var $$splitComponentImporter$5 = () => import("./resources-Nr0kuVqj.mjs");
 var Route$6 = createFileRoute("/resources")({ component: lazyRouteComponent($$splitComponentImporter$5, "component") });
 var BASE_URL = "";
 var Route$5 = createFileRoute("/sitemap.xml")({ server: { handlers: { GET: async () => {
@@ -340,124 +344,134 @@ var Route$5 = createFileRoute("/sitemap.xml")({ server: { handlers: { GET: async
 		"Cache-Control": "public, max-age=3600"
 	} });
 } } } });
-var $$splitComponentImporter$4 = () => import("./stewardship-BnjdopDz.mjs");
+var $$splitComponentImporter$4 = () => import("./stewardship-CcleOlRU.mjs");
 var Route$4 = createFileRoute("/stewardship")({ component: lazyRouteComponent($$splitComponentImporter$4, "component") });
-var $$splitComponentImporter$3 = () => import("./what-we-do-CD_eTR54.mjs");
+var $$splitComponentImporter$3 = () => import("./what-we-do-CGi7Q-A7.mjs");
 var Route$3 = createFileRoute("/what-we-do")({ component: lazyRouteComponent($$splitComponentImporter$3, "component") });
-var $$splitComponentImporter$2 = () => import("./why-zekano-BM4ZfkjS.mjs");
+var $$splitComponentImporter$2 = () => import("./why-zekano-SXaOi8TM.mjs");
 var Route$2 = createFileRoute("/why-zekano")({ component: lazyRouteComponent($$splitComponentImporter$2, "component") });
-var $$splitComponentImporter$1 = () => import("./zeklease-DwPs0Mfb.mjs");
+var $$splitComponentImporter$1 = () => import("./zeklease-D18LUlYJ.mjs");
 var Route$1 = createFileRoute("/zeklease")({ component: lazyRouteComponent($$splitComponentImporter$1, "component") });
-var $$splitComponentImporter = () => import("./zekmanage-CR4n44Fx.mjs");
+var $$splitComponentImporter = () => import("./zekmanage-D-KnWq4k.mjs");
 var Route = createFileRoute("/zekmanage")({ component: lazyRouteComponent($$splitComponentImporter, "component") });
 var rootRouteChildren = {
-	IndexRoute: Route$20.update({
+	IndexRoute: Route$22.update({
 		id: "/",
 		path: "/",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
-	AboutUsRoute: Route$19.update({
+	AboutUsRoute: Route$21.update({
 		id: "/about-us",
 		path: "/about-us",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
-	CompanyRoute: Route$18.update({
+	ApplyZekleaseRoute: Route$20.update({
+		id: "/apply-zeklease",
+		path: "/apply-zeklease",
+		getParentRoute: () => Route$23
+	}),
+	CompanyRoute: Route$19.update({
 		id: "/company",
 		path: "/company",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
-	ContactRoute: Route$17.update({
+	ContactRoute: Route$18.update({
 		id: "/contact",
 		path: "/contact",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
-	FaqsRoute: Route$16.update({
+	FaqsRoute: Route$17.update({
 		id: "/faqs",
 		path: "/faqs",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
-	LeadershipRoute: Route$15.update({
+	LeadershipRoute: Route$16.update({
 		id: "/leadership",
 		path: "/leadership",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
-	OurCommitmentRoute: Route$14.update({
+	OurCommitmentRoute: Route$15.update({
 		id: "/our-commitment",
 		path: "/our-commitment",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
-	OurCultureRoute: Route$13.update({
+	OurCultureRoute: Route$14.update({
 		id: "/our-culture",
 		path: "/our-culture",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
-	OurPhilosophyRoute: Route$12.update({
+	OurPhilosophyRoute: Route$13.update({
 		id: "/our-philosophy",
 		path: "/our-philosophy",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
-	OurPrinciplesRoute: Route$11.update({
+	OurPrinciplesRoute: Route$12.update({
 		id: "/our-principles",
 		path: "/our-principles",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
-	OurSolutionsRoute: Route$10.update({
+	OurSolutionsRoute: Route$11.update({
 		id: "/our-solutions",
 		path: "/our-solutions",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
-	OurStoryRoute: Route$9.update({
+	OurStoryRoute: Route$10.update({
 		id: "/our-story",
 		path: "/our-story",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
-	OurSystemRoute: Route$8.update({
+	OurSystemRoute: Route$9.update({
 		id: "/our-system",
 		path: "/our-system",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
-	OurSystemsRoute: Route$7.update({
+	OurSystemsRoute: Route$8.update({
 		id: "/our-systems",
 		path: "/our-systems",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
+	}),
+	RequestZekmanageRoute: Route$7.update({
+		id: "/request-zekmanage",
+		path: "/request-zekmanage",
+		getParentRoute: () => Route$23
 	}),
 	ResourcesRoute: Route$6.update({
 		id: "/resources",
 		path: "/resources",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
 	SitemapDotxmlRoute: Route$5.update({
 		id: "/sitemap.xml",
 		path: "/sitemap.xml",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
 	StewardshipRoute: Route$4.update({
 		id: "/stewardship",
 		path: "/stewardship",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
 	WhatWeDoRoute: Route$3.update({
 		id: "/what-we-do",
 		path: "/what-we-do",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
 	WhyZekanoRoute: Route$2.update({
 		id: "/why-zekano",
 		path: "/why-zekano",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
 	ZekleaseRoute: Route$1.update({
 		id: "/zeklease",
 		path: "/zeklease",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	}),
 	ZekmanageRoute: Route.update({
 		id: "/zekmanage",
 		path: "/zekmanage",
-		getParentRoute: () => Route$21
+		getParentRoute: () => Route$23
 	})
 };
-var routeTree = Route$21._addFileChildren(rootRouteChildren)._addFileTypes();
+var routeTree = Route$23._addFileChildren(rootRouteChildren)._addFileTypes();
 var getRouter = () => {
 	const queryClient = new QueryClient();
 	return createRouter({
@@ -468,4 +482,4 @@ var getRouter = () => {
 	});
 };
 //#endregion
-export { getRouter, router_DCbCVxxL_exports as t };
+export { getRouter, router_BCo6e6MV_exports as t };

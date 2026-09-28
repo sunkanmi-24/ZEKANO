@@ -29,7 +29,7 @@ function Page() {
 
       <section className="px-5 sm:px-8 lg:px-12 py-10 lg:py-14 grid lg:grid-cols-2 gap-8 items-center">
         <div>
-        <Eyebrow>OUR CULTURE</Eyebrow>
+        <Eyebrow>OUR CULTURE</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
         <h1 className="mt-3 text-3xl lg:text-[42px] font-bold text-brand-dark">How We Choose to Work.</h1>
         <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">Culture is how our principles become visible in the way we think, work, communicate, and take responsibility. At ZEKANO Mobility, we believe a strong culture is not created by statements on a wall. It is built through everyday actions, decisions, and standards.</p>
         </div>
@@ -48,7 +48,7 @@ function Page() {
           ].map((c) => (
             <div key={c.title} className="group rounded-xl border border-border p-6 bg-white hover:shadow-lg hover:border-brand-green/20 hover:-translate-y-1 transition-all">
               <c.icon className="h-7 w-7 text-brand-green group-hover:scale-110 transition-transform" />
-              <p className="mt-3 text-xs font-bold tracking-widest text-brand-green">{c.eyebrow}</p>
+              <p className="mt-3 text-xs font-bold tracking-widest text-brand-green">{c.eyebrow}</p><span aria-hidden className="mt-2 block h-0.5 w-8 bg-[#BF953F]" />
               <h3 className="mt-1 text-sm font-bold text-brand-dark">{c.title}</h3>
               <p className="mt-2 text-xs text-muted-foreground">{c.body}</p>
             </div>

@@ -26,7 +26,7 @@ function LeadershipPage() {
 
       <section className="px-5 sm:px-8 lg:px-12 py-10 lg:py-14 grid lg:grid-cols-2 gap-8 items-center">
         <div>
-        <Eyebrow>LEADERSHIP</Eyebrow>
+        <Eyebrow>LEADERSHIP</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
         <h1 className="mt-3 text-3xl lg:text-[42px] font-bold text-brand-dark leading-tight">Leadership With Purpose. Responsibility With Trust.</h1>
         <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">ZEKANO is built on the belief that leadership is not simply about directing an organization. It is about carrying responsibility for its purpose, its people, its decisions, and the communities it serves. Our leaders are responsible for ensuring that ZEKANO remains faithful to its purpose while building the capability, systems, and culture required to serve well.</p>
         </div>
@@ -34,7 +34,7 @@ function LeadershipPage() {
       </section>
 
       <section className="px-5 sm:px-8 lg:px-12 py-10 bg-brand-dark text-white text-center">
-        <div className="flex justify-center"><p className="text-xs font-bold tracking-[0.2em] text-white">LEADERSHIP AT ZEKANO</p></div>
+        <div className="flex justify-center"><p className="text-xs font-bold tracking-[0.2em] text-white">LEADERSHIP AT ZEKANO</p></div><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
         <h2 className="mt-3 text-2xl font-bold text-white">Purpose Before Position</h2>
         <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
           {[
@@ -54,7 +54,7 @@ function LeadershipPage() {
       </section>
 
       <section className="px-5 sm:px-8 lg:px-12 py-10">
-        <Eyebrow>OUR LEADERSHIP</Eyebrow>
+        <Eyebrow>OUR LEADERSHIP</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
         <div className="mt-6 grid lg:grid-cols-2 gap-6">
           {[
             { name: "ALIU AZEEZ ADEKUNLE", role: "Founder & CEO", img: getImage("leadership", "leader-1", ceoAsset.url), desc: "Provides overall direction, guiding purpose, long-term vision, strategic development, and institutional growth.", points: ["Institutional Vision & Direction", "Strategic Development", "Business Development", "Strategic Partnerships", "Institutional Governance"] },

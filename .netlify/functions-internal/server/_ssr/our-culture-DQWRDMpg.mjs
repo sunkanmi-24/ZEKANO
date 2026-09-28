@@ -1,9 +1,9 @@
 import { s as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
 import { _ as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { C as Heart, E as Eye, F as ArrowRight, i as Users, k as ChevronRight, l as Shield, m as MessageCircle, y as Lightbulb } from "../_libs/lucide-react.mjs";
-import { n as Header, r as getImage, t as Footer } from "./Footer-DpUl0FgZ.mjs";
+import { C as Heart, D as Eye, M as ChevronRight, R as ArrowRight, i as Users, l as Shield, m as MessageCircle, y as Lightbulb } from "../_libs/lucide-react.mjs";
+import { n as Header, r as getImage, t as Footer } from "./Footer-DAG4i2k1.mjs";
 import { t as about_hq_default } from "./about-hq-DQPHf-xN.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/our-culture-BFI-8ehs.js
+//#region node_modules/.nitro/vite/services/ssr/assets/our-culture-DQWRDMpg.js
 var import_jsx_runtime = require_jsx_runtime();
 function Eyebrow({ children }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -118,28 +118,30 @@ function Page() {
 					}, c.title))
 				})
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-				className: "px-5 sm:px-8 lg:px-12 py-10 bg-brand-dark text-white",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Eyebrow, { children: "ONE CULTURE. ONE STANDARD." }),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "mt-3 text-xl font-bold",
-						children: "We do our work with purpose, take responsibility, and continually improve the systems through which we serve."
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mt-3 text-sm text-white/70",
-						children: "Take responsibility. Work with structure. Communicate honestly. Treat people with respect. Think beyond today. Learn continuously. Improve deliberately."
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
-						to: "/stewardship",
-						className: "mt-6 inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold",
-						style: {
-							backgroundImage: "var(--brand-gold-gradient)",
-							color: "oklch(0.24 0.07 255.27)"
-						},
-						children: ["Explore Stewardship ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4" })]
-					})
-				]
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+				className: "px-5 sm:px-8 lg:px-12 pb-10",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "rounded-2xl bg-brand-dark text-white p-8 lg:p-10 text-center",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-xs font-bold tracking-[0.2em] text-white",
+							children: "ONE CULTURE. ONE STANDARD."
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "mt-3 text-xl font-bold text-white",
+							children: "We do our work with purpose, take responsibility, and continually improve the systems through which we serve."
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "mt-3 mx-auto max-w-2xl text-sm text-white",
+							children: "Take responsibility. Work with structure. Communicate honestly. Treat people with respect. Think beyond today. Learn continuously. Improve deliberately."
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+							to: "/stewardship",
+							className: "mt-6 inline-flex items-center gap-2 rounded-md bg-brand-green px-6 py-3 text-sm font-semibold text-white",
+							children: ["Explore Stewardship ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4" })]
+						})
+					]
+				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {})
 		]

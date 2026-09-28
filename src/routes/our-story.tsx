@@ -1,4 +1,4 @@
-﻿import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ChevronRight, Quote, Search, Car, Wrench, Layers, Users, Lightbulb, Target } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
@@ -35,7 +35,7 @@ function OurStoryPage() {
       <section className="px-5 py-10 sm:px-8 lg:px-12 lg:py-14">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-14 items-center">
           <div>
-            <Eyebrow>OUR STORY</Eyebrow>
+            <Eyebrow>OUR STORY</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h1 className="mt-3 text-3xl lg:text-[44px] font-bold leading-tight text-brand-dark">It Started With a Conversation</h1>
             <div className="mt-5 text-sm text-muted-foreground leading-relaxed space-y-3">
               <p>When the founder first returned to Nigeria from the UK, he began experiencing the mobility industry from the passenger seat. During one of his Bolt rides, he had a conversation with the driver about his experience working in the industry.</p>

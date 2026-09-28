@@ -1,9 +1,9 @@
 import { s as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
 import { _ as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { C as Heart, F as ArrowRight, i as Users, k as ChevronRight, l as Shield, o as TrendingUp, x as Layers, y as Lightbulb } from "../_libs/lucide-react.mjs";
-import { n as Header, r as getImage, t as Footer } from "./Footer-DpUl0FgZ.mjs";
+import { C as Heart, M as ChevronRight, R as ArrowRight, i as Users, l as Shield, o as TrendingUp, x as Layers, y as Lightbulb } from "../_libs/lucide-react.mjs";
+import { n as Header, r as getImage, t as Footer } from "./Footer-DAG4i2k1.mjs";
 import { t as philosophy_hero_default } from "./philosophy-hero-QT6gP1zo.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/our-philosophy-CPgxx1Lx.js
+//#region node_modules/.nitro/vite/services/ssr/assets/our-philosophy-WOU3BFhh.js
 var import_jsx_runtime = require_jsx_runtime();
 function Eyebrow({ children }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {

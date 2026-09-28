@@ -19,7 +19,7 @@ function Page() {
 
       <section className="px-5 sm:px-8 lg:px-12 py-10 lg:py-14 grid lg:grid-cols-2 gap-8 items-center">
         <div>
-        <Eyebrow>STEWARDSHIP</Eyebrow>
+        <Eyebrow>STEWARDSHIP</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
         <h1 className="mt-3 text-3xl lg:text-[42px] font-bold text-brand-dark">Responsibility Before Opportunity.</h1>
         <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">An asset entrusted to us is a responsibility before it is an opportunity. At ZEKANO Mobility, stewardship means taking responsibility for what has been placed within our care and managing it in a way that protects its potential, creates responsible value, and considers the future.</p>
         </div>
@@ -29,7 +29,7 @@ function Page() {
       {/* MEANING - blue */}
       <section className="px-5 sm:px-8 lg:px-12 py-10 bg-brand-dark text-white">
         <div className="text-center">
-          <p className="text-xs font-bold tracking-[0.2em] text-white">WHAT STEWARDSHIP MEANS TO US</p>
+          <p className="text-xs font-bold tracking-[0.2em] text-white">WHAT STEWARDSHIP MEANS TO US</p><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
           <h2 className="mt-3 text-2xl font-bold text-white">Protecting Potential While Creating Value</h2>
         </div>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -57,13 +57,13 @@ function Page() {
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-border p-8">
             <Users className="h-7 w-7 text-brand-green" />
-            <div className="mt-3"><Eyebrow>STEWARDSHIP IS SHARED</Eyebrow></div>
+            <div className="mt-3"><Eyebrow>STEWARDSHIP IS SHARED</Eyebrow></div><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h2 className="mt-3 text-xl font-bold text-brand-dark">Opportunity and Responsibility Together</h2>
             <p className="mt-3 text-sm text-muted-foreground">ZEKANO does not carry every responsibility alone. Owners, Professionals, customers, partners, and ZEKANO each have responsibilities.</p>
           </div>
           <div className="rounded-2xl bg-secondary/40 border border-border p-8">
             <Shield className="h-7 w-7 text-brand-green" />
-            <div className="mt-3"><Eyebrow>ACROSS THE ASSET LIFECYCLE</Eyebrow></div>
+            <div className="mt-3"><Eyebrow>ACROSS THE ASSET LIFECYCLE</Eyebrow></div><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h2 className="mt-3 text-xl font-bold text-brand-dark">Positioning → Utilization → Stewardship → Evaluation → Improvement → Transition</h2>
             <p className="mt-3 text-sm text-muted-foreground">Asset management is the structured stewardship of mobility assets toward their responsible potential.</p>
           </div>
@@ -71,7 +71,7 @@ function Page() {
       </section>
 
       <section className="px-5 sm:px-8 lg:px-12 py-10 bg-secondary/40 text-center">
-        <Eyebrow>BEYOND THE ASSET</Eyebrow>
+        <Eyebrow>BEYOND THE ASSET</Eyebrow><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
         <h2 className="mt-3 text-2xl font-bold text-brand-dark">Stewardship of People and Relationships</h2>
         <p className="mt-4 mx-auto max-w-2xl text-sm text-muted-foreground">We seek to treat people with respect, honour responsibilities, communicate honestly, protect trust, learn from experience, and improve what we are responsible for.</p>
         <p className="mt-3 text-sm font-semibold italic text-brand-dark">We do not simply seek to keep assets productive. We seek to keep their potential alive.</p>

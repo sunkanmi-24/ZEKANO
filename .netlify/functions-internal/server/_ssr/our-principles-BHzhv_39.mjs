@@ -1,9 +1,9 @@
 import { s as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
 import { _ as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { C as Heart, F as ArrowRight, c as Star, d as RefreshCw, i as Users, k as ChevronRight, l as Shield, x as Layers } from "../_libs/lucide-react.mjs";
-import { n as Header, r as getImage, t as Footer } from "./Footer-DpUl0FgZ.mjs";
+import { C as Heart, M as ChevronRight, R as ArrowRight, c as Star, d as RefreshCw, i as Users, l as Shield, x as Layers } from "../_libs/lucide-react.mjs";
+import { n as Header, r as getImage, t as Footer } from "./Footer-DAG4i2k1.mjs";
 import { t as philosophy_hero_default } from "./philosophy-hero-QT6gP1zo.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/our-principles-CzD-z6VX.js
+//#region node_modules/.nitro/vite/services/ssr/assets/our-principles-BHzhv_39.js
 var import_jsx_runtime = require_jsx_runtime();
 function Eyebrow({ children }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -130,32 +130,38 @@ function Page() {
 					}, c.title))
 				})
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-				className: "px-5 sm:px-8 lg:px-12 py-10 bg-brand-dark text-white",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Eyebrow, { children: "HOW THESE PRINCIPLES WORK TOGETHER" }),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "mt-3 text-xl font-bold",
-						children: "A Way of Thinking"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mt-3 text-sm text-white/70 leading-relaxed",
-						children: "Purpose gives us direction. Trust determines the foundation on which we grow. Responsibility shapes how we use opportunity. Structure creates clarity. People remain at the centre. Stewardship protects long-term potential. Accountability strengthens relationships. Continuous improvement keeps the system capable of serving well."
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mt-4 text-sm font-semibold text-white",
-						children: "These are not simply principles we communicate. They are standards we expect to live by."
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
-						to: "/our-culture",
-						className: "mt-6 inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold",
-						style: {
-							backgroundImage: "var(--brand-gold-gradient)",
-							color: "oklch(0.24 0.07 255.27)"
-						},
-						children: ["Explore Our Culture ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4" })]
-					})
-				]
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+				className: "px-5 sm:px-8 lg:px-12 pb-10",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "rounded-2xl bg-brand-dark text-white p-8 lg:p-10 text-center",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-xs font-bold tracking-[0.2em] text-white",
+							children: "HOW THESE PRINCIPLES WORK TOGETHER"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "mt-3 text-xl font-bold text-white",
+							children: "A Way of Thinking"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "mt-3 text-sm text-white leading-relaxed",
+							children: "Purpose gives us direction. Trust determines the foundation on which we grow. Responsibility shapes how we use opportunity. Structure creates clarity. People remain at the centre. Stewardship protects long-term potential. Accountability strengthens relationships. Continuous improvement keeps the system capable of serving well."
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "mt-4 text-sm font-semibold text-white",
+							children: "These are not simply principles we communicate. They are standards we expect to live by."
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+							to: "/our-culture",
+							className: "mt-6 inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold",
+							style: {
+								backgroundImage: "var(--brand-gold-gradient)",
+								color: "oklch(0.24 0.07 255.27)"
+							},
+							children: ["Explore Our Culture ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4" })]
+						})
+					]
+				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {})
 		]

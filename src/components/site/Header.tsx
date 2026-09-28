@@ -30,8 +30,8 @@ const nav: NavItem[] = [
     label: "Our Solutions",
     to: "/our-solutions",
     children: [
-      { label: "ZEKLEASE", to: "/zeklease" },
       { label: "ZEKMANAGE", to: "/zekmanage" },
+      { label: "ZEKLEASE", to: "/zeklease" },
     ],
   },
   { label: "Why ZEKANO", to: "/why-zekano" },
@@ -64,7 +64,7 @@ export function Header() {
                 <Link
                   to={item.to}
                   className="zekano-nav-link flex items-center gap-1 text-sm font-medium text-brand-dark hover:text-brand-green transition-colors"
-                  activeProps={{ className: "text-brand-green border-b-2 border-brand-green pb-1" }}
+                  activeProps={{ className: "text-brand-green border-b-2 border-[#BF953F] pb-1" }}
                   activeOptions={{ exact: item.to === "/" }}
                 >
                   {item.label}
@@ -92,7 +92,7 @@ export function Header() {
                 key={item.label}
                 to={item.to}
                 className="zekano-nav-link flex items-center gap-1 text-sm font-medium text-brand-dark hover:text-brand-green transition-colors"
-                activeProps={{ className: "text-brand-green border-b-2 border-brand-green pb-1" }}
+                activeProps={{ className: "text-brand-green border-b-2 border-[#BF953F] pb-1" }}
                 activeOptions={{ exact: item.to === "/" }}
               >
                 {item.label}

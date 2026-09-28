@@ -1,6 +1,6 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { a as Trigger2, c as require_react, i as Root2, n as Header, r as Item, s as require_jsx_runtime, t as Content2 } from "../_libs/@radix-ui/react-accordion+[...].mjs";
-import { A as ChevronDown } from "../_libs/lucide-react.mjs";
+import { N as ChevronDown } from "../_libs/lucide-react.mjs";
 import { t as clsx } from "../_libs/clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/resources-hero-BKeEesC9.js

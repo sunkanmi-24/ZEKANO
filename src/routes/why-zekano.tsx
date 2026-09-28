@@ -29,7 +29,7 @@ function Page() {
 
       <section className="px-5 sm:px-8 lg:px-12 py-10 lg:py-14 grid lg:grid-cols-2 gap-8 items-center">
         <div>
-        <Eyebrow>WHY ZEKANO</Eyebrow>
+        <Eyebrow>WHY ZEKANO</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
         <h1 className="mt-3 text-3xl lg:text-[42px] font-bold text-brand-dark">Structure With Purpose. Responsibility With Trust.</h1>
         <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">Mobility involves assets, people, relationships, and opportunity. How those elements are managed determines whether potential becomes productive value or whether uncertainty and mistrust take its place. At ZEKANO Mobility, we believe better mobility requires more than activity — it requires structure.</p>
         </div>
@@ -38,7 +38,7 @@ function Page() {
 
       <section className="px-5 sm:px-8 lg:px-12 py-10 bg-brand-dark text-white">
         <div className="text-center">
-          <p className="text-xs font-bold tracking-[0.2em] text-white">WHY ZEKANO</p>
+          <p className="text-xs font-bold tracking-[0.2em] text-white">WHY ZEKANO</p><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
           <h2 className="mt-3 text-2xl font-bold text-white">Structure. Stewardship. Accountability.</h2>
         </div>
         <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -65,7 +65,7 @@ function Page() {
       <section className="px-5 sm:px-8 lg:px-12 py-10">
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="rounded-2xl bg-secondary/40 border border-border p-8 text-center">
-            <Eyebrow>WHAT THIS MEANS FOR YOU</Eyebrow>
+            <Eyebrow>WHAT THIS MEANS FOR YOU</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h2 className="mt-3 text-xl font-bold text-brand-dark">Clearer Relationships. Defined Responsibilities. Professional Management.</h2>
             <p className="mt-3 text-sm text-muted-foreground">We cannot eliminate every uncertainty within mobility. But we can build better structures for managing it. We take responsibility for how we manage the relationships and assets entrusted to us.</p>
           </div>

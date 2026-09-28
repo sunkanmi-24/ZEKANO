@@ -1,8 +1,9 @@
 import { s as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
 import { _ as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { F as ArrowRight, k as ChevronRight, l as Shield, x as Layers } from "../_libs/lucide-react.mjs";
-import { n as Header, t as Footer } from "./Footer-DpUl0FgZ.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/our-solutions-D8wiv6vY.js
+import { M as ChevronRight, R as ArrowRight, l as Shield, x as Layers } from "../_libs/lucide-react.mjs";
+import { n as Header, r as getImage, t as Footer } from "./Footer-DAG4i2k1.mjs";
+import { t as city_skyline_default } from "./city-skyline-CqF1ITA4.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/our-solutions-CR7Xr1S8.js
 var import_jsx_runtime = require_jsx_runtime();
 function Eyebrow({ children }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -34,8 +35,8 @@ function Page() {
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-				className: "px-5 sm:px-8 lg:px-12 py-10 lg:py-14",
-				children: [
+				className: "px-5 sm:px-8 lg:px-12 py-10 lg:py-14 grid lg:grid-cols-2 gap-8 items-center",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Eyebrow, { children: "OUR SOLUTIONS" }),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
 						className: "mt-3 text-3xl lg:text-[42px] font-bold text-brand-dark",
@@ -49,39 +50,48 @@ function Page() {
 						className: "mt-3 text-sm text-muted-foreground",
 						children: "A mobility solution is more than a service — it is a structured response to a mobility need, designed to create clarity, establish responsibility, and enable productive use."
 					})
-				]
+				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "overflow-hidden rounded-2xl",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+						src: getImage("solutions", "hero", city_skyline_default),
+						alt: "Our Solutions",
+						className: "h-72 w-full object-cover lg:h-[380px]",
+						width: 1200,
+						height: 800
+					})
+				})]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-				className: "px-5 sm:px-8 lg:px-12 py-10 bg-secondary/40",
+				className: "px-5 sm:px-8 lg:px-12 py-10 bg-brand-dark text-white",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "grid lg:grid-cols-2 gap-6",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "rounded-2xl bg-white border border-border p-8",
+						className: "rounded-2xl border border-white/10 bg-white/5 p-8",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "flex items-center gap-3",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "grid h-10 w-10 place-items-center rounded-full bg-brand-dark",
+									className: "grid h-10 w-10 place-items-center rounded-full bg-white/10",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shield, { className: "h-5 w-5 text-white" })
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-									className: "text-xl font-bold text-brand-green",
+									className: "text-xl font-bold text-white",
 									children: "ZEKMANAGE"
 								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-2 text-sm font-semibold text-brand-dark",
+								className: "mt-2 text-sm font-semibold text-white/80",
 								children: "Structured Mobility Asset Management"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-3 text-sm text-muted-foreground",
+								className: "mt-3 text-sm text-white/60",
 								children: "ZEKMANAGE provides Asset Owners with professional management, oversight, coordination, and accountability for their mobility assets."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-2 text-xs font-semibold text-brand-dark",
+								className: "mt-2 text-xs font-semibold text-white",
 								children: "For: Asset Owners"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-								className: "mt-3 space-y-1 text-xs text-muted-foreground list-disc pl-5",
+								className: "mt-3 space-y-1 text-xs text-white/60 list-disc pl-5",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "Professional asset management" }),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "Operational oversight" }),
@@ -91,46 +101,42 @@ function Page() {
 								]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-4 text-xs font-semibold italic text-brand-dark",
+								className: "mt-4 text-xs font-semibold italic text-white",
 								children: "Ownership gives responsibility. Management provides structure. Stewardship protects potential."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
 								to: "/zekmanage",
-								className: "mt-5 inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold",
-								style: {
-									backgroundImage: "var(--brand-gold-gradient)",
-									color: "oklch(0.24 0.07 255.27)"
-								},
+								className: "mt-5 inline-flex items-center gap-2 rounded-md bg-brand-green px-6 py-3 text-sm font-semibold text-white",
 								children: ["Explore ZEKMANAGE ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4" })]
 							})
 						]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "rounded-2xl bg-white border border-border p-8",
+						className: "rounded-2xl border border-white/10 bg-white/5 p-8",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "flex items-center gap-3",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "grid h-10 w-10 place-items-center rounded-full bg-brand-dark",
+									className: "grid h-10 w-10 place-items-center rounded-full bg-white/10",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Layers, { className: "h-5 w-5 text-white" })
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-									className: "text-xl font-bold text-brand-blue",
+									className: "text-xl font-bold text-white",
 									children: "ZEKLEASE"
 								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-2 text-sm font-semibold text-brand-dark",
+								className: "mt-2 text-sm font-semibold text-white/80",
 								children: "Structured Mobility Access"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-3 text-sm text-muted-foreground",
+								className: "mt-3 text-sm text-white/60",
 								children: "ZEKLEASE provides responsible Mobility Professionals with structured access to mobility assets for productive use."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-2 text-xs font-semibold text-brand-dark",
+								className: "mt-2 text-xs font-semibold text-white",
 								children: "For: Mobility Professionals"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-								className: "mt-3 space-y-1 text-xs text-muted-foreground list-disc pl-5",
+								className: "mt-3 space-y-1 text-xs text-white/60 list-disc pl-5",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "Structured access to mobility assets" }),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "Defined responsibilities" }),
@@ -140,53 +146,54 @@ function Page() {
 								]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-4 text-xs font-semibold italic text-brand-dark",
+								className: "mt-4 text-xs font-semibold italic text-white",
 								children: "Access creates opportunity. Opportunity carries responsibility. Responsibility creates trust."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
 								to: "/zeklease",
-								className: "mt-5 inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold",
-								style: {
-									backgroundImage: "var(--brand-gold-gradient)",
-									color: "oklch(0.24 0.07 255.27)"
-								},
+								className: "mt-5 inline-flex items-center gap-2 rounded-md bg-brand-green px-6 py-3 text-sm font-semibold text-white",
 								children: ["Explore ZEKLEASE ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4" })]
 							})
 						]
 					})]
 				})
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 				className: "px-5 sm:px-8 lg:px-12 py-10",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Eyebrow, { children: "ONE MOBILITY SYSTEM. DIFFERENT SOLUTIONS." }),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "mt-3 text-2xl font-bold text-brand-dark",
-						children: "We Structure the Relationship"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed",
-						children: "ZEKMANAGE provides the structure through which mobility assets are managed and stewarded. ZEKLEASE provides the structure through which responsible Mobility Professionals gain access to those assets. Together, they connect the key relationships between assets, people, and productive mobility."
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mt-3 text-sm font-semibold text-brand-dark",
-						children: "We do not simply connect mobility assets with people. We structure the relationship between them."
-					})
-				]
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-				className: "px-5 sm:px-8 lg:px-12 py-10 bg-secondary/40",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Eyebrow, { children: "BUILT TO EVOLVE" }),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "mt-3 text-2xl font-bold text-brand-dark",
-						children: "Purpose. Structure. Stewardship. Accountability. Responsible Value."
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mt-4 text-sm text-muted-foreground leading-relaxed",
-						children: "Our solutions will continue to evolve as we learn from the mobility communities we serve. Any future solution must remain consistent with the principles that guide ZEKANO Mobility. We do not build solutions simply because they are possible. We build them when they can create meaningful value and responsibly strengthen the mobility system."
-					})
-				]
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "grid lg:grid-cols-2 gap-6",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "rounded-2xl border border-border p-8",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Eyebrow, { children: "ONE MOBILITY SYSTEM. DIFFERENT SOLUTIONS." }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+								className: "mt-3 text-2xl font-bold text-brand-dark",
+								children: "We Structure the Relationship"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-4 text-sm text-muted-foreground leading-relaxed",
+								children: "ZEKMANAGE provides the structure through which mobility assets are managed and stewarded. ZEKLEASE provides the structure through which responsible Mobility Professionals gain access to those assets. Together, they connect the key relationships between assets, people, and productive mobility."
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-3 text-sm font-semibold text-brand-dark",
+								children: "We do not simply connect mobility assets with people. We structure the relationship between them."
+							})
+						]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "rounded-2xl bg-secondary/40 border border-border p-8",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Eyebrow, { children: "BUILT TO EVOLVE" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+								className: "mt-3 text-2xl font-bold text-brand-dark",
+								children: "Purpose. Structure. Stewardship. Accountability. Responsible Value."
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-4 text-sm text-muted-foreground leading-relaxed",
+								children: "Our solutions will continue to evolve as we learn from the mobility communities we serve. Any future solution must remain consistent with the principles that guide ZEKANO Mobility. We do not build solutions simply because they are possible. We build them when they can create meaningful value and responsibly strengthen the mobility system."
+							})
+						]
+					})]
+				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 				className: "px-5 sm:px-8 lg:px-12 pb-14",
@@ -213,7 +220,7 @@ function Page() {
 								children: ["I Own a Mobility Asset ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4" })]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
 								to: "/zeklease",
-								className: "inline-flex items-center gap-2 rounded-md border border-white/20 px-6 py-3 text-sm font-semibold text-white",
+								className: "inline-flex items-center gap-2 rounded-md bg-brand-green px-6 py-3 text-sm font-semibold text-white",
 								children: ["I Need Mobility Access ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4" })]
 							})]
 						})

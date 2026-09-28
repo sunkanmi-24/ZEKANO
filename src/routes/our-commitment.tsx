@@ -19,7 +19,7 @@ function Page() {
 
       <section className="px-5 sm:px-8 lg:px-12 py-10 lg:py-14 grid lg:grid-cols-2 gap-8 items-center">
         <div>
-        <Eyebrow>OUR COMMITMENT</Eyebrow>
+        <Eyebrow>OUR COMMITMENT</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
         <h1 className="mt-3 text-3xl lg:text-[42px] font-bold text-brand-dark">Built on Trust. Guided by Responsibility.</h1>
         <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">Our commitment is to build a mobility institution that people can rely on. We recognize that every asset, relationship, opportunity, and responsibility entrusted to ZEKANO Mobility carries expectations. We therefore commit ourselves to building systems that create clarity, protect trust, and enable responsible value creation across the Mobility System.</p>
         </div>
@@ -29,7 +29,7 @@ function Page() {
       {/* COMMITMENTS - blue */}
       <section className="px-5 sm:px-8 lg:px-12 py-10 bg-brand-dark text-white">
         <div className="text-center">
-          <p className="text-xs font-bold tracking-[0.2em] text-white">WHAT WE COMMIT TO</p>
+          <p className="text-xs font-bold tracking-[0.2em] text-white">WHAT WE COMMIT TO</p><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
           <h2 className="mt-3 text-2xl font-bold text-white">Standards We Expect to Live By</h2>
         </div>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -54,7 +54,7 @@ function Page() {
       <div className="h-10 bg-white" aria-hidden />
 
       <section className="px-5 sm:px-8 lg:px-12 py-10 bg-secondary/40 text-center">
-        <Eyebrow>A COMMITMENT WE CAN BE HELD TO</Eyebrow>
+        <Eyebrow>A COMMITMENT WE CAN BE HELD TO</Eyebrow><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
         <h2 className="mt-3 mx-auto max-w-2xl text-2xl font-bold text-brand-dark">We Control How We Respond</h2>
         <p className="mt-4 mx-auto max-w-2xl text-sm text-muted-foreground">Our commitment is not that every outcome will be perfect. It is that we will approach our responsibilities with purpose, honesty, structure, and accountability. That is where our commitment begins.</p>
       </section>
