@@ -33,10 +33,10 @@ function LeadershipPage() {
         <div className="overflow-hidden rounded-2xl"><img src={getImage("leadership","hero","https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200")} alt="Leadership" className="h-72 w-full object-cover" width={1200} height={800} /></div>
       </section>
 
-      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-secondary/40">
-        <Eyebrow>LEADERSHIP AT ZEKANO</Eyebrow>
-        <h2 className="mt-3 text-2xl font-bold text-brand-dark">Purpose Before Position</h2>
-        <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-brand-dark text-white text-center">
+        <div className="flex justify-center"><p className="text-xs font-bold tracking-[0.2em] text-white">LEADERSHIP AT ZEKANO</p></div>
+        <h2 className="mt-3 text-2xl font-bold text-white">Purpose Before Position</h2>
+        <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
           {[
             { icon: Target, t: "Purpose Before Position", d: "Protect the purpose, decide with integrity, consider long-term consequences." },
             { icon: Shield, t: "Responsibility Before Authority", d: "Authority enables responsible action. Leaders are accountable for standards they build." },
@@ -44,10 +44,10 @@ function LeadershipPage() {
             { icon: Users, t: "People and Institution", d: "Responsible for people and systems, not just results." },
             { icon: TrendingUp, t: "Long-Term Stewardship", d: "Strengthen what we have been entrusted with for the future." },
           ].map((c) => (
-            <div key={c.t} className="group rounded-xl bg-white border border-border p-6 hover:shadow-lg hover:border-brand-green/20 hover:-translate-y-1 transition-all">
-              <c.icon className="h-7 w-7 text-brand-green group-hover:scale-110 transition-transform" />
-              <h3 className="mt-3 text-sm font-bold text-brand-dark">{c.t}</h3>
-              <p className="mt-2 text-xs text-muted-foreground">{c.d}</p>
+            <div key={c.t} className="group rounded-xl border border-white/10 bg-white/5 p-6 hover:shadow-lg hover:-translate-y-1 transition-all">
+              <c.icon className="mx-auto h-7 w-7 text-white group-hover:scale-110 transition-transform" />
+              <h3 className="mt-3 text-sm font-bold text-white">{c.t}</h3>
+              <p className="mt-2 text-xs text-white/60">{c.d}</p>
             </div>
           ))}
         </div>

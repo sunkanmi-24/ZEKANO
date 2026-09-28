@@ -56,11 +56,13 @@ function Page() {
         </div>
       </section>
 
-      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-brand-dark text-white">
-        <Eyebrow>ONE CULTURE. ONE STANDARD.</Eyebrow>
-        <h2 className="mt-3 text-xl font-bold">We do our work with purpose, take responsibility, and continually improve the systems through which we serve.</h2>
-        <p className="mt-3 text-sm text-white/70">Take responsibility. Work with structure. Communicate honestly. Treat people with respect. Think beyond today. Learn continuously. Improve deliberately.</p>
-        <Link to="/stewardship" className="mt-6 inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold" style={{ backgroundImage: "var(--brand-gold-gradient)", color: "oklch(0.24 0.07 255.27)" }}>Explore Stewardship <ArrowRight className="h-4 w-4" /></Link>
+      <section className="px-5 sm:px-8 lg:px-12 pb-10">
+        <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10 text-center">
+          <p className="text-xs font-bold tracking-[0.2em] text-white">ONE CULTURE. ONE STANDARD.</p>
+          <h2 className="mt-3 text-xl font-bold text-white">We do our work with purpose, take responsibility, and continually improve the systems through which we serve.</h2>
+          <p className="mt-3 mx-auto max-w-2xl text-sm text-white">Take responsibility. Work with structure. Communicate honestly. Treat people with respect. Think beyond today. Learn continuously. Improve deliberately.</p>
+          <Link to="/stewardship" className="mt-6 inline-flex items-center gap-2 rounded-md bg-brand-green px-6 py-3 text-sm font-semibold text-white">Explore Stewardship <ArrowRight className="h-4 w-4" /></Link>
+        </div>
       </section>
 
       <Footer />

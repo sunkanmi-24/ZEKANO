@@ -66,11 +66,11 @@ export function Footer() {
 
           {columns.map((col) => (
             <div key={col.title} className="zekano-footer-col">
-              <h4 className="zekano-footer-col-title text-sm font-bold text-brand-green tracking-wider">{col.title}</h4>
+              <h4 className="zekano-footer-col-title text-sm font-bold text-white tracking-wider">{col.title}</h4>
               <ul className="zekano-footer-link-list mt-4 space-y-2.5">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <Link to={link.to} className="zekano-footer-link text-sm text-white/80 hover:text-brand-green transition">
+                    <Link to={link.to} className="zekano-footer-link text-sm text-white/80 hover:text-white transition">
                       {link.label}
                     </Link>
                   </li>
@@ -81,9 +81,9 @@ export function Footer() {
 
           <div className="zekano-footer-contact">
             <ul className="space-y-3 text-sm text-white/80">
-              <li className="zekano-footer-contact-item flex items-center gap-2"><Phone className="h-4 w-4 text-brand-green shrink-0" /> Privacy Policy</li>
-              <li className="zekano-footer-contact-item flex items-center gap-2"><Mail className="h-4 w-4 text-brand-green shrink-0" /> +234 800 600 0000</li>
-              <li className="zekano-footer-contact-item flex items-center gap-2"><MapPin className="h-4 w-4 text-brand-green shrink-0" /> hello@zekano.co</li>
+              <li className="zekano-footer-contact-item flex items-center gap-2"><Phone className="h-4 w-4 text-white shrink-0" /> Privacy Policy</li>
+              <li className="zekano-footer-contact-item flex items-center gap-2"><Mail className="h-4 w-4 text-white shrink-0" /> +234 800 600 0000</li>
+              <li className="zekano-footer-contact-item flex items-center gap-2"><MapPin className="h-4 w-4 text-white shrink-0" /> hello@zekano.co</li>
             </ul>
           </div>
         </div>

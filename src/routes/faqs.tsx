@@ -47,24 +47,31 @@ function Page() {
         <div className="overflow-hidden rounded-2xl"><img src={getImage("faqs","hero",heroImg)} alt="FAQs" className="h-72 w-full object-cover" width={1200} height={800} /></div>
       </section>
 
-      {cats.map((cat) => (
-        <section key={cat} className="px-5 sm:px-8 lg:px-12 py-6">
-          <h2 className="text-sm font-bold tracking-widest text-brand-green">{cat.toUpperCase()}</h2>
-          <Accordion type="single" collapsible className="mt-4">
-            {faqs.filter((f) => f.cat === cat).map((f, i) => (
-              <AccordionItem key={i} value={`${cat}-${i}`}>
-                <AccordionTrigger className="text-sm font-semibold text-brand-dark text-left">{f.q}</AccordionTrigger>
-                <AccordionContent className="text-sm text-muted-foreground">{f.a}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </section>
-      ))}
+      <section className="px-5 sm:px-8 lg:px-12 py-10">
+        <div className="grid lg:grid-cols-2 gap-6">
+          {cats.map((cat) => (
+            <div key={cat} className="rounded-2xl border border-border p-6 bg-white">
+              <div className="flex items-center gap-3">
+                <div className="grid h-10 w-10 place-items-center rounded-full bg-brand-dark"><HelpCircle className="h-5 w-5 text-white" /></div>
+                <h2 className="text-sm font-bold tracking-widest text-brand-dark">{cat.toUpperCase()}</h2>
+              </div>
+              <Accordion type="single" collapsible className="mt-4">
+                {faqs.filter((f) => f.cat === cat).map((f, i) => (
+                  <AccordionItem key={i} value={`${cat}-${i}`}>
+                    <AccordionTrigger className="text-sm font-semibold text-brand-dark text-left">{f.q}</AccordionTrigger>
+                    <AccordionContent className="text-sm text-muted-foreground">{f.a}</AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      <section className="px-5 sm:px-8 lg:px-12 pb-14">
-        <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10">
-          <h2 className="text-xl font-bold">Still Have a Question?</h2>
-          <p className="mt-2 text-sm text-white/70">ZEKMANAGE: <a href="mailto:zekmanage@zekano.co" className="underline">zekmanage@zekano.co</a> — ZEKLEASE: <a href="mailto:admin.mobility@zekano.co" className="underline">admin.mobility@zekano.co</a></p>
+      <section className="px-5 sm:px-8 lg:px-12 pb-10">
+        <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10 text-center">
+          <h2 className="text-xl font-bold text-white">Still Have a Question?</h2>
+          <p className="mt-2 mx-auto max-w-xl text-sm text-white">ZEKMANAGE: <a href="mailto:zekmanage@zekano.co" className="underline text-white">zekmanage@zekano.co</a> — ZEKLEASE: <a href="mailto:admin.mobility@zekano.co" className="underline text-white">admin.mobility@zekano.co</a></p>
         </div>
       </section>
 

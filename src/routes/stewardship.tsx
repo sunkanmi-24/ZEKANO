@@ -10,15 +10,6 @@ export const Route = createFileRoute("/stewardship")({ component: Page });
 function Eyebrow({ children }: { children: string }) {
   return <p className="text-xs font-bold tracking-[0.2em] text-brand-green">{children}</p>;
 }
-function Section({ eyebrow, title, children, altBg }: { eyebrow: string; title: string; children: React.ReactNode; altBg?: boolean }) {
-  return (
-    <section className={`px-5 sm:px-8 lg:px-12 py-10 ${altBg ? "bg-secondary/40" : ""}`}>
-      <Eyebrow>{eyebrow}</Eyebrow>
-      <h2 className="mt-3 text-2xl font-bold text-brand-dark">{title}</h2>
-      <div className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed space-y-3">{children}</div>
-    </section>
-  );
-}
 
 function Page() {
   return (
@@ -35,45 +26,64 @@ function Page() {
         <div className="overflow-hidden rounded-2xl"><img src={getImage("stewardship","hero",heroImg)} alt="Stewardship" className="h-72 w-full object-cover" width={1200} height={800} /></div>
       </section>
 
-      <Section eyebrow="WHAT STEWARDSHIP MEANS TO US" title="Protecting Potential While Creating Value" altBg>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 not-prose">
+      {/* MEANING - blue */}
+      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-brand-dark text-white">
+        <div className="text-center">
+          <p className="text-xs font-bold tracking-[0.2em] text-white">WHAT STEWARDSHIP MEANS TO US</p>
+          <h2 className="mt-3 text-2xl font-bold text-white">Protecting Potential While Creating Value</h2>
+        </div>
+        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
-            { icon: Heart, t: "Responsible Use", d: "Put assets to productive use without compromising purpose or long-term potential." },
-            { icon: Eye, t: "Professional Oversight", d: "Attention, coordination, monitoring, and informed decision-making to keep assets productive." },
-            { icon: Shield, t: "Protection of Potential", d: "Consider condition, utilization, and viability to protect ability to create value tomorrow." },
-            { icon: Users, t: "Accountability", d: "People understand what they are responsible for and what is expected of them." },
-            { icon: Leaf, t: "Sustainable Value", d: "Create value without treating the present as though the future does not matter." },
+            { icon: Heart, t: "Responsible Use", d: "Put assets to productive use without compromising purpose." },
+            { icon: Eye, t: "Professional Oversight", d: "Attention, coordination, monitoring, informed decisions." },
+            { icon: Shield, t: "Protection of Potential", d: "Protect ability to create value tomorrow." },
+            { icon: Users, t: "Accountability", d: "Clear responsibilities and expectations." },
+            { icon: Leaf, t: "Sustainable Value", d: "Create value without ignoring the future." },
           ].map((c) => (
-            <div key={c.t} className="rounded-xl bg-white border border-border p-5">
-              <c.icon className="h-6 w-6 text-brand-green mb-2" />
-              <h3 className="text-sm font-bold text-brand-dark">{c.t}</h3>
-              <p className="mt-1 text-xs text-muted-foreground">{c.d}</p>
+            <div key={c.t} className="rounded-xl border border-white/10 bg-white/5 p-6 text-center">
+              <c.icon className="mx-auto h-7 w-7 text-white" />
+              <h3 className="mt-3 text-sm font-bold text-white">{c.t}</h3>
+              <p className="mt-1 text-xs text-white/60">{c.d}</p>
             </div>
           ))}
         </div>
-        <p className="font-semibold text-brand-dark">Responsible stewardship protects tomorrow's potential while creating value today.</p>
-      </Section>
+        <p className="mt-6 text-center text-sm font-semibold text-white">Responsible stewardship protects tomorrow's potential while creating value today.</p>
+      </section>
 
-      <Section eyebrow="STEWARDSHIP IS SHARED" title="Opportunity and Responsibility Should Exist Together">
-        <p>ZEKANO does not carry every responsibility within the Mobility System alone. Asset Owners, Mobility Professionals, customers, partners, and ZEKANO each have responsibilities. A healthy mobility system works when each participant fulfils the responsibility attached to their role.</p>
-      </Section>
+      <div className="h-10 bg-white" aria-hidden />
 
-      <Section eyebrow="STEWARDSHIP ACROSS THE ASSET LIFECYCLE" title="Positioning → Utilization → Stewardship → Evaluation → Improvement → Transition" altBg>
-        <p>Our approach extends beyond the moment an asset enters the system. At each stage, we consider how the asset can continue to create responsible value while protecting its longer-term potential.</p>
-        <p className="font-semibold text-brand-dark">Asset management is the structured stewardship of mobility assets toward their responsible and productive potential.</p>
-      </Section>
-
-      <Section eyebrow="BEYOND THE ASSET" title="Stewardship of People and Relationships">
-        <p>We seek to treat people with respect, honour responsibilities, communicate honestly, protect trust, learn from experience, and improve what we are responsible for. The value of a mobility system is determined not only by its assets but by how responsibly people within that system relate to one another.</p>
-        <p className="font-semibold text-brand-dark italic">We do not simply seek to keep assets productive. We seek to keep their potential alive. That is stewardship.</p>
-      </Section>
-
-      <section className="px-5 sm:px-8 lg:px-12 pb-14">
-        <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10">
-          <h2 className="text-xl font-bold">Our Commitment to Stewardship</h2>
-          <Link to="/our-commitment" className="mt-6 inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold" style={{ backgroundImage: "var(--brand-gold-gradient)", color: "oklch(0.24 0.07 255.27)" }}>Explore Our Commitment <ArrowRight className="h-4 w-4" /></Link>
+      {/* SHARED + LIFECYCLE side by side */}
+      <section className="px-5 sm:px-8 lg:px-12 py-10">
+        <div className="grid lg:grid-cols-2 gap-6">
+          <div className="rounded-2xl border border-border p-8">
+            <Users className="h-7 w-7 text-brand-green" />
+            <div className="mt-3"><Eyebrow>STEWARDSHIP IS SHARED</Eyebrow></div>
+            <h2 className="mt-3 text-xl font-bold text-brand-dark">Opportunity and Responsibility Together</h2>
+            <p className="mt-3 text-sm text-muted-foreground">ZEKANO does not carry every responsibility alone. Owners, Professionals, customers, partners, and ZEKANO each have responsibilities.</p>
+          </div>
+          <div className="rounded-2xl bg-secondary/40 border border-border p-8">
+            <Shield className="h-7 w-7 text-brand-green" />
+            <div className="mt-3"><Eyebrow>ACROSS THE ASSET LIFECYCLE</Eyebrow></div>
+            <h2 className="mt-3 text-xl font-bold text-brand-dark">Positioning → Utilization → Stewardship → Evaluation → Improvement → Transition</h2>
+            <p className="mt-3 text-sm text-muted-foreground">Asset management is the structured stewardship of mobility assets toward their responsible potential.</p>
+          </div>
         </div>
       </section>
+
+      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-secondary/40 text-center">
+        <Eyebrow>BEYOND THE ASSET</Eyebrow>
+        <h2 className="mt-3 text-2xl font-bold text-brand-dark">Stewardship of People and Relationships</h2>
+        <p className="mt-4 mx-auto max-w-2xl text-sm text-muted-foreground">We seek to treat people with respect, honour responsibilities, communicate honestly, protect trust, learn from experience, and improve what we are responsible for.</p>
+        <p className="mt-3 text-sm font-semibold italic text-brand-dark">We do not simply seek to keep assets productive. We seek to keep their potential alive.</p>
+      </section>
+
+      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-white">
+        <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10 text-center">
+          <h2 className="text-xl font-bold text-white">Our Commitment to Stewardship</h2>
+          <Link to="/our-commitment" className="mt-6 inline-flex items-center gap-2 rounded-md bg-brand-green px-6 py-3 text-sm font-semibold text-white">Explore Our Commitment <ArrowRight className="h-4 w-4" /></Link>
+        </div>
+      </section>
+      <div className="h-10 bg-white" aria-hidden />
 
       <Footer />
     </div>

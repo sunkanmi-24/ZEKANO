@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutUsRouteImport } from './routes/about-us'
+import { Route as ApplyZekleaseRouteImport } from './routes/apply-zeklease'
 import { Route as CompanyRouteImport } from './routes/company'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FaqsRouteImport } from './routes/faqs'
@@ -23,6 +24,7 @@ import { Route as OurSolutionsRouteImport } from './routes/our-solutions'
 import { Route as OurStoryRouteImport } from './routes/our-story'
 import { Route as OurSystemRouteImport } from './routes/our-system'
 import { Route as OurSystemsRouteImport } from './routes/our-systems'
+import { Route as RequestZekmanageRouteImport } from './routes/request-zekmanage'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as StewardshipRouteImport } from './routes/stewardship'
@@ -39,6 +41,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutUsRoute = AboutUsRouteImport.update({
   id: '/about-us',
   path: '/about-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApplyZekleaseRoute = ApplyZekleaseRouteImport.update({
+  id: '/apply-zeklease',
+  path: '/apply-zeklease',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CompanyRoute = CompanyRouteImport.update({
@@ -101,6 +108,11 @@ const OurSystemsRoute = OurSystemsRouteImport.update({
   path: '/our-systems',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RequestZekmanageRoute = RequestZekmanageRouteImport.update({
+  id: '/request-zekmanage',
+  path: '/request-zekmanage',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ResourcesRoute = ResourcesRouteImport.update({
   id: '/resources',
   path: '/resources',
@@ -140,6 +152,7 @@ const ZekmanageRoute = ZekmanageRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
+  '/apply-zeklease': typeof ApplyZekleaseRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/faqs': typeof FaqsRoute
@@ -152,6 +165,7 @@ export interface FileRoutesByFullPath {
   '/our-story': typeof OurStoryRoute
   '/our-system': typeof OurSystemRoute
   '/our-systems': typeof OurSystemsRoute
+  '/request-zekmanage': typeof RequestZekmanageRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/stewardship': typeof StewardshipRoute
@@ -163,6 +177,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
+  '/apply-zeklease': typeof ApplyZekleaseRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/faqs': typeof FaqsRoute
@@ -175,6 +190,7 @@ export interface FileRoutesByTo {
   '/our-story': typeof OurStoryRoute
   '/our-system': typeof OurSystemRoute
   '/our-systems': typeof OurSystemsRoute
+  '/request-zekmanage': typeof RequestZekmanageRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/stewardship': typeof StewardshipRoute
@@ -187,6 +203,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
+  '/apply-zeklease': typeof ApplyZekleaseRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/faqs': typeof FaqsRoute
@@ -199,6 +216,7 @@ export interface FileRoutesById {
   '/our-story': typeof OurStoryRoute
   '/our-system': typeof OurSystemRoute
   '/our-systems': typeof OurSystemsRoute
+  '/request-zekmanage': typeof RequestZekmanageRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/stewardship': typeof StewardshipRoute
@@ -212,6 +230,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about-us'
+    | '/apply-zeklease'
     | '/company'
     | '/contact'
     | '/faqs'
@@ -224,6 +243,7 @@ export interface FileRouteTypes {
     | '/our-story'
     | '/our-system'
     | '/our-systems'
+    | '/request-zekmanage'
     | '/resources'
     | '/sitemap.xml'
     | '/stewardship'
@@ -235,6 +255,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about-us'
+    | '/apply-zeklease'
     | '/company'
     | '/contact'
     | '/faqs'
@@ -247,6 +268,7 @@ export interface FileRouteTypes {
     | '/our-story'
     | '/our-system'
     | '/our-systems'
+    | '/request-zekmanage'
     | '/resources'
     | '/sitemap.xml'
     | '/stewardship'
@@ -258,6 +280,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about-us'
+    | '/apply-zeklease'
     | '/company'
     | '/contact'
     | '/faqs'
@@ -270,6 +293,7 @@ export interface FileRouteTypes {
     | '/our-story'
     | '/our-system'
     | '/our-systems'
+    | '/request-zekmanage'
     | '/resources'
     | '/sitemap.xml'
     | '/stewardship'
@@ -282,6 +306,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutUsRoute: typeof AboutUsRoute
+  ApplyZekleaseRoute: typeof ApplyZekleaseRoute
   CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
   FaqsRoute: typeof FaqsRoute
@@ -294,6 +319,7 @@ export interface RootRouteChildren {
   OurStoryRoute: typeof OurStoryRoute
   OurSystemRoute: typeof OurSystemRoute
   OurSystemsRoute: typeof OurSystemsRoute
+  RequestZekmanageRoute: typeof RequestZekmanageRoute
   ResourcesRoute: typeof ResourcesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   StewardshipRoute: typeof StewardshipRoute
@@ -317,6 +343,13 @@ declare module '@tanstack/react-router' {
       path: '/about-us'
       fullPath: '/about-us'
       preLoaderRoute: typeof AboutUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/apply-zeklease': {
+      id: '/apply-zeklease'
+      path: '/apply-zeklease'
+      fullPath: '/apply-zeklease'
+      preLoaderRoute: typeof ApplyZekleaseRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/company': {
@@ -403,6 +436,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OurSystemsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/request-zekmanage': {
+      id: '/request-zekmanage'
+      path: '/request-zekmanage'
+      fullPath: '/request-zekmanage'
+      preLoaderRoute: typeof RequestZekmanageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/resources': {
       id: '/resources'
       path: '/resources'
@@ -458,6 +498,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutUsRoute: AboutUsRoute,
+  ApplyZekleaseRoute: ApplyZekleaseRoute,
   CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
   FaqsRoute: FaqsRoute,
@@ -470,6 +511,7 @@ const rootRouteChildren: RootRouteChildren = {
   OurStoryRoute: OurStoryRoute,
   OurSystemRoute: OurSystemRoute,
   OurSystemsRoute: OurSystemsRoute,
+  RequestZekmanageRoute: RequestZekmanageRoute,
   ResourcesRoute: ResourcesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   StewardshipRoute: StewardshipRoute,
