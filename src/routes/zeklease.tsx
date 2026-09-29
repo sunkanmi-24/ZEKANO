@@ -106,20 +106,17 @@ function Page() {
               ))}
             </div>
           </div>
-          <div className="rounded-2xl bg-secondary/40 border border-border p-8">
+          <div className="rounded-2xl bg-secondary/40 border border-border p-8 flex flex-col">
             <Eyebrow>HOW THE RELATIONSHIP WORKS</Eyebrow><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h2 className="mt-3 text-2xl font-bold text-brand-dark">Assets Enable People. People Enable Assets.</h2>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">The mobility asset provides infrastructure for productive mobility. ZEKANO provides the structure through which access is organized and managed. The Mobility Professional puts the asset to productive use while carrying the responsibilities associated with that access.</p>
             <div className="mt-4 flex items-center gap-3 rounded-xl bg-white border border-border p-4 text-sm"><Eye className="h-5 w-5 text-brand-green shrink-0" /><span className="text-muted-foreground">Structure creates conditions for opportunity; it does not guarantee outcome.</span></div>
+            <div className="mt-4 rounded-xl bg-brand-dark text-white p-6 text-center">
+              <h3 className="text-base font-bold text-white">Apply for ZEKLEASE</h3>
+              <p className="mt-1 text-xs text-white/70">Interested in structured access?</p>
+              <Link to="/apply-zeklease" className="mt-4 inline-flex items-center gap-2 rounded-md bg-brand-green px-5 py-2.5 text-sm font-semibold text-white">Apply for ZEKLEASE <ArrowRight className="h-4 w-4" /></Link>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-white">
-        <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10 text-center">
-          <h2 className="text-xl font-bold text-white">Apply for ZEKLEASE</h2>
-          <p className="mt-2 mx-auto max-w-xl text-sm text-white/70">Interested in structured access? Email us at <a href="mailto:admin.mobility@zekano.co" className="underline text-white">admin.mobility@zekano.co</a></p>
-          <Link to="/apply-zeklease" className="mt-6 inline-flex items-center gap-2 rounded-md bg-brand-green px-6 py-3 text-sm font-semibold text-white">Apply for ZEKLEASE <ArrowRight className="h-4 w-4" /></Link>
         </div>
       </section>
 

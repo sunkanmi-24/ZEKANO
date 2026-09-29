@@ -53,17 +53,18 @@ function Page() {
 
       <div className="h-10 bg-white" aria-hidden />
 
-      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-secondary/40 text-center">
-        <Eyebrow>A COMMITMENT WE CAN BE HELD TO</Eyebrow><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
-        <h2 className="mt-3 mx-auto max-w-2xl text-2xl font-bold text-brand-dark">We Control How We Respond</h2>
-        <p className="mt-4 mx-auto max-w-2xl text-sm text-muted-foreground">Our commitment is not that every outcome will be perfect. It is that we will approach our responsibilities with purpose, honesty, structure, and accountability. That is where our commitment begins.</p>
-      </section>
-
-      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-white">
-        <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10 text-center">
-          <h2 className="text-xl font-bold text-white">Building Something Worth Trusting</h2>
-          <p className="mt-3 mx-auto max-w-2xl text-sm text-white leading-relaxed">We build trusted systems that bring order, trust, and opportunity to the communities we serve. That is the commitment behind the work.</p>
-          <p className="mt-2 text-sm font-semibold text-white">Purpose. Trust. Responsibility. Stewardship. Accountability. Continuous improvement.</p>
+      <section className="px-5 sm:px-8 lg:px-12 py-10">
+        <div className="grid lg:grid-cols-2 gap-6">
+          <div className="rounded-2xl bg-secondary/40 border border-border p-8 text-center">
+            <Eyebrow>A COMMITMENT WE CAN BE HELD TO</Eyebrow><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
+            <h2 className="mt-3 text-2xl font-bold text-brand-dark">We Control How We Respond</h2>
+            <p className="mt-4 text-sm text-muted-foreground">Our commitment is not that every outcome will be perfect. It is that we will approach our responsibilities with purpose, honesty, structure, and accountability. That is where our commitment begins.</p>
+          </div>
+          <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10 text-center flex flex-col justify-center">
+            <h2 className="text-xl font-bold text-white">Building Something Worth Trusting</h2>
+            <p className="mt-3 text-sm text-white leading-relaxed">We build trusted systems that bring order, trust, and opportunity to the communities we serve. That is the commitment behind the work.</p>
+            <p className="mt-2 text-sm font-semibold text-white">Purpose. Trust. Responsibility. Stewardship. Accountability. Continuous improvement.</p>
+          </div>
         </div>
       </section>
       <div className="h-10 bg-white" aria-hidden />

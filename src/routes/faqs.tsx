@@ -54,7 +54,7 @@ function Page() {
               <div className="flex items-center gap-3">
                 <div className="grid h-10 w-10 place-items-center rounded-full bg-brand-dark"><HelpCircle className="h-5 w-5 text-white" /></div>
                 <h2 className="text-sm font-bold tracking-widest text-brand-dark">{cat.toUpperCase()}</h2>
-              </div>
+              </div><span aria-hidden className="ml-[52px] mt-2 block h-0.5 w-12 bg-[#BF953F]" />
               <Accordion type="single" collapsible className="mt-4">
                 {faqs.filter((f) => f.cat === cat).map((f, i) => (
                   <AccordionItem key={i} value={`${cat}-${i}`}>
@@ -71,7 +71,10 @@ function Page() {
       <section className="px-5 sm:px-8 lg:px-12 pb-10">
         <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10 text-center">
           <h2 className="text-xl font-bold text-white">Still Have a Question?</h2>
-          <p className="mt-2 mx-auto max-w-xl text-sm text-white">ZEKMANAGE: <a href="mailto:zekmanage@zekano.co" className="underline text-white">zekmanage@zekano.co</a> — ZEKLEASE: <a href="mailto:admin.mobility@zekano.co" className="underline text-white">admin.mobility@zekano.co</a></p>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <a href="mailto:zekmanage@zekano.co" className="inline-flex items-center gap-2 rounded-md bg-brand-green px-5 py-2.5 text-sm font-semibold text-white">ZEKMANAGE: zekmanage@zekano.co</a>
+            <a href="mailto:admin.mobility@zekano.co" className="inline-flex items-center gap-2 rounded-md bg-brand-green px-5 py-2.5 text-sm font-semibold text-white">ZEKLEASE: admin.mobility@zekano.co</a>
+          </div>
         </div>
       </section>
 

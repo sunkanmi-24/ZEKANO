@@ -79,17 +79,18 @@ function AboutUsPage() {
         </div>
       </section>
 
-      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-secondary/40 text-center">
-        <Eyebrow>BUILDING FOR LONG TERM</Eyebrow><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
-        <h2 className="mt-3 text-2xl font-bold text-brand-dark">Preserve what must endure. Improve what should evolve.</h2>
-        <p className="mt-4 mx-auto max-w-2xl text-sm text-muted-foreground leading-relaxed">ZEKANO Mobility is being built with a long-term perspective. We seek to build the capability, trust, and responsibility required to serve better as we grow. Because the systems we build today should be capable of creating value tomorrow.</p>
-      </section>
-
-      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-white">
-        <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10 text-center">
-          <h2 className="text-xl font-bold text-white">Our Identity</h2>
-          <p className="mt-3 mx-auto max-w-2xl text-sm text-white/70 leading-relaxed">ZEKANO is a purpose-driven institution that builds trusted systems to positively impact lives by bringing order, trust, and opportunity to the communities it serves. ZEKANO Mobility is the current expression of that purpose in mobility.</p>
-          <Link to="/our-philosophy" className="mt-6 inline-flex items-center gap-2 rounded-md bg-brand-green px-6 py-3 text-sm font-semibold text-white">Explore Our Philosophy <ArrowRight className="h-4 w-4" /></Link>
+      <section className="px-5 sm:px-8 lg:px-12 py-10">
+        <div className="grid lg:grid-cols-2 gap-6">
+          <div className="rounded-2xl bg-secondary/40 border border-border p-8 text-center">
+            <Eyebrow>BUILDING FOR LONG TERM</Eyebrow><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
+            <h2 className="mt-3 text-2xl font-bold text-brand-dark">Preserve what must endure. Improve what should evolve.</h2>
+            <p className="mt-4 text-sm text-muted-foreground leading-relaxed">ZEKANO Mobility is being built with a long-term perspective. We seek to build the capability, trust, and responsibility required to serve better as we grow. Because the systems we build today should be capable of creating value tomorrow.</p>
+          </div>
+          <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10 text-center">
+            <h2 className="text-xl font-bold text-white">Our Identity</h2>
+            <p className="mt-3 text-sm text-white/70 leading-relaxed">ZEKANO is a purpose-driven institution that builds trusted systems to positively impact lives by bringing order, trust, and opportunity to the communities it serves. ZEKANO Mobility is the current expression of that purpose in mobility.</p>
+            <Link to="/our-philosophy" className="mt-6 inline-flex items-center gap-2 rounded-md bg-brand-green px-6 py-3 text-sm font-semibold text-white">Explore Our Philosophy <ArrowRight className="h-4 w-4" /></Link>
+          </div>
         </div>
       </section>
       <div className="h-10 bg-white" aria-hidden />

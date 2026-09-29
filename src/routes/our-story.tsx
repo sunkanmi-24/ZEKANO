@@ -78,7 +78,7 @@ function OurStoryPage() {
           <p className="mt-2 text-sm text-white/70">We preserve what must endure while improving what should evolve.</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link to="/our-philosophy" className="inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold" style={{ backgroundImage: "var(--brand-gold-gradient)", color: "oklch(0.24 0.07 255.27)" }}>Explore Our Philosophy <ArrowRight className="h-4 w-4" /></Link>
-            <Link to="/our-systems" className="inline-flex items-center gap-2 rounded-md border border-white/20 px-6 py-3 text-sm font-semibold text-white">Explore the ZEKANO Mobility System <ArrowRight className="h-4 w-4" /></Link>
+            <Link to="/our-system" className="inline-flex items-center gap-2 rounded-md bg-brand-green px-6 py-3 text-sm font-semibold text-white">Explore the ZEKANO Mobility System <ArrowRight className="h-4 w-4" /></Link>
           </div>
         </div>
       </section>

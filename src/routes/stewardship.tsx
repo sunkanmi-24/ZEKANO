@@ -70,17 +70,18 @@ function Page() {
         </div>
       </section>
 
-      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-secondary/40 text-center">
-        <Eyebrow>BEYOND THE ASSET</Eyebrow><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
-        <h2 className="mt-3 text-2xl font-bold text-brand-dark">Stewardship of People and Relationships</h2>
-        <p className="mt-4 mx-auto max-w-2xl text-sm text-muted-foreground">We seek to treat people with respect, honour responsibilities, communicate honestly, protect trust, learn from experience, and improve what we are responsible for.</p>
-        <p className="mt-3 text-sm font-semibold italic text-brand-dark">We do not simply seek to keep assets productive. We seek to keep their potential alive.</p>
-      </section>
-
-      <section className="px-5 sm:px-8 lg:px-12 py-10 bg-white">
-        <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10 text-center">
-          <h2 className="text-xl font-bold text-white">Our Commitment to Stewardship</h2>
-          <Link to="/our-commitment" className="mt-6 inline-flex items-center gap-2 rounded-md bg-brand-green px-6 py-3 text-sm font-semibold text-white">Explore Our Commitment <ArrowRight className="h-4 w-4" /></Link>
+      <section className="px-5 sm:px-8 lg:px-12 py-10">
+        <div className="grid lg:grid-cols-2 gap-6">
+          <div className="rounded-2xl bg-secondary/40 border border-border p-8 text-center">
+            <Eyebrow>BEYOND THE ASSET</Eyebrow><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
+            <h2 className="mt-3 text-2xl font-bold text-brand-dark">Stewardship of People and Relationships</h2>
+            <p className="mt-4 text-sm text-muted-foreground">We seek to treat people with respect, honour responsibilities, communicate honestly, protect trust, learn from experience, and improve what we are responsible for.</p>
+            <p className="mt-3 text-sm font-semibold italic text-brand-dark">We do not simply seek to keep assets productive. We seek to keep their potential alive.</p>
+          </div>
+          <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10 text-center flex flex-col justify-center">
+            <h2 className="text-xl font-bold text-white">Our Commitment to Stewardship</h2>
+            <Link to="/our-commitment" className="mt-6 inline-flex items-center justify-center gap-2 rounded-md bg-brand-green px-6 py-3 text-sm font-semibold text-white">Explore Our Commitment <ArrowRight className="h-4 w-4" /></Link>
+          </div>
         </div>
       </section>
       <div className="h-10 bg-white" aria-hidden />

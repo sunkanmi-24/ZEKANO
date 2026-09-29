@@ -77,9 +77,9 @@ function OurPhilosophyPage() {
 
       <section className="px-5 sm:px-8 lg:px-12 pb-10">
         <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10 text-center">
-          <p className="text-xs font-bold tracking-widest text-brand-green">THE ZEKANO APPROACH</p>
-          <p className="mt-3 font-mono text-sm">Purpose → Responsibility → Structure → Trust → Value → Impact</p>
-          <p className="mt-3 text-sm text-white/70">Purpose determines why we exist. Responsibility determines how we act. Structure creates the systems. Trust is strengthened through responsible action. Value is created when systems serve people well.</p>
+          <p className="text-xs font-bold tracking-widest text-white">THE ZEKANO APPROACH</p>
+          <p className="mt-3 font-mono text-sm text-white">Purpose → Responsibility → Structure → Trust → Value → Impact</p>
+          <p className="mt-3 text-sm text-white">Purpose determines why we exist. Responsibility determines how we act. Structure creates the systems. Trust is strengthened through responsible action. Value is created when systems serve people well.</p>
           <p className="mt-2 text-sm font-semibold text-white">We build with purpose. We operate with responsibility. We grow with discipline.</p>
           <Link to="/our-principles" className="mt-6 inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold" style={{ backgroundImage: "var(--brand-gold-gradient)", color: "oklch(0.24 0.07 255.27)" }}>Explore Our Principles <ArrowRight className="h-4 w-4" /></Link>
         </div>
