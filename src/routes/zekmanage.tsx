@@ -92,10 +92,10 @@ function Page() {
               <p className="mt-2 text-xs text-white/70">This is an estimate based on the information provided and the applicable ZEKMANAGE arrangement. Final terms, applicable deductions, and the management arrangement are determined during onboarding.</p>
             </div>
           </div>
-          <div className="rounded-2xl bg-brand-dark text-white p-8 lg:p-10 text-center flex flex-col justify-center">
-            <h2 className="text-xl font-bold text-white">Request ZEKMANAGE</h2>
+          <div className="rounded-2xl bg-brand-dark text-white p-6 text-center flex flex-col justify-center self-center w-full max-w-md mx-auto">
+            <h2 className="text-lg font-bold text-white">Request ZEKMANAGE</h2>
             <p className="mt-2 mx-auto max-w-xl text-sm text-white/70">Let's Discuss Your Mobility Asset.</p>
-            <Link to="/request-zekmanage" className="mt-6 inline-flex items-center justify-center gap-2 rounded-md bg-brand-green px-6 py-3 text-sm font-semibold text-white">Request ZEKMANAGE <ArrowRight className="h-4 w-4" /></Link>
+            <Link to="/request-zekmanage" className="mt-4 inline-flex items-center justify-center gap-2 rounded-md bg-brand-green px-6 py-3 text-sm font-semibold text-white">Request ZEKMANAGE <ArrowRight className="h-4 w-4" /></Link>
           </div>
         </div>
       </section>

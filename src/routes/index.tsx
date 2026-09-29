@@ -55,21 +55,21 @@ function HomePage() {
 
       {/* WHAT WE DO */}
       <section className="py-14 lg:py-16 bg-brand-dark text-white">
-        <div className="mx-auto max-w-none px-4 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
-          <div>
-            <p className="text-xs font-bold tracking-[0.18em] text-white">WHAT WE DO</p><span aria-hidden className="mt-2 block h-0.5 w-12 bg-[#BF953F]" />
+        <div className="mx-auto max-w-none px-4 lg:px-8 text-center">
+          <div className="mx-auto max-w-2xl">
+            <p className="text-xs font-bold tracking-[0.18em] text-white">WHAT WE DO</p><span aria-hidden className="mx-auto mt-2 block h-0.5 w-12 bg-[#BF953F]" />
             <h2 className="mt-3 text-3xl font-bold text-white">Structure. Manage. Connect. Maximize.</h2>
             <p className="mt-3 text-sm text-white/70 leading-relaxed">We manage and connect mobility assets with mobility communities, creating the structure through which assets can be responsibly and productively used.</p>
           </div>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { icon: Layers, t: "Structure", d: "We organize the relationships, responsibilities, processes, and systems surrounding mobility." },
               { icon: User, t: "Manage", d: "We provide structured management and professional oversight for mobility assets." },
               { icon: Handshake, t: "Connect", d: "We connect mobility assets with the people and communities that can put them to productive use." },
               { icon: BarChart3, t: "Maximize", d: "We seek to maximize the responsible and productive potential of mobility assets." },
             ].map((s) => (
-              <div key={s.t} className="rounded-xl border border-white/10 bg-white/5 p-6">
-                <s.icon className="h-7 w-7 text-white" />
+              <div key={s.t} className="rounded-xl border border-white/10 bg-white/5 p-6 text-center">
+                <s.icon className="mx-auto h-7 w-7 text-white" />
                 <h3 className="mt-3 text-base font-bold text-white">{s.t}</h3>
                 <p className="mt-1 text-xs text-white/60">{s.d}</p>
               </div>
@@ -161,15 +161,16 @@ function HomePage() {
           <p className="mt-3 mx-auto max-w-3xl text-sm text-white/70">Mobility works through relationships between assets, people, and opportunities. Our system brings these elements together through structure, enabling mobility assets to be put to responsible and productive use.</p>
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { t: "Assets", d: "Mobility assets provide the potential to create value." },
-              { t: "Communities", d: "People and communities bring needs, capabilities, and opportunities into the system." },
-              { t: "Structure", d: "We organize the relationships, responsibilities, and processes that connect assets with communities." },
-              { t: "Productive Mobility", d: "When these elements work together responsibly, mobility assets can serve meaningful needs and create productive value." },
-              { t: "Value", d: "Value is created across the relationships connecting asset owners, mobility professionals, customers, partners, and the wider community." },
-              { t: "Impact", d: "The value created through mobility ultimately contributes to our purpose: positively impacting the lives of the communities we serve." },
+              { icon: Building2, t: "Assets", d: "Mobility assets provide the potential to create value." },
+              { icon: Users, t: "Communities", d: "People and communities bring needs, capabilities, and opportunities into the system." },
+              { icon: Layers, t: "Structure", d: "We organize the relationships, responsibilities, and processes that connect assets with communities." },
+              { icon: BarChart3, t: "Productive Mobility", d: "When these elements work together responsibly, mobility assets can serve meaningful needs and create productive value." },
+              { icon: Heart, t: "Value", d: "Value is created across the relationships connecting asset owners, mobility professionals, customers, partners, and the wider community." },
+              { icon: Lightbulb, t: "Impact", d: "The value created through mobility ultimately contributes to our purpose: positively impacting the lives of the communities we serve." },
             ].map((c) => (
-              <div key={c.t} className="rounded-xl border border-white/10 bg-white/5 p-6">
-                <h3 className="text-sm font-bold text-white">{c.t}</h3>
+              <div key={c.t} className="rounded-xl border border-white/10 bg-white/5 p-6 text-center">
+                <c.icon className="mx-auto h-7 w-7 text-white" />
+                <h3 className="mt-3 text-sm font-bold text-white">{c.t}</h3>
                 <p className="mt-2 text-xs text-white/60">{c.d}</p>
               </div>
             ))}
