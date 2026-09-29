@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Linkedin, Instagram, Facebook, Phone, Mail, MapPin } from "lucide-react";
+import { Linkedin, Instagram, Facebook, MessageCircle, Mail, MapPin, HelpCircle } from "lucide-react";
 import { ZekanoLogo } from "./ZekanoLogo";
 
 const columns = [
@@ -17,12 +17,19 @@ const columns = [
     ],
   },
   {
-    title: "OUR SYSTEMS",
+    title: "OUR SOLUTIONS",
     links: [
-      { label: "ZEKMANAGE", to: "/our-systems" },
-      { label: "ZEKLEASE", to: "/our-systems" },
-      { label: "See the Big Picture", to: "/our-systems" },
-      { label: "Choose Your Path", to: "/our-systems" },
+      { label: "ZEKMANAGE", to: "/zekmanage" },
+      { label: "ZEKLEASE", to: "/zeklease" },
+      { label: "All Solutions", to: "/our-solutions" },
+    ],
+  },
+  {
+    title: "OUR SYSTEM",
+    links: [
+      { label: "The Mobility System", to: "/our-system" },
+      { label: "Why ZEKANO", to: "/why-zekano" },
+      { label: "FAQs", to: "/faqs" },
     ],
   },
 ];
@@ -31,7 +38,7 @@ export function Footer() {
   return (
     <footer className="zekano-footer bg-brand-dark text-white">
       <div className="zekano-footer-inner mx-auto max-w-none px-4 py-14 lg:px-8">
-        <div className="zekano-footer-grid grid grid-cols-2 gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="zekano-footer-grid grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-5">
           <div className="zekano-footer-brand lg:col-span-1">
             <ZekanoLogo variant="light" />
             <p className="zekano-footer-tagline mt-4 text-sm text-white/70 max-w-xs">
@@ -62,10 +69,12 @@ export function Footer() {
           ))}
 
           <div className="zekano-footer-contact">
-            <ul className="space-y-3 text-sm text-white/80">
-              <li className="zekano-footer-contact-item flex items-center gap-2"><Phone className="h-4 w-4 text-white shrink-0" /> Privacy Policy</li>
-              <li className="zekano-footer-contact-item flex items-center gap-2"><Mail className="h-4 w-4 text-white shrink-0" /> +234 800 600 0000</li>
-              <li className="zekano-footer-contact-item flex items-center gap-2"><MapPin className="h-4 w-4 text-white shrink-0" /> hello@zekano.co</li>
+            <h4 className="text-sm font-bold text-white tracking-wider">CONTACT</h4>
+            <ul className="mt-4 space-y-3 text-sm text-white/80">
+              <li className="zekano-footer-contact-item flex items-center gap-2"><MessageCircle className="h-4 w-4 text-white shrink-0" /> +234 800 600 0000</li>
+              <li className="zekano-footer-contact-item flex items-center gap-2"><Mail className="h-4 w-4 text-white shrink-0" /> hello@zekano.co</li>
+              <li className="zekano-footer-contact-item flex items-start gap-2"><MapPin className="h-4 w-4 text-white shrink-0 mt-0.5" /> <span>3rd Floor, Mobility Hub,<br />Idu Industrial Area,<br />Abuja, Nigeria.</span></li>
+              <li className="zekano-footer-contact-item flex items-center gap-2"><HelpCircle className="h-4 w-4 text-white shrink-0" /><Link to="/faqs" className="hover:text-white transition">FAQs</Link></li>
             </ul>
           </div>
         </div>
